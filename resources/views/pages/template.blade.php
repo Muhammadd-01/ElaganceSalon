@@ -52,13 +52,9 @@
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
-                            <li><a data-scroll class="nav-link active" href="index">Home<span
+                            <li><a data-scroll class="nav-link active" href="/">Home<span
                                         class="sr-only">(current)</span></a>
-                                <ul>
-                                    <li><a href="index2">Home Default</a></li>
-                                    <li><a href="index3">Home Modern</a></li>
-                                    <li><a href="index4">Home Classic</a></li>
-                                </ul>
+
                             </li>
                             <li><a href="aboutus">About</a>
                                 <ul>
