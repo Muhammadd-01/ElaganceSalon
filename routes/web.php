@@ -25,3 +25,7 @@ Route::view("/aboutCompany","users.pages.about-company");
 Route::view("/404","users.pages.404");
 Route::view("/templateAdmin","admin.pages.template");
 Route::view("/index","admin.pages.index");
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
