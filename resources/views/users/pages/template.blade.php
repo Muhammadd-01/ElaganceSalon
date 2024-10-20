@@ -48,7 +48,7 @@
     <header id="header" class="header-section">
         <div class="container">
             <nav class="navbar ">
-                <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Barbershop"></a>
+                <a href="#" class="navbar-brand"><img src="" alt="Barbershop"></a>
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
