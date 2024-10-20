@@ -20,15 +20,14 @@ Route::view("/feedback","users.pages.feedback");
 Route::view("/testimonals","users.pages.testimonals");
 Route::view("/contact","users.pages.contact");
 Route::view("/service","users.pages.service");
-Route::view("/service2","users.pages.service2");
 Route::view("/team","users.pages.team");
 Route::view("/pricing","users.pages.pricing");
-Route::view("/signup","users.pages.signup");
+Route::view("/signup","auth.register");
 Route::view("/login","users.pages.login");
 Route::view("/blogclassic","users.pages.blog-classic");
 Route::view("/appointment","users.pages.appointment");
 Route::view("/aboutCompany","users.pages.about-company");
-Route::view("/user404","users.pages.404");
+
 
 //User Routes End
 
