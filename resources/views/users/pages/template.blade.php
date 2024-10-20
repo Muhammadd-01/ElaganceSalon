@@ -78,11 +78,7 @@
                                 </ul>
                             </li>
                             <li><a href="#">Blog</a>
-                                <ul>
-                                    <li><a href="blogGrid">Blog Grid</a></li>
-                                    <li><a href="blogClassic">Blog Classic</a></li>
-                                    <li><a href="blogSingle">Blog Single</a></li>
-                                </ul>
+                             
                             </li>
                             <li><a href="contact">Contact</a></li>
                         </ul>
