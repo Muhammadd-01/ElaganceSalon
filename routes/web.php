@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('users.pages.welcome');
@@ -27,3 +28,6 @@ Route::view("/aboutCompany","users.pages.about-company");
 Route::view("/404","users.pages.404");
 Route::view("/templateAdmin","admin.pages.template");
 Route::view("/index","admin.pages.index");
+
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
