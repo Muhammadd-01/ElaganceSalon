@@ -48,7 +48,7 @@
     <header id="header" class="header-section">
         <div class="container">
             <nav class="navbar ">
-                <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Barbershop"></a>
+                <a href="/" class="navbar-brand"><img src="img/logo.png" alt="Barbershop"></a>
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
@@ -73,14 +73,16 @@
                                     <li><a href="appointment">Appointment</a></li>
                                     <li><a href="gallery">Gallery</a></li>
                                     <li><a href="team">Our Team</a></li>
-                                    <li><a href="pricing">Our Pricing</a></li>
-                                    <li><a href="404">404 Error</a></li>
+                                    <li><a href="feedback">Feedback</a></li>
+                                    <li><a href="testimonals">Testimonals</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Blog</a>
-                             
+                            <li><a href="blogclassic">Blog</a>
+
                             </li>
                             <li><a href="contact">Contact</a></li>
+                            <li><a href="login">Login</a></li>
+                            <li><a href="signup">SignUp</a></li>
                         </ul>
                     </div>
                     <div class="header-btn">
