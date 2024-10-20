@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('gender')->nullable();
             $table->string('password')->nullable();
             $table->string('address')->nullable();
-            $table->string('role')->default('User');
+            $table->integer('role')->default(0); // 0 represents 'user', 1 represents 'admin' (or any other logic you have)
             $table->timestamps();
         });
     }
