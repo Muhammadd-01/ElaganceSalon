@@ -52,6 +52,7 @@ Route::view("/widget","admin.widget");
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+<<<<<<< HEAD
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -59,3 +60,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+=======
+Route::group(['prefix' => 'staff', 'as' => 'staff.'], function () {
+    Auth::routes(['guard' => 'staff']);
+});
+>>>>>>> 23db652d265f9a028bddd86099f22d42180f04f3
