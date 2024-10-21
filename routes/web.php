@@ -53,6 +53,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -65,3 +66,18 @@ Route::group(['prefix' => 'staff', 'as' => 'staff.'], function () {
     Auth::routes(['guard' => 'staff']);
 });
 >>>>>>> 23db652d265f9a028bddd86099f22d42180f04f3
+=======
+// <<<<<<< jazib
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// =======
+// Route::group(['prefix' => 'staff', 'as' => 'staff.'], function () {
+//     Auth::routes(['guard' => 'staff']);
+// });
+// >>>>>>> jazib
+>>>>>>> f9ee392b10646a33bd236dade779df5b99ceb0ea
