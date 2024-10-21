@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Controllers\FeedbackController;
 
 //User Routes Start
 
 Route::get('/', function () {
-    return view('auth.register');
+    return view('users.pages.welcome');
 });
 
 
@@ -23,17 +23,19 @@ Route::view("/service","users.pages.service");
 Route::view("/team","users.pages.team");
 Route::view("/pricing","users.pages.pricing");
 Route::view("/signup","auth.register");
-Route::view("/login","users.pages.login");
+Route::view("/login","auth.login");
 Route::view("/blogclassic","users.pages.blog-classic");
 Route::view("/appointment","users.pages.appointment");
 Route::view("/aboutCompany","users.pages.about-company");
+
+
+Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
 
 
 //User Routes End
 
 //Admin Routes Start
 Route::view("/dash","admin.dashboard");
-Route::view("/404","admin.404");
 Route::view("/blank","admin.blank");
 Route::view("/button","admin.button");
 Route::view("/chart","admin.chart");

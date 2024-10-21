@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -128,13 +129,21 @@
                             </div>
                         </div>
 
-                        <!-- Submit Button -->
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
+                     <!-- Submit Button and Login Link -->
+<div class="row mb-2">
+    <div class="col-md-6 offset-md-4 d-flex align-items-center">
+        <button type="submit" class="btn btn-primary">
+            {{ __('Register') }}
+        </button>
+        <a href="{{ route('login') }}" class="ms-3">{{ __('Already have an account? Login') }}</a>
+    </div>
+</div>
+
+
+
+
                             </div>
+
                         </div>
                     </form>
                 </div>
