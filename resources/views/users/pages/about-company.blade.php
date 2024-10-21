@@ -4,8 +4,8 @@
 <section class="page_header d-flex align-items-center">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-            <h3>Trendy Salon &amp; Spa</h3>
-            <h2>Our Barbershop</h2>
+
+            <h2>Elegance Hair Salon</h2>
             <div class="heading-line"></div>
         </div>
     </div>
@@ -15,12 +15,9 @@
         <div class="row d-flex align-items-center">
             <div class="col-md-6 xs-padding wow fadeInLeft" data-wow-delay="300ms">
                 <div class="section_heading">
-                    <h3>Trendy Salon & Spa</h3>
-                    <h2>Step up your healthy hair care <br> routine with tips and advice!</h2>
-                    <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men's and
-                        boys' hair. A barber's place of work is known as a "barbershop" or a "barber's". Barbershops
-                        are also places of social interaction and public discourse. In some instances, barbershops
-                        are also public forums.</p>
+
+                    <h2>Refine Your Grooming Ritual at <br> Elegance Men Hair Salon</h2>
+                    <p>Step into Elegance Men Hair Salon, where the art of grooming is elevated to a timeless experience. Our talented barbers, rooted in tradition and skill, are dedicated to not just shaping your hairstyle but also enhancing your hair care routine with expert tips and advice for vibrant, healthy locks. This charming salon is a haven for men and boys, providing a warm atmosphere where meaningful conversations flourish and community bonds are formed. Indulge in a classic haircut or a meticulous shave, and discover how elegance meets tradition in a setting that celebrates the essence of true grooming. Experience the refined elegance that awaits you, and leave with more than just a fresh look embrace a lifestyle of sophistication and care.<p>
                     <a href="#" class="default_btn">More About Us</a>
                 </div>
             </div>
@@ -33,49 +30,11 @@
         </div>
     </div>
 </section>
-<section class="service_section bg-grey bd-bottom padding">
-    <div class="container">
-        <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-            <h3>Save 20% On Beauty Spa</h3>
-            <h2>Our Barber Services</h2>
-            <div class="heading-line"></div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-sm-6 sm-padding">
-                <div class="service_content align-center wow fadeInUp" data-wow-delay="200ms">
-                    <img src="img/service-1.jpg" alt="Services">
-                    <h3>Haircut Styles</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
-                <div class="service_content align-center">
-                    <img src="img/service-2.jpg" alt="Services">
-                    <h3>Beard Triming</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
-                <div class="service_content align-center">
-                    <img src="img/service-3.jpg" alt="Services">
-                    <h3>Clean Smooth Shave</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 sm-padding wow fadeInUp" data-wow-delay="500ms">
-                <div class="service_content align-center">
-                    <img src="img/service-4.jpg" alt="Services">
-                    <h3>Face Masking</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 <section id="team" class="team_section bd-bottom padding">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-            <h3>Trendy Salon &amp; Spa</h3>
+          
             <h2>Our Barbers</h2>
             <div class="heading-line"></div>
         </div>
@@ -84,8 +43,8 @@
                 <div class="team_member">
                     <img src="img/team-1.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Kyle Frederick</h3>
-                        <p>WEB DESIGNER</p>
+                        <h3>Jazib Salman</h3>
+                        <p>Beard Specialist</p>
                     </div>
                 </div>
             </li>
@@ -93,8 +52,8 @@
                 <div class="team_member">
                     <img src="img/team-2.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>José Carpio</h3>
-                        <p>WORDPRESS DEVELOPER</p>
+                        <h3>Affan</h3>
+                        <p>Hair Specialist</p>
                     </div>
                 </div>
             </li>
@@ -102,8 +61,8 @@
                 <div class="team_member">
                     <img src="img/team-3.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Michel Ibáñez</h3>
-                        <p>ONLINE MARKETER</p>
+                        <h3>Zaki Haider</h3>
+                        <p>Moustache Specialist</p>
                     </div>
                 </div>
             </li>
@@ -111,8 +70,8 @@
                 <div class="team_member">
                     <img src="img/team-4.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Adam Castellon</h3>
-                        <p>JAVA SPECIALIST</p>
+                        <h3>Hamza Akram</h3>
+                        <p>Facial Specialist</p>
                     </div>
                 </div>
             </li>

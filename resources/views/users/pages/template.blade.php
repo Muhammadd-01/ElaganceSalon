@@ -59,7 +59,7 @@
                             <li><a href="aboutus">About</a>
                                 <ul>
                                     <li><a href="aboutus">About Us</a></li>
-                                    <li><a href="aboutCompany">About Company</a></li>
+                                    <li><a href="aboutcompany">About Company</a></li>
                                 </ul>
                             </li>
                             <li><a href="service">Services</a>
@@ -110,7 +110,7 @@
             <div class="row">
                 <div class="col-md-6 xs-padding">
                     <div class="copyright">&copy;
-                        <script type="text/javascript"> document.write(new Date().getFullYear())</script> Barber Shop
+                        <script type="text/javascript"> document.write(new Date().getFullYear())</script> All Rights Reserved By Elegance
 
                     </div>
                 </div>

@@ -16,6 +16,15 @@ Route::view("/template","users.pages.template");
 Route::view("/aboutus","users.pages.aboutus");
 
 Route::view("/gallery","users.pages.gallery");
+
+Route::view("/service1","users.pages.service1");
+Route::view("/service2","users.pages.service2");
+Route::view("/service3","users.pages.service3");
+Route::view("/service4","users.pages.service4");
+Route::view("/service5","users.pages.service5");
+Route::view("/service6","users.pages.service6");
+Route::view("/service7","users.pages.service7");
+Route::view("/service8","users.pages.service8");
 Route::view("/feedback","users.pages.feedback");
 Route::view("/testimonals","users.pages.testimonals");
 Route::view("/contact","users.pages.contact");
@@ -26,7 +35,7 @@ Route::view("/signup","auth.register");
 Route::view("/login","auth.login");
 Route::view("/blogclassic","users.pages.blog-classic");
 Route::view("/appointment","users.pages.appointment");
-Route::view("/aboutCompany","users.pages.about-company");
+Route::view("/aboutcompany","users.pages.about-company");
 
 
 Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
@@ -52,21 +61,15 @@ Route::view("/widget","admin.widget");
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-=======
-Route::group(['prefix' => 'staff', 'as' => 'staff.'], function () {
-    Auth::routes(['guard' => 'staff']);
-});
->>>>>>> 23db652d265f9a028bddd86099f22d42180f04f3
-=======
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 // <<<<<<< jazib
 // Auth::routes();
 
@@ -80,4 +83,4 @@ Route::group(['prefix' => 'staff', 'as' => 'staff.'], function () {
 //     Auth::routes(['guard' => 'staff']);
 // });
 // >>>>>>> jazib
->>>>>>> f9ee392b10646a33bd236dade779df5b99ceb0ea
+

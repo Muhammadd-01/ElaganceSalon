@@ -2,12 +2,17 @@
 
 
 @section('content')
-
+<style>
+    .service1{
+        text-decoration: none;
+        color: black
+    }
+</style>
 <section class="page_header d-flex align-items-center">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-            <h3>Trendy Salon &amp; Spa</h3>
-            <h2>Barbershop Services</h2>
+
+            <h2>Elegance Services</h2>
             <div class="heading-line"></div>
         </div>
     </div>
@@ -16,60 +21,61 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="200ms">
-                <div class="service_box">
+              <a class="service1" href="service1"><div class="service_box">
                     <i class="bs bs-scissors-1"></i>
                     <h3>Haircut Styles</h3>
-                    <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
+                    <p>Experience the Art of Classic Men's Hairstyling at Elegance Men Hair Salon"
+                        Brief introductory line that sets the tone.</p>
+                </div></a>
             </div>
             <div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="300ms">
-                <div class="service_box">
+             <a class="service1" href="service2">  <div class="service_box">
                     <i class="bs bs-razor-2"></i>
                     <h3>Beard Triming</h3>
                     <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
+                </div></a>
             </div>
             <div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="400ms">
-                <div class="service_box">
+                <a class="service1" href="service3"> <div class="service_box">
                     <i class="bs bs-brush"></i>
                     <h3>Smooth Shave</h3>
                     <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
+                </div></a>
             </div>
             <div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="500ms">
-                <div class="service_box">
+           <a class="service1" href="service4">    <div class="service_box">
                     <i class="bs bs-hairbrush-1"></i>
                     <h3>Face Masking</h3>
                     <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
+                </div></a>
             </div>
             <div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="600ms">
-                <div class="service_box">
+              <a class="service1" href="service5">  <div class="service_box">
                     <i class="bs bs-razor"></i>
                     <h3>Beard Triming</h3>
                     <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
+                </div></a>
             </div>
             <div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="700ms">
-                <div class="service_box">
+                <a class="service1" href="service6"><div class="service_box">
                     <i class="bs bs-hairbrush"></i>
                     <h3>Hair Coloring</h3>
                     <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
+                </div></a>
             </div>
             <div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="800ms">
-                <div class="service_box">
+               <a class="service1" href="service7"><div class="service_box">
                     <i class="bs bs-comb-2"></i>
                     <h3>Hair Straight</h3>
                     <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
+                </div></a>
             </div>
             <div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="900ms">
-                <div class="service_box">
+               <a class="service1" href="service8"> <div class="service_box">
                     <i class="bs bs-perfume"></i>
                     <h3>Bright Facial</h3>
                     <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
+                </div></a>
             </div>
         </div>
     </div>

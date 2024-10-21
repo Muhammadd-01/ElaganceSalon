@@ -1,6 +1,8 @@
 @extends('users.pages.template')
 
-@section('content')
+@section('content') <div class="container">
+
+
 <section class="contact-section padding">
     <form action="{{ route('feedback.store') }}" method="POST" id="ajax_form" class="form-horizontal">
         @csrf
@@ -22,8 +24,8 @@
 
         <!-- Message container for success/error messages -->
         <div id="form-messages" class="alert" role="alert" style="display:none;"></div>
-    </form>
-
+    </form></section>
+</div>
     <script>
         $(document).ready(function() {
             $('#ajax_form').on('submit', function(event) {
@@ -51,9 +53,9 @@
                 });
             });
         });
-        success: function(response) {
-   
+
+
 
     </script>
-</section>
+
 @endsection
