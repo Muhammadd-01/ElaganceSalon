@@ -52,10 +52,16 @@ Route::view("/widget","admin.widget");
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+// <<<<<<< jazib
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// =======
+// Route::group(['prefix' => 'staff', 'as' => 'staff.'], function () {
+//     Auth::routes(['guard' => 'staff']);
+// });
+// >>>>>>> jazib
