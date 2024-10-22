@@ -18,7 +18,7 @@
 
                     <h2>Refine Your Grooming Ritual at <br> Elegance Men Hair Salon</h2>
                     <p>Step into Elegance Men Hair Salon, where the art of grooming is elevated to a timeless experience. Our talented barbers, rooted in tradition and skill, are dedicated to not just shaping your hairstyle but also enhancing your hair care routine with expert tips and advice for vibrant, healthy locks. This charming salon is a haven for men and boys, providing a warm atmosphere where meaningful conversations flourish and community bonds are formed. Indulge in a classic haircut or a meticulous shave, and discover how elegance meets tradition in a setting that celebrates the essence of true grooming. Experience the refined elegance that awaits you, and leave with more than just a fresh look embrace a lifestyle of sophistication and care.<p>
-                    <a href="#" class="default_btn">More About Us</a>
+                  
                 </div>
             </div>
             <div class="col-md-6 xs-padding wow fadeInRight" data-wow-delay="300ms">
@@ -34,7 +34,7 @@
 <section id="team" class="team_section bd-bottom padding">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-          
+
             <h2>Our Barbers</h2>
             <div class="heading-line"></div>
         </div>
