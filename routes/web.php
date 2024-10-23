@@ -6,8 +6,11 @@ use Illuminate\Support\Facades\Auth;
 
 //User Routes Start
 
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('auth.register');
+});
+Route::get('/', function () {
+    return view('users.pages.welcome');
 });
 
 

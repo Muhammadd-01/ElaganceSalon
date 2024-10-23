@@ -88,10 +88,17 @@
                         </ul>
                     </div>
                     <div class="header-btn">
-                        <a href="#" class="menu-btn">Make Appointment</a>
+                        <a href="login" class="menu-btn">Logout</a>
                     </div>
+
                 </div>
             </nav>
+        </div>
+        <div class="header-btn" style="display: flex ; gap: 5px; margin-right   : 10px  "  >
+            <a href="login" class="menu-btn">login</a>
+            <br>
+            <a href="login" class="menu-btn">Register</a>
+
         </div>
     </header>
 
