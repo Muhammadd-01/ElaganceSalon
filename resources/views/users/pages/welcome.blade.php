@@ -2,6 +2,7 @@
 
 
 @section('content')
+
 <section class="hero_section d-flex align-items-center">
     <div class="video_bg"
         data-property="{videoURL:'3pFH7FQu5so',containment:'self',autoPlay:true, mute:true, startAt:0, opacity:1, showControls:false, ratio:'16/9', quality: 'hd720', showYTLogo: false }">
