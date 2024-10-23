@@ -2,178 +2,207 @@
 
 
 @section('content')
+<style>
+/* Service Description Section */
+    .service-description {
+        background-color: #faf5e6;
+        border: 3px solid #a67c52;
+        padding: 40px;
+        max-width: 900px;
+        margin: 50px auto;
+        text-align: center;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        position: relative;
+    }
+
+    /* Decorative elements */
+    .service-description:before, .service-description:after {
+        content: "";
+        display: block;
+        width: 70%;
+        height: 2px;
+        background-color: #a67c52;
+        margin: 0 auto;
+        position: absolute;
+    }
+
+    .service-description:before {
+        top: 10px;
+    }
+
+    .service-description:after {
+        bottom: 10px;
+    }
+
+    /* Heading styles */
+    .service-description h2 {
+        font-size: 36px;
+        color: #6b4e31;
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+
+    /* Paragraph styles */
+    .service-description p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    /* Decorative dividers */
+    .divider {
+        width: 60%;
+        height: 1px;
+        background-color: #a67c52;
+        margin: 20px auto;
+    }
+
+    /* Vintage icon for emphasis */
+    .service-description .icon {
+        font-size: 24px;
+        color: #a67c52;
+        margin-bottom: 15px;
+    }
+    .beard-styles {
+            background-color: #faf5e6;
+            border: 3px solid #a67c52;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 50px auto;
+            text-align: center;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+        }
+
+        /* Heading styles */
+        .beard-styles h2 {
+            font-size: 36px;
+            color: #6b4e31;
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        /* Styles grid */
+        .styles-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr); /* Default for mobile */
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* Individual style card */
+        .style-card {
+            background-color: #fff;
+            border: 2px solid #a67c52;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .style-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Image styles */
+        .style-card img {
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        /* Style title */
+        .style-card h3 {
+            font-size: 24px;
+            color: #6b4e31;
+            margin: 15px 0;
+        }
+
+        /* Style description */
+        .style-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .styles-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 cards on medium screens */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .styles-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 cards on large screens */
+            }
+        }
+
+
+
+</style>
 
 <section class="page_header d-flex align-items-center">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-            <h3>Trendy Salon &amp; Spa</h3>
-            <h2>Barbershop Services</h2>
+
+            <h2>Elegance Services</h2>
             <div class="heading-line"></div>
         </div>
     </div>
 </section>
-<section class="service_section bg-grey bd-bottom padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="200ms">
-                <div class="service_content align-center">
-                    <img src="img/service-1.jpg" alt="Services">
-                    <h3>Haircut Styles</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
+
+
+    <div class="service-description">
+        <h2>Why Choose Our Beard Trimming Service?</h2>
+        <p class="icon">✂️</p>
+        <p>At Elegance Men Hair Salon, our skilled barbers deliver precision beard trims tailored to suit your unique style. With years of experience, we focus on perfecting every detail, using high-quality tools and products to ensure the finest results.</p>
+        <div class="divider"></div>
+        <p>Whether you prefer a clean, sharp look or a fuller, more natural beard, we offer personalized trimming to enhance your appearance. Each session includes a thorough consultation to understand your preferences and recommend the best style for your face shape.</p>
+        <div class="divider"></div>
+        <p>Experience a blend of classic barbering techniques and modern grooming trends, all in a relaxing vintage-inspired setting. We use premium beard oils and balms for a refreshing finish that keeps your beard looking its best.</p>
+    </div>
+
+
+
+
+    <div class="beard-styles">
+        <h2>Beard Styles Offered</h2>
+        <div class="styles-grid">
+            <div class="style-card">
+                <img src="https://via.placeholder.com/300x200?text=Full+Beard" alt="Full Beard">
+                <h3>The Full Beard</h3>
+                <p>A classic choice for those who appreciate a robust and natural look. Ideal for adding character and masculinity.</p>
             </div>
-            <div class="col-lg-3 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="300ms">
-                <div class="service_content align-center">
-                    <img src="img/service-2.jpg" alt="Services">
-                    <h3>Beard Triming</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
+            <div class="style-card">
+                <img src="https://via.placeholder.com/300x200?text=Goatee" alt="Goatee">
+                <h3>The Goatee</h3>
+                <p>Refined and stylish, the goatee brings a modern edge to your appearance. Perfect for showcasing your jawline.</p>
             </div>
-            <div class="col-lg-3 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="400ms">
-                <div class="service_content align-center">
-                    <img src="img/service-3.jpg" alt="Services">
-                    <h3>Clean Smooth Shave</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
+            <div class="style-card">
+                <img src="https://via.placeholder.com/300x200?text=Goatee" alt="Goatee">
+                <h3>The Goatee</h3>
+                <p>Refined and stylish, the goatee brings a modern edge to your appearance. Perfect for showcasing your jawline.</p>
             </div>
-            <div class="col-lg-3 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="500ms">
-                <div class="service_content align-center">
-                    <img src="img/service-4.jpg" alt="Services">
-                    <h3>Face Masking</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
+            <div class="style-card">
+                <img src="https://via.placeholder.com/300x200?text=Goatee" alt="Goatee">
+                <h3>The Goatee</h3>
+                <p>Refined and stylish, the goatee brings a modern edge to your appearance. Perfect for showcasing your jawline.</p>
             </div>
-            <div class="col-lg-3 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="600ms">
-                <div class="service_content align-center">
-                    <img src="img/service-5.jpg" alt="Services">
-                    <h3>Beard Triming</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
+            <div class="style-card">
+                <img src="https://via.placeholder.com/300x200?text=Short+Boxed+Beard" alt="Short Boxed Beard">
+                <h3>The Short Boxed Beard</h3>
+                <p>A neatly trimmed and structured style for a professional look. Maintains a polished appearance at all times.</p>
             </div>
-            <div class="col-lg-3 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="700ms">
-                <div class="service_content align-center">
-                    <img src="img/service-6.jpg" alt="Services">
-                    <h3>Hair Coloring</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="800ms">
-                <div class="service_content align-center">
-                    <img src="img/service-7.jpg" alt="Services">
-                    <h3>Hair Straight</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="900ms">
-                <div class="service_content align-center">
-                    <img src="img/service-8.jpg" alt="Services">
-                    <h3>Bright Facial</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
-                </div>
+            <div class="style-card">
+                <img src="https://via.placeholder.com/300x200?text=Van+Dike" alt="Van Dyke">
+                <h3>The Van Dyke</h3>
+                <p>A distinguished style featuring a pointed beard and mustache. Perfect for those looking for a sophisticated edge.</p>
             </div>
         </div>
     </div>
-</section>
-<section class="cta_section padding">
-    <div class="container">
-        <div class="display-table">
-            <div class="table-cel">
-                <div class="cta_content align-center wow fadeInUp" data-wow-delay="300ms">
-                    <h2>Making You Look Good <br> Is In Our Haritage.</h2>
-                    <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave men's
-                        and boys hair.</p>
-                    <a href="#" class="default_btn">Make Appointment</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="sponsor_section bg-grey padding">
-    <div class="container">
-        <ul id="sponsor_carousel" class="sponsor_items owl-carousel">
-            <li class="sponsor_item">
-                <img src="img/sponsor-1.png" alt="sponsor-image">
-            </li>
-            <li class="sponsor_item">
-                <img src="img/sponsor-2.png" alt="sponsor-image">
-            </li>
-            <li class="sponsor_item">
-                <img src="img/sponsor-3.png" alt="sponsor-image">
-            </li>
-            <li class="sponsor_item">
-                <img src="img/sponsor-4.png" alt="sponsor-image">
-            </li>
-            <li class="sponsor_item">
-                <img src="img/sponsor-5.png" alt="sponsor-image">
-            </li>
-            <li class="sponsor_item">
-                <img src="img/sponsor-1.png" alt="sponsor-image">
-            </li>
-            <li class="sponsor_item">
-                <img src="img/sponsor-2.png" alt="sponsor-image">
-            </li>
-            <li class="sponsor_item">
-                <img src="img/sponsor-3.png" alt="sponsor-image">
-            </li>
-        </ul>
-    </div>
-</div>
-<section class="widget_section padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 sm-padding">
-                <div class="footer_widget">
-                    <img class="mb-15" src="img/logo.png" alt="Brand">
-                    <p>Our barbershop is the created for men who appreciate premium quality, time and flawless look.
-                    </p>
-                    <ul class="widget_social">
-                        <li><a href="#"><i class="social_facebook"></i></a></li>
-                        <li><a href="#"><i class="social_twitter"></i></a></li>
-                        <li><a href="#"><i class="social_googleplus"></i></a></li>
-                        <li><a href="#"><i class="social_instagram"></i></a></li>
-                        <li><a href="#"><i class="social_linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 sm-padding">
-                <div class="footer_widget">
-                    <h3>Headquaters</h3>
-                    <p>962 Fifth Avenue, 3rd Floor New York, NY10022</p>
-                    <p><a href="https://html.dynamiclayers.net/cdn-cgi/l/email-protection" class="__cf_email__"
-                            data-cfemail="c78fa2ababa887a3bea9a6aaaea4aba6bea2b5b4e9a9a2b3">[email&#160;protected]</a>
-                        <br>(+123) 456 789 101</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 sm-padding">
-                <div class="footer_widget">
-                    <h3>Opening Hours</h3>
-                    <ul class="opening_time">
-                        <li>Monday - Friday 11:30am - 2:008pm</li>
-                        <li>Saturday – Monday: 9am – 8pm</li>
-                        <li>Monday - Friday 5:30am - 11:008pm</li>
-                        <li>Saturday - Sunday 4:30am - 1:00pm</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-12 sm-padding">
-                <div class="footer_widget">
-                    <h3>Subscribe to our contents</h3>
-                    <div class="subscribe_form">
-                        <form action="#" class="subscribe_form">
-                            <input type="email" name="email" id="subs-email" class="form_input"
-                                placeholder="Email Address...">
-                            <button type="submit" class="submit">SUBSCRIBE</button>
-                            <div class="clearfix"></div>
-                            <div id="subscribe-result">
-                                <p class="subscription-success"></p>
-                                <p class="subscription-error"></p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 @endsection

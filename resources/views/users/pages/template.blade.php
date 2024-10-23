@@ -48,7 +48,7 @@
     <header id="header" class="header-section">
         <div class="container">
             <nav class="navbar ">
-                <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Barbershop"></a>
+                <a href="/" class="navbar-brand"><img src="img/" alt="Barbershop"></a>
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
@@ -59,32 +59,26 @@
                             <li><a href="aboutus">About</a>
                                 <ul>
                                     <li><a href="aboutus">About Us</a></li>
-                                    <li><a href="aboutCompany">About Company</a></li>
+                                    <li><a href="aboutcompany">About Company</a></li>
                                 </ul>
                             </li>
                             <li><a href="service">Services</a>
-                                <ul>
-                                    <li><a href="service">Services 01</a></li>
-                                    <li><a href="service2">Services 02</a></li>
-                                </ul>
                             </li>
                             <li><a href="#">Pages</a>
                                 <ul>
                                     <li><a href="appointment">Appointment</a></li>
                                     <li><a href="gallery">Gallery</a></li>
                                     <li><a href="team">Our Team</a></li>
-                                    <li><a href="pricing">Our Pricing</a></li>
-                                    <li><a href="404">404 Error</a></li>
+                                    <li><a href="feedback">Feedback</a></li>
+                                    <li><a href="testimonals">Testimonals</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Blog</a>
-                                <ul>
-                                    <li><a href="blogGrid">Blog Grid</a></li>
-                                    <li><a href="blogClassic">Blog Classic</a></li>
-                                    <li><a href="blogSingle">Blog Single</a></li>
-                                </ul>
+                            <li><a href="blogclassic">Blog</a>
+
                             </li>
                             <li><a href="contact">Contact</a></li>
+                            <li><a href="login">Login</a></li>
+                            <li><a href="signup">SignUp</a></li>
                         </ul>
                     </div>
                     <div class="header-btn">
@@ -116,7 +110,7 @@
             <div class="row">
                 <div class="col-md-6 xs-padding">
                     <div class="copyright">&copy;
-                        <script type="text/javascript"> document.write(new Date().getFullYear())</script> Barber Shop
+                        <script type="text/javascript"> document.write(new Date().getFullYear())</script> All Rights Reserved By Elegance
 
                     </div>
                 </div>

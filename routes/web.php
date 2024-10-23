@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Controllers\FeedbackController;
 
 //User Routes Start
 
 Route::get('/', function () {
-    return view('auth.register');
+    return view('users.pages.welcome');
 });
 
 
@@ -16,23 +16,35 @@ Route::view("/template","users.pages.template");
 Route::view("/aboutus","users.pages.aboutus");
 
 Route::view("/gallery","users.pages.gallery");
+
+Route::view("/service1","users.pages.service1");
+Route::view("/service2","users.pages.service2");
+Route::view("/service3","users.pages.service3");
+Route::view("/service4","users.pages.service4");
+Route::view("/service5","users.pages.service5");
+Route::view("/service6","users.pages.service6");
+Route::view("/service7","users.pages.service7");
+Route::view("/service8","users.pages.service8");
+Route::view("/feedback","users.pages.feedback");
+Route::view("/testimonals","users.pages.testimonals");
 Route::view("/contact","users.pages.contact");
 Route::view("/service","users.pages.service");
-Route::view("/service2","users.pages.service2");
 Route::view("/team","users.pages.team");
 Route::view("/pricing","users.pages.pricing");
-Route::view("/blogSingle","users.pages.blog-single");
-Route::view("/blogGrid","users.pages.blog-grid");
-Route::view("/blogClassic","users.pages.blog-classic");
+Route::view("/signup","auth.register");
+Route::view("/login","auth.login");
+Route::view("/blogclassic","users.pages.blog-classic");
 Route::view("/appointment","users.pages.appointment");
-Route::view("/aboutCompany","users.pages.about-company");
-Route::view("/user404","users.pages.404");
+Route::view("/aboutcompany","users.pages.about-company");
+
+
+Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
+
 
 //User Routes End
 
 //Admin Routes Start
 Route::view("/dash","admin.dashboard");
-Route::view("/404","admin.404");
 Route::view("/blank","admin.blank");
 Route::view("/button","admin.button");
 Route::view("/chart","admin.chart");
@@ -49,6 +61,26 @@ Route::view("/widget","admin.widget");
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::group(['prefix' => 'staff', 'as' => 'staff.'], function () {
-    Auth::routes(['guard' => 'staff']);
-});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// <<<<<<< jazib
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// =======
+// Route::group(['prefix' => 'staff', 'as' => 'staff.'], function () {
+//     Auth::routes(['guard' => 'staff']);
+// });
+// >>>>>>> jazib
+
