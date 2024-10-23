@@ -5,11 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="BarberShop & Hair Salon HTML Template">
+    <meta name="description" content="Elegance Men Hair Salon">
     <meta name="author" content="">
-    <title>Barber Shop || BarberShop Hair Salon HTML Template</title>
+    <title>Elegance Men Hair Salon</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link rel="stylesheet" href="css/elegant-font-icons.css">
 
     <link rel="stylesheet" href="css/elegant-line-icons.css">
@@ -37,52 +38,70 @@
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <div id='preloader'>
-        <div class='loader'>
-            <img src="img/loading.gif" width="80" alt="">
-        </div>
-    </div>
     <header id="header" class="header-section">
         <div class="container">
-            <nav class="navbar ">
+            <nav class="navbar">
                 <a href="/" class="navbar-brand"><img src="img/" alt="Barbershop"></a>
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
-                            <li><a data-scroll class="nav-link active" href="/">Home<span
-                                        class="sr-only">(current)</span></a>
-
-                            </li>
+                            <li><a data-scroll class="nav-link active" href="/">Home<span class="sr-only">(current)</span></a></li>
                             <li><a href="aboutus">About</a>
                                 <ul>
                                     <li><a href="aboutus">About Us</a></li>
                                     <li><a href="aboutcompany">About Company</a></li>
                                 </ul>
                             </li>
-                            <li><a href="service">Services</a>
-                            </li>
+                            <li><a href="service">Services</a></li>
                             <li><a href="#">Pages</a>
                                 <ul>
                                     <li><a href="appointment">Appointment</a></li>
                                     <li><a href="gallery">Gallery</a></li>
                                     <li><a href="team">Our Team</a></li>
                                     <li><a href="feedback">Feedback</a></li>
-                                    <li><a href="testimonals">Testimonals</a></li>
+                                    <li><a href="testimonals">Testimonials</a></li>
                                 </ul>
                             </li>
-                            <li><a href="blogclassic">Blog</a>
-
-                            </li>
+                            <li><a href="blogclassic">Blog</a></li>
                             <li><a href="contact">Contact</a></li>
-                            <li><a href="login">Login</a></li>
-                            <li><a href="signup">SignUp</a></li>
+                            @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                            @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <img src="{{ asset('storage/' . Auth::user()->profile_picture_url) }}" alt="Profile Picture" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
+
+
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                            @endguest
                         </ul>
                     </div>
                     <div class="header-btn">
-                        <a href="#" class="menu-btn">Make Appointment</a>
+                        <a href="/#appointment-form" class="menu-btn">Make Appointment</a>
                     </div>
                 </div>
             </nav>

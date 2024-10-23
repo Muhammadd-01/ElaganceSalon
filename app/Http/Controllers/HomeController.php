@@ -5,8 +5,44 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
+
+
 class HomeController extends Controller
 {
+    public function register(Request $request)
+{
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users',
+        'mobile' => 'required|string',
+        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate image
+        'age' => 'required|integer',
+        'gender' => 'required|string',
+        'address' => 'required|string',
+        'password' => 'required|string|min:8|confirmed',
+    ]);
+
+    $imagePath = null;
+    if ($request->hasFile('image')) {
+        $imagePath = $request->file('image')->store('profile_images', 'public'); // Save to 'storage/app/public/profile_images'
+    }
+
+    // Create the user
+    $user = User::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'mobile' => $request->mobile,
+        'image' => $imagePath, // Save image path in the database
+        'age' => $request->age,
+        'gender' => $request->gender,
+        'address' => $request->address,
+        'password' => bcrypt($request->password),
+    ]);
+
+    // Redirect or perform other actions
+    return redirect()->route('home')->with('success', 'Registration successful');
+}
+
     /**
      * Create a new controller instance.
      *
