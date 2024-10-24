@@ -10,7 +10,7 @@ class AdminController extends Controller
 
    public function getUsers(){
        $users = DB::table('tbl_users')->get();
-       return view('admin.index', ['myuser'=>$users]);
+       return view('admin.user', ['myuser'=>$users]);
     // return $users;
    }
 }

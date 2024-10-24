@@ -63,6 +63,7 @@ Route::view("/spin","admin.spinTem");
 Route::view("/index","admin.index");
 Route::view("/typo","admin.typography");
 Route::view("/widget","admin.widget");
+Route::view("/User","admin.user");
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
