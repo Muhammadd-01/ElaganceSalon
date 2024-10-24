@@ -41,7 +41,7 @@
     <header id="header" class="header-section">
         <div class="container">
             <nav class="navbar">
-                <a href="/" class="navbar-brand"><img src="img/" alt="Barbershop"></a>
+                <a href="/" class="navbar-brand"><img src="img/logo.png" alt="Barbershop"></a>
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
@@ -76,12 +76,9 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
-                            @else
+                        @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <img src="{{ asset('storage/' . Auth::user()->profile_picture_url) }}" alt="Profile Picture" class="rounded-circle" width="30" height="30" style="margin-right: 8px;">
-
-
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -97,7 +94,8 @@
                                     </form>
                                 </div>
                             </li>
-                            @endguest
+                        @endguest
+
                         </ul>
                     </div>
                     <div class="header-btn">
