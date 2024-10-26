@@ -9,6 +9,7 @@
     <meta name="author" content="">
     <title>Elegance Men Hair Salon</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link rel="stylesheet" href="css/elegant-font-icons.css">
@@ -40,8 +41,8 @@
 <body>
     <header id="header" class="header-section">
         <div class="container">
-            <nav class="navbar">
-                <a href="/" class="navbar-brand"><img src="img/logo.png" alt="Barbershop"></a>
+            <nav class="navbar ">
+                <a href="/" class="navbar-brand"><img src="img/" alt="Barbershop"></a>
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
@@ -62,48 +63,22 @@
                                     <li><a href="testimonals">Testimonials</a></li>
                                 </ul>
                             </li>
-                            <li><a href="blogclassic">Blog</a></li>
-                            <li><a href="contact">Contact</a></li>
-                            @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
+                            <li><a href="blogclassic">Blog</a>
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
                             </li>
-                        @endguest
-
+                            <li><a href="contact">Contact</a></li>
+                            <li><a href="login">Login</a></li>
+                            <li><a href="signup">SignUp</a></li>
                         </ul>
+
                     </div>
                     <div class="header-btn">
-                        <a href="/#appointment-form" class="menu-btn">Make Appointment</a>
+                        <a href="#" class="menu-btn">Make Appointment</a>
                     </div>
                 </div>
             </nav>
         </div>
+
     </header>
 
 {{-- Header end --}}
@@ -120,7 +95,63 @@
 
 
     {{-- Footer start --}}
-
+    <section class="widget_section padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="footer_widget">
+                        <img class="mb-15" src="img/logo (2).png" alt="Brand">
+                        <p>Our barbershop is the created for men who appreciate premium quality, time and flawless look.
+                        </p>
+                        <ul class="widget_social">
+                            <li><a href="#"><i class="social_facebook"></i></a></li>
+                            <li><a href="#"><i class="social_twitter"></i></a></li>
+                            <li><a href="#"><i class="social_googleplus"></i></a></li>
+                            <li><a href="#"><i class="social_instagram"></i></a></li>
+                            <li><a href="#"><i class="social_linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="footer_widget">
+                        <h3>Headquaters</h3>
+                        <p>962 Fifth Avenue, 3rd Floor New York, NY10022</p>
+                        <p><a href="https://html.dynamiclayers.net/cdn-cgi/l/email-protection" class="__cf_email__"
+                                data-cfemail="1d55787171725d7964737c70747e717c64786f6e33737869">[email&#160;protected]</a>
+                            <br>(+123) 456 789 101</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="footer_widget">
+                        <h3>Opening Hours</h3>
+                        <ul class="opening_time">
+                            <li>Monday - Friday 11:30am - 2:008pm</li>
+                            <li>Saturday – Monday: 9am – 8pm</li>
+                            <li>Monday - Friday 5:30am - 11:008pm</li>
+                            <li>Saturday - Sunday 4:30am - 1:00pm</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12 sm-padding">
+                    <div class="footer_widget">
+                        <h3>Subscribe to our contents</h3>
+                        <div class="subscribe_form">
+                            <form action="#" class="subscribe_form">
+                                <input type="email" name="email" id="subs-email" class="form_input"
+                                    placeholder="Email Address...">
+                                <button type="submit" class="submit">SUBSCRIBE</button>
+                                <div class="clearfix"></div>
+                                <div id="subscribe-result">
+                                    <p class="subscription-success"></p>
+                                    <p class="subscription-error"></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer_section">
         <div class="container">

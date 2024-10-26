@@ -6,8 +6,14 @@ use App\Http\Controllers\FeedbackController;
 
 //User Routes Start
 
+
+Route::get('/login', function () {
+    return view('auth.register');
+});
+
 Route::get('/', function () {
     return view('users.pages.welcome');
+
 });
 
 
@@ -57,30 +63,10 @@ Route::view("/spin","admin.spinTem");
 Route::view("/index","admin.index");
 Route::view("/typo","admin.typography");
 Route::view("/widget","admin.widget");
+Route::view("/User","admin.user");
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// error resolve
-// <<<<<<< jazib
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// =======
-// Route::group(['prefix' => 'staff', 'as' => 'staff.'], function () {
-//     Auth::routes(['guard' => 'staff']);
-// });
-// >>>>>>> jazib
 
