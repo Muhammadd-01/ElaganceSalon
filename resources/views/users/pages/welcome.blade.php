@@ -84,7 +84,9 @@
     <div class="map_pattern"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-6">
+            <div class="col-md-6 offset-md-6"><section id="appointment-form">
+                <!-- Appointment form content here -->
+
                 <form action="https://html.dynamiclayers.net/dl/barbershop/appointment.php" method="post"
                     id="appointment_form" class="form-horizontal appointment_form">
                     <div class="book_content">
@@ -139,7 +141,7 @@
             </div>
         </div>
     </div>
-</section>
+</section></section>
 <section id="gallery" class="gallery_section bg-grey bd-bottom padding">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
