@@ -42,7 +42,9 @@ Route::view("/login","auth.login");
 Route::view("/blogclassic","users.pages.blog-classic");
 Route::view("/appointment","users.pages.appointment");
 Route::view("/aboutcompany","users.pages.about-company");
-Route::post('/appointment/store', [AppointmentController::class, 'store'])->name('appointment.store');
+Route::post('/appointment/store', [AppointmentController::class, 'store'])
+    ->name('appointment.store')
+    ->middleware('auth');
 
 
 
