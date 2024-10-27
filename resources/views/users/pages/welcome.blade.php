@@ -2,7 +2,26 @@
 
 
 @section('content')
+<style>
+    .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
 
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+</style>
 <section class="hero_section d-flex align-items-center">
     <div class="video_bg"
         data-property="{videoURL:'3pFH7FQu5so',containment:'self',autoPlay:true, mute:true, startAt:0, opacity:1, showControls:false, ratio:'16/9', quality: 'hd720', showYTLogo: false }">
@@ -82,65 +101,72 @@
 <section class="book_section padding">
     <div class="book_bg"></div>
     <div class="map_pattern"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-6"><section id="appointment-form">
-                <!-- Appointment form content here -->
 
-                <form action="https://html.dynamiclayers.net/dl/barbershop/appointment.php" method="post"
-                    id="appointment_form" class="form-horizontal appointment_form">
-                    <div class="book_content">
-                        <h2>Make an appointment</h2>
-                        <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave
-                            men's and boys hair.</p>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-6 padding-10">
-                            <input type="text" id="app_name" name="app_name" class="form-control" placeholder="Name"
-                                required>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-6"><section id="appointment-form">
+                    <!-- Appointment form content here -->
+
+                    <form action="{{ route('appointment.store') }}" method="post" id="appointment_form" class="form-horizontal appointment_form">
+                         @csrf
+
+                        <div class="book_content">
+                            <h2>Make an appointment</h2>
+                            <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave
+                                men's and boys hair.</p>
                         </div>
-                        <div class="col-md-6 padding-10">
-                            <input type="email" id="app_email" name="app_email" class="form-control"
-                                placeholder="Your Email" required>
+                        <div class="form-group row">
+                            <div class="col-md-6 padding-10">
+                                <input type="text" id="app_name" name="app_name" class="form-control" placeholder="Name"
+                                    required>
+                            </div>
+                            <div class="col-md-6 padding-10">
+                                <input type="email" id="app_email" name="app_email" class="form-control"
+                                    placeholder="Your Email" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-6 padding-10">
-                            <input type="text" id="app_phone" name="app_phone" class="form-control"
-                                placeholder="Your Phone No" required>
+                        <div class="form-group row">
+                            <div class="col-md-6 padding-10">
+                                <input type="text" id="app_phone" name="app_phone" class="form-control"
+                                    placeholder="Your Phone No" required>
+                            </div>
+                            <div class="col-md-6 padding-10">
+                                <input type="text" id="app_free_time" name="app_free_time" class="form-control"
+                                    placeholder="Your Free Time" required>
+                            </div>
                         </div>
-                        <div class="col-md-6 padding-10">
-                            <input type="text" id="app_free_time" name="app_free_time" class="form-control"
-                                placeholder="Your Free Time" required>
+                        <div class="form-group row">
+                            <div class="col-md-6 padding-10">
+                                <select class="form-control" id="app_services" name="app_services">
+                                    <option>Services</option>
+                                    <option>Hair Styling</option>
+                                    <option>Hair Coloring</option>
+                                    <option>Hair Styling</option>
+                                    <option>Shaving</option>
+                                    <option>Face Mask</option>
+                                    <option>Hair Wash</option>
+                                    <option>Beard Triming</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 padding-10">
+                                <select class="form-control" id="app_barbers" name="app_barbers">
+                                    <option>Choose Barbers</option>
+                                    <option>Michel Brown</option>
+                                    <option>Jonathan Smith</option>
+                                    <option>Jack Tosan</option>
+                                    <option>Martin Lane</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-6 padding-10">
-                            <select class="form-control" id="app_services" name="app_services">
-                                <option>Services</option>
-                                <option>Hair Styling</option>
-                                <option>Shaving</option>
-                                <option>Face Mask</option>
-                                <option>Hair Wash</option>
-                                <option>Beard Triming</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6 padding-10">
-                            <select class="form-control" id="app_barbers" name="app_barbers">
-                                <option>Choose Barbers</option>
-                                <option>Michel Brown</option>
-                                <option>Jonathan Smith</option>
-                                <option>Jack Tosan</option>
-                                <option>Martin Lane</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
-                    <div id="msg-status" class="alert" role="alert"></div>
-                </form>
+                        <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
+                        <div id="msg-status" class="alert" role="alert" style="display: none;"></div>
+                    </form>
+                </div>
             </div>
-        </div>
-    </div>
+        </div>    </form>
+
+
 </section></section>
 <section id="gallery" class="gallery_section bg-grey bd-bottom padding">
     <div class="container">
@@ -479,5 +505,75 @@
         </ul>
     </div>
 </div>
+<script>
+    document.getElementById('appointment_form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent the default form submission
 
+        // Create FormData object from the form
+        let formData = new FormData(this);
+
+        // Send the AJAX request
+        fetch('{{ route("appointment.store") }}', {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
+                'Accept': 'application/json',
+            },
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            let msgStatus = document.getElementById('msg-status');
+
+            if(data.status === 'success') {
+                // Success message
+                msgStatus.style.display = 'block';
+                msgStatus.className = 'alert alert-success';
+                msgStatus.innerHTML = data.message;
+
+                // Reset the form
+                document.getElementById('appointment_form').reset();
+            } else {
+                // Error message
+                msgStatus.style.display = 'block';
+                msgStatus.className = 'alert alert-danger';
+                msgStatus.innerHTML = data.message;
+            }
+
+            // Hide the message after 5 seconds
+            setTimeout(() => {
+                msgStatus.style.display = 'none';
+            }, 5000);
+        })
+        .catch(error => {
+            let msgStatus = document.getElementById('msg-status');
+            msgStatus.style.display = 'block';
+            msgStatus.className = 'alert alert-danger';
+            msgStatus.innerHTML = 'Something went wrong. Please try again.';
+        });
+    });
+    </script>
+
+    <style>
+    /* Add these styles for the alert messages */
+    .alert {
+        padding: 15px;
+        margin-top: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        display: none;
+    }
+
+    .alert-success {
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+    }
+
+    .alert-danger {
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+    }
+    </style>
 @endsection

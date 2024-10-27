@@ -260,7 +260,7 @@
         <div class="call-to-action">
             <h2>Book Your Appointment Today</h2>
             <p>Step into a world of classic grooming and timeless style. Discover the charm of Elegance Men Hair Salon and elevate your look in a vintage-inspired setting.</p>
-            <a href="#booking">Schedule Now</a>
+            <a href="#">Schedule Now</a>
         </div>
 
 
