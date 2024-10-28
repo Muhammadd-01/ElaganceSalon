@@ -99,7 +99,7 @@
     </div>
 </section>
 @if(Auth::check())
-    <form action="{{ route('appointment.store') }}" method="post" id="appointment_form" class="form-horizontal appointment_form">
+    <form method="post" id="appointment_form" class="form-horizontal appointment_form">
         <section class="book_section padding">
             <div class="book_bg"></div>
             <div class="map_pattern"></div>
@@ -110,7 +110,7 @@
                         <div class="col-md-6 offset-md-6"><section id="appointment-form">
                             <!-- Appointment form content here -->
 
-                            <form action="{{ route('appointment.store') }}" method="post" id="appointment_form" class="form-horizontal appointment_form">
+                            <form method="post" id="appointment_form" class="form-horizontal appointment_form">
                                  @csrf
 
                                 <div class="book_content">
@@ -519,69 +519,6 @@
         </ul>
     </div>
 </div>
-<script>
-document.getElementById('appointment_form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    @guest
-        // If user is not logged in, show login message
-        let msgStatus = document.getElementById('msg-status');
-        msgStatus.style.display = 'block';
-        msgStatus.className = 'alert alert-danger';
-        msgStatus.innerHTML = 'Please <a href="{{ route("login") }}">login</a> to book an appointment';
-
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            msgStatus.style.display = 'none';
-        }, 5000);
-
-        return;
-    @endguest
-
-    let formData = new FormData(this);
-
-    fetch('{{ route("appointment.store") }}', {
-        method: 'POST',
-        headers: {
-            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
-            'Accept': 'application/json',
-        },
-        body: formData
-    })
-    .then(response => {
-        if (response.status === 401) {
-            window.location.href = '{{ route("login") }}';
-            return;
-        }
-        return response.json();
-    })
-    .then(data => {
-        let msgStatus = document.getElementById('msg-status');
-
-        if(data.status === 'success') {
-            msgStatus.style.display = 'block';
-            msgStatus.className = 'alert alert-success';
-            msgStatus.innerHTML = data.message;
-
-            document.getElementById('appointment_form').reset();
-        } else {
-            msgStatus.style.display = 'block';
-            msgStatus.className = 'alert alert-danger';
-            msgStatus.innerHTML = data.message;
-        }
-
-        setTimeout(() => {
-            msgStatus.style.display = 'none';
-        }, 5000);
-    })
-    .catch(error => {
-        let msgStatus = document.getElementById('msg-status');
-        msgStatus.style.display = 'block';
-        msgStatus.className = 'alert alert-danger';
-        msgStatus.innerHTML = 'Something went wrong. Please try again.';
-    });
-});
-</script>
 
     <style>
     /* Add these styles for the alert messages */
@@ -604,7 +541,7 @@ document.getElementById('appointment_form').addEventListener('submit', function(
         background-color: #f8d7da;
         border-color: #f5c6cb;
     }
-   
+
 .login-required-message {
     padding: 40px;
     background: #f8f9fa;

@@ -42,12 +42,6 @@ Route::view("/login","auth.login");
 Route::view("/blogclassic","users.pages.blog-classic");
 Route::view("/appointment","users.pages.appointment");
 Route::view("/aboutcompany","users.pages.about-company");
-Route::post('/appointment/store', [AppointmentController::class, 'store'])
-    ->name('appointment.store')
-    ->middleware('auth');
-
-
-
 Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
 
 
