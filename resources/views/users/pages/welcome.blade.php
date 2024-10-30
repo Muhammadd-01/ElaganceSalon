@@ -13,7 +13,7 @@
             <h1>Being a barber is about <br>taking care of the people.</h1>
             <p>Our barbershop is the territory created purely for males who appreciate<br> premium quality, time and
                 flawless look.</p>
-            <a href="#" class="default_btn">Make Appointment</a>
+            <a href="appointment" class="default_btn">Make Appointment</a>
         </div>
     </div>
 </section>
@@ -28,7 +28,7 @@
                         boys' hair. A barber's place of work is known as a "barbershop" or a "barber's". Barbershops
                         are also places of social interaction and public discourse. In some instances, barbershops
                         are also public forums.</p>
-                    <a href="#" class="default_btn">More About Us</a>
+                    <a href="aboutus" class="default_btn">More About Us</a>
                 </div>
             </div>
             <div class="col-md-6 xs-padding">
@@ -365,7 +365,7 @@
                         <div class="content_inner">
                             <h2>Haircuts</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="#">Make Appointment</a>
+                            <a href="appointment">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -377,7 +377,7 @@
                         <div class="content_inner">
                             <h2>Facials</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="#">Make Appointment</a>
+                            <a href="appointment">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -389,7 +389,7 @@
                         <div class="content_inner">
                             <h2>Makeups</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="#">Make Appointment</a>
+                            <a href="appointment">Make Appointment</a>
                         </div>
                     </div>
                 </div>

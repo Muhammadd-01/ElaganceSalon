@@ -42,7 +42,7 @@
     <header id="header" class="header-section">
         <div class="container">
             <nav class="navbar ">
-                <a href="/" class="navbar-brand"><img src="img/" alt="Barbershop"></a>
+                <img src="{{ asset('img/logo (2).png') }}" alt="Logo" style="width: 150px; height: auto; margin-left: 10px">
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
@@ -102,7 +102,7 @@
 
                     </div>
                     <div class="header-btn">
-                        <a href="#" class="menu-btn">Make Appointment</a>
+                        <a href="appointment" class="menu-btn">Make Appointment</a>
                     </div>
                 </div>
             </nav>
@@ -129,7 +129,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 sm-padding">
                     <div class="footer_widget">
-                        <img class="mb-15" src="img/logo (2).png" alt="Brand">
+                        <img class="mb-15" src="img/logo (2).png" alt="Brand" style="margin-top: -50px">
                         <p>Our barbershop is the created for men who appreciate premium quality, time and flawless look.
                         </p>
                         <ul class="widget_social">
