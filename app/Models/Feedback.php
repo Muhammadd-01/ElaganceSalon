@@ -5,7 +5,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 class Feedback extends Model
 {
-    protected $table = 'feedback';
+    use HasFactory;
+    protected $table = 'tbl_feedback';
 
-    protected $fillable = ['name', 'feedback'];
+    protected $fillable = [
+        // 'appoint_id',
+        'name',
+        'email',
+        'feedback',
+        'review',  // Add star_rating to fillable array
+    ];
 }

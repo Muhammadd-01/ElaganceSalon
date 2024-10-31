@@ -7,26 +7,27 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="admin/img/favicon.ico" rel="icon">
+      <!-- Favicon -->
+      <link href="{{ asset('admin/img/favicon.ico') }}" rel="icon">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+      <!-- Google Web Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+      <!-- Icon Font Stylesheet -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- admin/libraries Stylesheet -->
-    <link href="admin/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+      <!-- Library Stylesheet -->
+      <link href="{{ asset('admin/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+      <link href="{{ asset('admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="admin/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Customized Bootstrap Stylesheet -->
+      <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="admin/css/style.css" rel="stylesheet">
+      <!-- Template Stylesheet -->
+      <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -59,16 +60,34 @@
                 <div class="navbar-nav w-100">
                     <a href="index" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>User</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="button" class="dropdown-item">Buttons</a>
+
                             <a href="getUser" class="dropdown-item">showUser</a>
                             <a href="createUser" class="dropdown-item">addUser</a>
-                            <a href="typo" class="dropdown-item">Typography</a>
-                            <a href="element" class="dropdown-item">Other Elements</a>
+
                         </div>
                     </div>
-                    <a href="widget" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Services</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+
+                            <a href="adminServices" class="dropdown-item">showService</a>
+                            <a href="adminServicesCreate" class="dropdown-item">addService</a>
+
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Inventory</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+
+                            <a href="adminInventory" class="dropdown-item">showProducts</a>
+                            <a href="adminInventoryCreate" class="dropdown-item">addProducts</a>
+
+                        </div>
+                    </div>
+
+                    {{-- <a href="widget" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Feedback</a>
                     <a href="form" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
                     <a href="table" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
                     <a href="chart" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
@@ -80,7 +99,7 @@
                             <a href="404" class="dropdown-item">404 Error</a>
                             <a href="blank" class="dropdown-item">Blank Page</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </nav>
         </div>
@@ -213,19 +232,19 @@
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
-    <!-- JavaScript admin/libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="admin/lib/chart/chart.min.js"></script>
-    <script src="admin/lib/easing/easing.min.js"></script>
-    <script src="admin/lib/waypoints/waypoints.min.js"></script>
-    <script src="admin/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="admin/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="admin/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ asset('admin/lib/chart/chart.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/easing/easing.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/waypoints/waypoints.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/tempusdominus/js/moment.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 
-    <!-- Template Javascript -->
-    <script src="admin/js/main.js"></script>
+  <!-- Template JavaScript -->
+  <script src="{{ asset('admin/js/main.js') }}"></script>
 </body>
 
 </html>

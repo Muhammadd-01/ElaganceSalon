@@ -1,61 +1,42 @@
 @extends('users.pages.template')
 
-@section('content') <div class="container">
-
-
-<section class="contact-section padding">
-    <form action="{{ route('feedback.store') }}" method="POST" id="ajax_form" class="form-horizontal">
+@section('content')
+<div class="container">
+    <h2>Submit Your Review</h2>
+    <form action="{{ route('reviews.store') }}" method="POST">
         @csrf
-        <div class="form-group colum-row row">
-            <div class="col-sm-10">
-                <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
+        {{-- <div class="form-group">
+            <label for="appoint_id">Appointment ID</label>
+            <input type="text" name="appoint_id" class="form-control" required>
+        </div> --}}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="feedback">Feedback</label>
+            <textarea name="feedback" class="form-control" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="review">Star Rating</label><br>
+            <div>
+                <input type="radio" id="star1" name="star_rating" value="1" required>
+                <label for="star1">★</label>
+                <input type="radio" id="star2" name="star_rating" value="2">
+                <label for="star2">★</label>
+                <input type="radio" id="star3" name="star_rating" value="3">
+                <label for="star3">★</label>
+                <input type="radio" id="star4" name="star_rating" value="4">
+                <label for="star4">★</label>
+                <input type="radio" id="star5" name="star_rating" value="5">
+                <label for="star5">★</label>
             </div>
         </div>
-        <div class="form-group row">
-            <div class="col-md-12">
-                <textarea id="feedback" name="feedback" cols="30" rows="5" class="form-control message" placeholder="Message" required></textarea>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-md-12">
-                <button id="submit" class="default_btn" type="submit">Send Feedback</button>
-            </div>
-        </div>
-
-        <!-- Message container for success/error messages -->
-        <div id="form-messages" class="alert" role="alert" style="display:none;"></div>
-    </form></section>
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+    </form>
 </div>
-    <script>
-        $(document).ready(function() {
-            $('#ajax_form').on('submit', function(event) {
-                event.preventDefault(); // Prevent the default form submission
-
-                // Get the form data
-                var formData = $(this).serialize();
-
-                $.ajax({
-                    type: 'POST',
-                    url: $(this).attr('action'),
-                    data: formData,
-                    success: function(response) {
-                        // Show the success message from the response
-                        $('#form-messages').removeClass('alert alert-danger').addClass('alert alert-success');
-                        $('#form-messages').text(response.message).fadeIn(); // Use the message from the server
-                        $('#ajax_form')[0].reset(); // Reset the form
-                    },
-                    error: function(xhr) {
-                        // If there's an error, show the error message
-                        $('#form-messages').removeClass('alert alert-success').addClass('alert alert-danger');
-                        var errors = xhr.responseJSON.errors.feedback.join(', ');
-                        $('#form-messages').text(errors).fadeIn();
-                    }
-                });
-            });
-        });
-
-
-
-    </script>
-
 @endsection
