@@ -19,7 +19,7 @@
                 <div class="team_member">
                     <img src="img/team-1.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Kyle Frederick</h3>
+                        <h3>Zaki Haider</h3>
                         <p>WEB DESIGNER</p>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                 <div class="team_member">
                     <img src="img/team-2.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>José Carpio</h3>
+                        <h3>Jazib Salman</h3>
                         <p>WORDPRESS DEVELOPER</p>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                 <div class="team_member">
                     <img src="img/team-3.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Michel Ibáñez</h3>
+                        <h3>Hamza Akram</h3>
                         <p>ONLINE MARKETER</p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                 <div class="team_member">
                     <img src="img/team-4.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Adam Castellon</h3>
+                        <h3>Muhammad Affan</h3>
                         <p>JAVA SPECIALIST</p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                     <h2>Making You Look Good <br> Is In Our Haritage.</h2>
                     <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave men's
                         and boys hair.</p>
-                    <a href="#" class="default_btn">Make Appointment</a>
+                    <a href="appointment" class="default_btn">Make Appointment</a>
                 </div>
             </div>
         </div>

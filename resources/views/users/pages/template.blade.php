@@ -144,10 +144,10 @@
                 <div class="col-lg-3 col-md-6 sm-padding">
                     <div class="footer_widget">
                         <h3>Headquaters</h3>
-                        <p>962 Fifth Avenue, 3rd Floor New York, NY10022</p>
-                        <p><a href="https://html.dynamiclayers.net/cdn-cgi/l/email-protection" class="__cf_email__"
+                        <p>Aptech Metro Star Gate, Karachi</p>
+                        <p><a href="muhammadaffan1445@gmail.com" class="__cf_email__"
                                 data-cfemail="1d55787171725d7964737c70747e717c64786f6e33737869">[email&#160;protected]</a>
-                            <br>(+123) 456 789 101</p>
+                            <br>+92 3101259848</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 sm-padding">

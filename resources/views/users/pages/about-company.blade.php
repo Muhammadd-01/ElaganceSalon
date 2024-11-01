@@ -43,7 +43,7 @@
                 <div class="team_member">
                     <img src="img/team-1.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Jazib Salman</h3>
+                        <h3>Zaki Haider</h3>
                         <p>Beard Specialist</p>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="team_member">
                     <img src="img/team-2.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Affan</h3>
+                        <h3>Jazib Salman</h3>
                         <p>Hair Specialist</p>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                 <div class="team_member">
                     <img src="img/team-3.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Zaki Haider</h3>
+                        <h3>Hamza Akram</h3>
                         <p>Moustache Specialist</p>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                 <div class="team_member">
                     <img src="img/team-4.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Hamza Akram</h3>
+                        <h3>Muhammad Affan</h3>
                         <p>Facial Specialist</p>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                     <h2>Making You Look Good <br> Is In Our Haritage.</h2>
                     <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave men's
                         and boys hair.</p>
-                    <a href="#" class="default_btn">Make Appointment</a>
+                    <a href="appointment" class="default_btn">Make Appointment</a>
                 </div>
             </div>
         </div>
