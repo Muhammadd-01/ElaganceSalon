@@ -18,21 +18,27 @@ class ReviewController extends Controller
 
      public function store(Request $request)
      {
-         $request->validate([
-            //  'appoint_id' => 'required|integer',
-             'name' => 'required|string|max:255',
-             'email' => 'required|email|max:255',
-             'feedback' => 'required|string',
-             'review' => 'required|integer|min:1|max:5',  // Validate star rating
-         ]);
+
+        // return $request->all();
+
+        //  $request->validate([
+        //     //  'appoint_id' => 'required|integer',
+        //      'name' => 'required|string|max:255',
+        //      'email' => 'required|email|max:255',
+        //      'feedback' => 'required|string',
+        //      'review' => 'required|integer|min:1|max:5',  // Validate star rating
+        //  ]);
 
          Feedback::create([
-            //  'appoint_id' => $request->appoint_id,
+            //  'apponitId	' => $request->appoint_id,
+             'apponitId' => 1,
              'name' => $request->name,
+             'userId' => 17,
              'email' => $request->email,
              'feedback' => $request->feedback,
              'review' => $request->review,  // Save star rating
          ]);
+
 
          return redirect()->route('reviews.index')->with('success', 'Review submitted successfully!');
      }

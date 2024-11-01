@@ -58,13 +58,13 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/index" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>User</a>
                         <div class="dropdown-menu bg-transparent border-0">
 
-                            <a href="getUser" class="dropdown-item">showUser</a>
-                            <a href="createUser" class="dropdown-item">addUser</a>
+                            <a href="/getUser" class="dropdown-item">showUser</a>
+                            <a href="/createUser" class="dropdown-item">addUser</a>
 
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Inventory</a>
                         <div class="dropdown-menu bg-transparent border-0">
 
-                            <a href="adminInventory" class="dropdown-item">showProducts</a>
+                            <a href="{{Route('admin.products.index')}}" class="dropdown-item">showProducts</a>
                             <a href="adminInventoryCreate" class="dropdown-item">addProducts</a>
 
                         </div>

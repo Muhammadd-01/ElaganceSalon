@@ -22,7 +22,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($products as $product)
+            @foreach($data as $product)
             <tr>
                 <td>{{ $product->productName }}</td>
                 <td>{{ $product->productDescription }}</td>
@@ -30,7 +30,7 @@
                 <td>{{ $product->stock }}</td>
                 <td>${{ $product->productPrice }}</td>
                 <td>{{ $product->productStatus ? 'Available' : 'Unavailable' }}</td>
-                <td>{{ $product->productExpiry ? $product->productExpiry->format('Y-m-d') : 'N/A' }}</td>
+                <td>{{ $product->productExpiry }}</td>
             </tr>
         @endforeach
         </tbody>

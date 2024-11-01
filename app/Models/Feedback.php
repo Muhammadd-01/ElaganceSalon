@@ -9,7 +9,8 @@ class Feedback extends Model
     protected $table = 'tbl_feedback';
 
     protected $fillable = [
-        // 'appoint_id',
+        'apponitId',
+        'userId',
         'name',
         'email',
         'feedback',

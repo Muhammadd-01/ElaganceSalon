@@ -24,15 +24,15 @@
         <div class="form-group">
             <label for="review">Star Rating</label><br>
             <div>
-                <input type="radio" id="star1" name="star_rating" value="1" required>
+                <input type="radio" id="star1" name="review" value="1" required>
                 <label for="star1">★</label>
-                <input type="radio" id="star2" name="star_rating" value="2">
+                <input type="radio" id="star2" name="review" value="2">
                 <label for="star2">★</label>
-                <input type="radio" id="star3" name="star_rating" value="3">
+                <input type="radio" id="star3" name="review" value="3">
                 <label for="star3">★</label>
-                <input type="radio" id="star4" name="star_rating" value="4">
+                <input type="radio" id="star4" name="review" value="4">
                 <label for="star4">★</label>
-                <input type="radio" id="star5" name="star_rating" value="5">
+                <input type="radio" id="star5" name="review" value="5">
                 <label for="star5">★</label>
             </div>
         </div>

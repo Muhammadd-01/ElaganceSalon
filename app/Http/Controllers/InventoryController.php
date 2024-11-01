@@ -45,8 +45,9 @@ class InventoryController extends Controller
 
       public function index()
 {
-    $products = Inventory::all(); // Retrieve all products from the Inventory model
-    return view('admin.inventory', ['data'=>$products]); // Pass products to the view
+    $products = Inventory::all();
+    // return $products; // Retrieve all products from the Inventory model
+   return view('admin.inventory', ['data'=>$products]); // Pass products to the view
 }
 
 }
