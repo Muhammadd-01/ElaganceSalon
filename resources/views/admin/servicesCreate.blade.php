@@ -3,6 +3,7 @@
 @section('content')
 <div class="container mt-4">
     <h2>Add New Service</h2>
+    <a href="{{ route('services.index') }}" class="btn btn-secondary mb-3">View Services</a>
     <form action="{{ route('services.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group mb-3">

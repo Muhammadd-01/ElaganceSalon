@@ -4,7 +4,7 @@
     <!-- Button to Add New Service -->
     <div class="container mt-5 d-flex justify-content-between">
         <h2>Available Services</h2>
-        <a href="{{ route('admin.servicesCreate') }}" class="btn btn-success">Add New Service</a>
+        <a href="{{ route('admin.services.create') }}" class="btn btn-success">Add New Service</a>
     </div>
 
     <!-- Display Services Table -->

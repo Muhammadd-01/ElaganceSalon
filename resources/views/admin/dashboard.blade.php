@@ -72,8 +72,8 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Services</a>
                         <div class="dropdown-menu bg-transparent border-0">
 
-                            <a href="adminServices" class="dropdown-item">showService</a>
-                            <a href="adminServicesCreate" class="dropdown-item">addService</a>
+                            <a href="/services" class="dropdown-item">showService</a>
+                            <a href="/adminServicesCreate" class="dropdown-item">addService</a>
 
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                         <div class="dropdown-menu bg-transparent border-0">
 
                             <a href="{{Route('admin.products.index')}}" class="dropdown-item">showProducts</a>
-                            <a href="adminInventoryCreate" class="dropdown-item">addProducts</a>
+                            <a href="/adminInventoryCreate" class="dropdown-item">addProducts</a>
 
                         </div>
                     </div>

@@ -9,7 +9,7 @@ class InventoryController extends Controller
       // Method to display the product creation form
       public function create()
       {
-          return view('admin.inventory'); // Ensure this path is correct
+          return view('admin.inventoryCreate'); // Ensure this path is correct
       }
 
       // Method to handle form submission and store product data

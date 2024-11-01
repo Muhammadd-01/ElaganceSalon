@@ -68,7 +68,7 @@ Route::view("/User","admin.user");
 Route::view("/createUser","admin.userCreate");
 Route::view("/adminServices","admin.services");
 Route::view("/adminServicesCreate","admin.servicesCreate");
-// Route::view("/adminInventory","admin.inventory");
+Route::view("/adminInventory","admin.inventory");
 Route::view("/adminInventoryCreate","admin.inventoryCreate");
 
 Auth::routes();
@@ -90,7 +90,7 @@ Route::delete('/users/{id}', [HomeController::class, 'destroy'])->name('user.des
 
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::post('/services', [ServiceController::class, 'store'])->name('services.store');
-Route::get('/admin/services/create', [ServiceController::class, 'create'])->name('admin.servicesCreate');
+Route::get('/admin/services/create', [ServiceController::class, 'create'])->name('admin.services.create');
 
 
 //Inventory Routes
