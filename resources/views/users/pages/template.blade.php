@@ -16,30 +16,21 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <link rel="stylesheet" href="css/elegant-font-icons.css">
+    <link rel="stylesheet" href="{{ asset('css/elegant-font-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/elegant-line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/barber-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/venobox/venobox.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/slicknav.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
-    <link rel="stylesheet" href="css/elegant-line-icons.css">
-
-    <link rel="stylesheet" href="css/themify-icons.css">
-
-    <link rel="stylesheet" href="css/barber-icons.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="css/animate.min.css">
-
-    <link rel="stylesheet" href="css/venobox/venobox.css">
-
-    <link rel="stylesheet" href="css/nice-select.css">
-
-    <link rel="stylesheet" href="css/owl.carousel.css">
-
-    <link rel="stylesheet" href="css/slicknav.min.css">
-
-    <link rel="stylesheet" href="css/main.css">
-
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <!-- JavaScript -->
+    <script src="{{ asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
 </head>
 
 <body>
@@ -191,35 +182,22 @@
     </footer>
     <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
 
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-
-    <script src="js/vendor/bootstrap.min.js"></script>
-
-    <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
-
-    <script src="js/vendor/owl.carousel.min.js"></script>
-
-    <script src="js/vendor/jquery.isotope.v3.0.2.js"></script>
-
-    <script src="js/vendor/smooth-scroll.min.js"></script>
-
-    <script src="js/vendor/venobox.min.js"></script>
-
-    <script src="js/vendor/jquery.ajaxchimp.min.js"></script>
-
-    <script src="js/vendor/jquery.slicknav.min.js"></script>
-
-    <script src="js/vendor/jquery.nice-select.min.js"></script>
-
-    <script src="js/vendor/jquery.mb.YTPlayer.min.js"></script>
-
-    <script src="js/vendor/wow.min.js"></script>
-
-    <script src="js/contact.js"></script>
-
-    <script src="js/appointment.js"></script>
-
-    <script src="js/main.js"></script>
+   <!-- JavaScript Links -->
+   <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
+   <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
+   <script src="{{ asset('js/vendor/imagesloaded.pkgd.min.js') }}"></script>
+   <script src="{{ asset('js/vendor/owl.carousel.min.js') }}"></script>
+   <script src="{{ asset('js/vendor/jquery.isotope.v3.0.2.js') }}"></script>
+   <script src="{{ asset('js/vendor/smooth-scroll.min.js') }}"></script>
+   <script src="{{ asset('js/vendor/venobox.min.js') }}"></script>
+   <script src="{{ asset('js/vendor/jquery.ajaxchimp.min.js') }}"></script>
+   <script src="{{ asset('js/vendor/jquery.slicknav.min.js') }}"></script>
+   <script src="{{ asset('js/vendor/jquery.nice-select.min.js') }}"></script>
+   <script src="{{ asset('js/vendor/jquery.mb.YTPlayer.min.js') }}"></script>
+   <script src="{{ asset('js/vendor/wow.min.js') }}"></script>
+   <script src="{{ asset('js/contact.js') }}"></script>
+   <script src="{{ asset('js/appointment.js') }}"></script>
+   <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 

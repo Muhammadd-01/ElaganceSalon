@@ -153,7 +153,7 @@ class HomeController extends Controller
         // ]);
 
         // Create the new user
-     $res =    User::create(attributes: [
+     $res =  User::create(attributes: [
             'name' => $request->name,
             'email' => $request->email,
             'mobile' => $request->mobile,
