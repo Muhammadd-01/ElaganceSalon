@@ -3,13 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\FeedbackController;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\ReviewController;
->>>>>>> b8f8921dc39fb5de3e21c4e0c89a0d4559933b3f
 
 //User Routes Start
 

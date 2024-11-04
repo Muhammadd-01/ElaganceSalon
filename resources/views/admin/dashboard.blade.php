@@ -8,7 +8,7 @@
 
     <!-- Favicon -->
       <!-- Favicon -->
-      <link href="{{ asset('admin/img/favicon.ico') }}" rel="icon">
+      <link href="{{ asset('public/img/logo (2).png') }}" rel="icon">
 
       <!-- Google Web Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,11 +45,11 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
                 <a href="index" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>DarkPan</h3>
+                    <h3> <img src="img/logo (2).png" style="margin-left: 10px; height: 50px;"  "alt=""></h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="img/logo (2).png" alt="" style="width: 40px; height: 40px;">
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
@@ -86,6 +86,22 @@
 
                         </div>
                     </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Appointments</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+
+                            <a href="/services" class="dropdown-item">showAppointments</a>
+                            <a href="/adminServicesCreate" class="dropdown-item">addService</a>
+
+                        </div>
+
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Feedback</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+
+
+                        </div>
+
+
 
                     {{-- <a href="widget" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Feedback</a>
                     <a href="form" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
