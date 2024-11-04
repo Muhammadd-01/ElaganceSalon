@@ -43,9 +43,9 @@ class InventoryController extends Controller
         ]);
 
         // Toastr notification
-        toastr()->success('Product added successfully.');
 
-        return redirect()->route('admin.inventory')->with('success', 'Product added successfully');
+        return redirect()->route('admin.inventory')->Toastr('Product added successfully.', 'success');
+
     }
 
     // Method to display all inventory products
