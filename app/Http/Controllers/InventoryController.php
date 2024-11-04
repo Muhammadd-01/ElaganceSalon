@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Inventory;
 use Illuminate\Http\Request;
+use Flasher\Toastr\Prime\ToastrInterface;
 
 class InventoryController extends Controller
 {
@@ -41,6 +42,7 @@ class InventoryController extends Controller
           ]);
 
           return redirect()->route('admin.inventory')->with('success', 'Product added successfully');
+          toastr()->success('Product added successfully.');
       }
 
       public function index()
