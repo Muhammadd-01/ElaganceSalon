@@ -54,30 +54,32 @@
                                 </ul>
                             </li>
                             <li><a href="service">Services</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul>
-                                    <li><a href="appointment">Appointment</a></li>
-                                    <li><a href="gallery">Gallery</a></li>
-                                    <li><a href="team">Our Team</a></li>
-                                    <li><a href="feedback">Feedback</a></li>
-                                    <li><a href="testimonals">Testimonials</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="blogclassic">Blog</a>
+                            <li><a href="feedback">Feedback</a>
 
                             </li>
                             <li><a href="contact">Contact</a></li>
+                            <li><a href="appointment" >Appointment</a></li>
                             @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
+                            <div class="header-btn" style="margin-top: 20px;">
+                                <a class="menu-btn" href="{{ route('login') }}"
+                                   style="display: inline-block;  border-radius: 15px;"
+                                   onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
+                                   onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                    {{ __('Login') }}
+                                </a>
+                            </div>
+                            
+                            
                             @endif
 
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
+                                <div class="header-btn" style="margin-top: 20px;">
+                                    <a class="menu-btn" href="{{ route('register') }}"style="display: inline-block;  border-radius: 15px;"
+                                    onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
+                                    onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                        {{ __('Register') }}</a>
+                                </div>
                             @endif
                         @else
                             <li class="nav-item dropdown">
@@ -101,9 +103,7 @@
                         </ul>
 
                     </div>
-                    <div class="header-btn">
-                        <a href="appointment" class="menu-btn">Make Appointment</a>
-                    </div>
+                    
                 </div>
             </nav>
         </div>

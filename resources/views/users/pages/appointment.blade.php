@@ -5,7 +5,7 @@
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
             <h3>Trendy Salon &amp; Spa</h3>
-            <h2>Make Appointment</h2>
+            <h2>Appointment</h2>
             <div class="heading-line"></div>
         </div>
     </div>
@@ -91,6 +91,7 @@
                                 <option value="face_mask">Face Mask</option>
                                 <option value="hair_wash">Hair Wash</option>
                                 <option value="beard_trimming">Beard Trimming</option>
+                                <option value="message_therapy">Message Therapy</option>
                             </select>
                         </div>
                         <div class="col-md-6 padding-10">
@@ -213,7 +214,8 @@
             shaving: "$20",
             face_mask: "$25",
             hair_wash: "$15",
-            beard_trimming: "$18"
+            beard_trimming: "$18",
+            message_therapy: "$40"
         };
 
         const serviceSelect = document.getElementById('app_services');
