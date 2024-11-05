@@ -86,14 +86,8 @@
 
                         </div>
                     </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Appointments</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-
-                            <a href="/services" class="dropdown-item">showAppointments</a>
-                            <a href="/adminServicesCreate" class="dropdown-item">addService</a>
-
-                        </div>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Appointments</a>
+                    
 
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Feedback</a>
                         <div class="dropdown-menu bg-transparent border-0">
