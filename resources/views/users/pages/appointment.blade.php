@@ -55,45 +55,34 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-6">
-                <form action="https://html.dynamiclayers.net/dl/barbershop/appointment.php" method="post"
-                    id="appointment_form" class="form-horizontal appointment_form">
+                <form action="{{ route('appointments.store') }}" method="POST" id="appointment_form" class="form-horizontal appointment_form">
+                    @csrf
                     <div class="book_content">
                         <h2>Make an appointment</h2>
-                        <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave
-                            men's and boys hair.</p>
+                        <p>Barber is a person whose occupation is mainly to cut, groom, and shave men's and boys' hair.</p>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6 padding-10">
-                            <input type="text" id="app_name" name="app_name" class="form-control" placeholder="Name"
-                                required>
+                            <input type="text" id="app_name" name="app_name" class="form-control" placeholder="Name" required>
                         </div>
                         <div class="col-md-6 padding-10">
-                            <input type="email" id="app_email" name="app_email" class="form-control"
-                                placeholder="Your Email" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-6 padding-10">
-                            <input type="text" id="app_phone" name="app_phone" class="form-control"
-                                placeholder="Your Phone No" required>
-                        </div>
-                        <div class="col-md-6 padding-10">
-                            <input type="text" id="app_free_time" name="app_free_time" class="form-control"
-                                placeholder="Your Free Time" required>
+                            <input type="email" id="app_email" name="app_email" class="form-control" placeholder="Your Email" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6 padding-10">
-                            <select class="form-control" id="app_services" name="app_services" onchange="updatePrice()">
-                                <option value="">Select Service</option>
-                                <option value="hair_styling">Hair Styling</option>
-                                <option value="shaving">Shaving</option>
-                                <option value="face_mask">Face Mask</option>
-                                <option value="hair_wash">Hair Wash</option>
-                                <option value="beard_trimming">Beard Trimming</option>
-                                <option value="message_therapy">Message Therapy</option>
-                            </select>
+                            <input type="text" id="app_phone" name="app_phone" class="form-control" placeholder="Your Phone No" required>
                         </div>
+                        <div class="col-md-6 padding-10">
+                            <input type="date" id="app_book_date" name="book_date" class="form-control" placeholder="Booking Date" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 padding-10">
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <div class="col-md-6 padding-10">
                             <select class="form-control" id="app_barbers" name="app_barbers">
                                 <option>Choose Barbers</option>
@@ -102,6 +91,22 @@
                                 <option>Jack Tosan</option>
                                 <option>Martin Lane</option>
                             </select>
+                        </div>
+                        <div class="col-md-6 padding-10">
+                            <input type="number" id="pay_amount" name="pay_amount" class="form-control" placeholder="Payment Amount" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 padding-10">
+                            <select class="form-control" id="payment_method" name="payment_method" required>
+                                <option value="">Payment Method</option>
+                                <option value="credit_card">Credit Card</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="cash">Cash</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 padding-10">
+                            <input type="hidden" name="status" value="pending">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -116,6 +121,7 @@
         </div>
     </div>
 </section>
+
 <section id="team" class="team_section bd-bottom padding">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
