@@ -32,7 +32,7 @@
             <h1>Being a barber is about <br>taking care of the people.</h1>
             <p>Our barbershop is the territory created purely for males who appreciate<br> premium quality, time and
                 flawless look.</p>
-            <a href="#" class="default_btn">Make Appointment</a>
+            <a href="appointment" class="default_btn">Make Appointment</a>
         </div>
     </div>
 </section>
@@ -47,7 +47,7 @@
                         boys' hair. A barber's place of work is known as a "barbershop" or a "barber's". Barbershops
                         are also places of social interaction and public discourse. In some instances, barbershops
                         are also public forums.</p>
-                    <a href="#" class="default_btn">More About Us</a>
+                    <a href="aboutus" class="default_btn">More About Us</a>
                 </div>
             </div>
             <div class="col-md-6 xs-padding">
@@ -98,90 +98,69 @@
         </div>
     </div>
 </section>
-@if(Auth::check())
-    <form method="post" id="appointment_form" class="form-horizontal appointment_form">
-        <section class="book_section padding">
-            <div class="book_bg"></div>
-            <div class="map_pattern"></div>
+<section class="book_section padding">
+    <div class="book_bg"></div>
+    <div class="map_pattern"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-6"><section id="appointment-form">
+                <!-- Appointment form content here -->
 
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 offset-md-6"><section id="appointment-form">
-                            <!-- Appointment form content here -->
-
-                            <form method="post" id="appointment_form" class="form-horizontal appointment_form">
-                                 @csrf
-
-                                <div class="book_content">
-                                    <h2>Make an appointment</h2>
-                                    <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave
-                                        men's and boys hair.</p>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-6 padding-10">
-                                        <input type="text" id="app_name" name="app_name" class="form-control" placeholder="Name"
-                                            required>
-                                    </div>
-                                    <div class="col-md-6 padding-10">
-                                        <input type="email" id="app_email" name="app_email" class="form-control"
-                                            placeholder="Your Email" required>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-6 padding-10">
-                                        <input type="text" id="app_phone" name="app_phone" class="form-control"
-                                            placeholder="Your Phone No" required>
-                                    </div>
-                                    <div class="col-md-6 padding-10">
-                                        <input type="text" id="app_free_time" name="app_free_time" class="form-control"
-                                            placeholder="Your Free Time" required>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-6 padding-10">
-                                        <select class="form-control" id="app_services" name="app_services">
-                                            <option>Services</option>
-                                            <option>Hair Styling</option>
-                                            <option>Hair Coloring</option>
-                                            <option>Hair Styling</option>
-                                            <option>Shaving</option>
-                                            <option>Face Mask</option>
-                                            <option>Hair Wash</option>
-                                            <option>Beard Triming</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 padding-10">
-                                        <select class="form-control" id="app_barbers" name="app_barbers">
-                                            <option>Choose Barbers</option>
-                                            <option>Michel Brown</option>
-                                            <option>Jonathan Smith</option>
-                                            <option>Jack Tosan</option>
-                                            <option>Martin Lane</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
-                                <div id="msg-status" class="alert" role="alert" style="display: none;"></div>
-                            </form>
+                <form action="https://html.dynamiclayers.net/dl/barbershop/appointment.php" method="post"
+                    id="appointment_form" class="form-horizontal appointment_form">
+                    <div class="book_content">
+                        <h2>Make an appointment</h2>
+                        <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave
+                            men's and boys hair.</p>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 padding-10">
+                            <input type="text" id="app_name" name="app_name" class="form-control" placeholder="Name"
+                                required>
+                        </div>
+                        <div class="col-md-6 padding-10">
+                            <input type="email" id="app_email" name="app_email" class="form-control"
+                                placeholder="Your Email" required>
                         </div>
                     </div>
-                </div>    </form>
-
-
-        </section>
-    </form>
-@else
-    <div class="login-required-message text-center">
-        <h3>Please Login to Book an Appointment</h3>
-        <p>You need to be logged in to book an appointment with us.</p>
-        <a href="{{ route('login') }}" class="default_btn">Login Now</a>
-        <p class="mt-3">Don't have an account? <a href="{{ route('register') }}">Register here</a></p>
+                    <div class="form-group row">
+                        <div class="col-md-6 padding-10">
+                            <input type="text" id="app_phone" name="app_phone" class="form-control"
+                                placeholder="Your Phone No" required>
+                        </div>
+                        <div class="col-md-6 padding-10">
+                            <input type="text" id="app_free_time" name="app_free_time" class="form-control"
+                                placeholder="Your Free Time" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 padding-10">
+                            <select class="form-control" id="app_services" name="app_services">
+                                <option>Services</option>
+                                <option>Hair Styling</option>
+                                <option>Shaving</option>
+                                <option>Face Mask</option>
+                                <option>Hair Wash</option>
+                                <option>Beard Triming</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 padding-10">
+                            <select class="form-control" id="app_barbers" name="app_barbers">
+                                <option>Choose Barbers</option>
+                                <option>Michel Brown</option>
+                                <option>Jonathan Smith</option>
+                                <option>Jack Tosan</option>
+                                <option>Martin Lane</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
+                    <div id="msg-status" class="alert" role="alert"></div>
+                </form>
+            </div>
+        </div>
     </div>
-@endif
-
-
-
+</section></section>
 <section id="gallery" class="gallery_section bg-grey bd-bottom padding">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
@@ -253,7 +232,7 @@
                 <div class="team_member">
                     <img src="img/team-1.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Kyle Frederick</h3>
+                        <h3>Zaki Haider</h3>
                         <p>WEB DESIGNER</p>
                     </div>
                 </div>
@@ -262,7 +241,7 @@
                 <div class="team_member">
                     <img src="img/team-2.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>José Carpio</h3>
+                        <h3>Jazib Salman</h3>
                         <p>WORDPRESS DEVELOPER</p>
                     </div>
                 </div>
@@ -271,7 +250,7 @@
                 <div class="team_member">
                     <img src="img/team-3.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Michel Ibáñez</h3>
+                        <h3>Hamza Akram</h3>
                         <p>ONLINE MARKETER</p>
                     </div>
                 </div>
@@ -280,7 +259,7 @@
                 <div class="team_member">
                     <img src="img/team-4.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Adam Castellon</h3>
+                        <h3>Muhammad Affan</h3>
                         <p>JAVA SPECIALIST</p>
                     </div>
                 </div>
@@ -405,7 +384,7 @@
                         <div class="content_inner">
                             <h2>Haircuts</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="#">Make Appointment</a>
+                            <a href="appointment">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -417,7 +396,7 @@
                         <div class="content_inner">
                             <h2>Facials</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="#">Make Appointment</a>
+                            <a href="appointment">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -429,7 +408,7 @@
                         <div class="content_inner">
                             <h2>Makeups</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="#">Make Appointment</a>
+                            <a href="appointment">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -519,45 +498,5 @@
         </ul>
     </div>
 </div>
-
-    <style>
-    /* Add these styles for the alert messages */
-    .alert {
-        padding: 15px;
-        margin-top: 20px;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        display: none;
-    }
-
-    .alert-success {
-        color: #155724;
-        background-color: #d4edda;
-        border-color: #c3e6cb;
-    }
-
-    .alert-danger {
-        color: #721c24;
-        background-color: #f8d7da;
-        border-color: #f5c6cb;
-    }
-
-.login-required-message {
-    padding: 40px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-.login-required-message h3 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.login-required-message p {
-    margin-bottom: 20px;
-    color: #666;
-}
-</style>
 
 @endsection
