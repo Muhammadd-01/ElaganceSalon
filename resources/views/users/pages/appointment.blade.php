@@ -84,7 +84,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6 padding-10">
-                            <select class="form-control" id="app_services" name="app_services" onchange="updatePrice()">
+                            {{-- <select class="form-control" id="app_services" name="app_services" onchange="updatePrice()">
                                 <option value="">Select Service</option>
                                 <option value="hair_styling">Hair Styling</option>
                                 <option value="shaving">Shaving</option>
@@ -92,7 +92,7 @@
                                 <option value="hair_wash">Hair Wash</option>
                                 <option value="beard_trimming">Beard Trimming</option>
                                 <option value="message_therapy">Message Therapy</option>
-                            </select>
+                            </select> --}}
                         </div>
                         <div class="col-md-6 padding-10">
                             <select class="form-control" id="app_barbers" name="app_barbers">

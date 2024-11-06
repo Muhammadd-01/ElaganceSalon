@@ -1,4 +1,3 @@
-{{-- header start --}}
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -42,7 +41,7 @@
     <header id="header" class="header-section">
         <div class="container">
             <nav class="navbar ">
-                <img src="{{ asset('img/logo (2).png') }}" alt="Logo" style="width: 150px; height: auto; margin-left: 10px">
+                {{-- <img src="{{ asset('img/logo (2).png') }}" alt="Logo" style="width: 150px; height: auto; margin-left: 10px"> --}}
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
