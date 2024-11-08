@@ -44,7 +44,7 @@ class InventoryController extends Controller
 
         // Toastr notification
 
-        return redirect()->route('admin.inventory')->Toastr('Product added successfully.', 'success');
+        return redirect()->route('admin.products.index');
 
     }
 

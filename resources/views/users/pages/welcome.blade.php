@@ -13,7 +13,7 @@
             <h1>Being a barber is about <br>taking care of the people.</h1>
             <p>Our barbershop is the territory created purely for males who appreciate<br> premium quality, time and
                 flawless look.</p>
-            <a href="#" class="default_btn">Make Appointment</a>
+            <a href="appointment" class="default_btn">Make Appointment</a>
         </div>
     </div>
 </section>
@@ -28,7 +28,7 @@
                         boys' hair. A barber's place of work is known as a "barbershop" or a "barber's". Barbershops
                         are also places of social interaction and public discourse. In some instances, barbershops
                         are also public forums.</p>
-                    <a href="#" class="default_btn">More About Us</a>
+                    <a href="aboutus" class="default_btn">More About Us</a>
                 </div>
             </div>
             <div class="col-md-6 xs-padding">
@@ -84,9 +84,7 @@
     <div class="map_pattern"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-6"><section id="appointment-form">
-                <!-- Appointment form content here -->
-
+            <div class="col-md-6 offset-md-6">
                 <form action="https://html.dynamiclayers.net/dl/barbershop/appointment.php" method="post"
                     id="appointment_form" class="form-horizontal appointment_form">
                     <div class="book_content">
@@ -116,13 +114,13 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6 padding-10">
-                            <select class="form-control" id="app_services" name="app_services">
-                                <option>Services</option>
-                                <option>Hair Styling</option>
-                                <option>Shaving</option>
-                                <option>Face Mask</option>
-                                <option>Hair Wash</option>
-                                <option>Beard Triming</option>
+                            <select class="form-control" id="app_services" name="app_services" onchange="updatePrice()">
+                                <option value="">Select Service</option>
+                                <option value="hair_styling">Hair Styling</option>
+                                <option value="shaving">Shaving</option>
+                                <option value="face_mask">Face Mask</option>
+                                <option value="hair_wash">Hair Wash</option>
+                                <option value="beard_trimming">Beard Trimming</option>
                             </select>
                         </div>
                         <div class="col-md-6 padding-10">
@@ -135,13 +133,18 @@
                             </select>
                         </div>
                     </div>
+                    <div class="form-group row">
+                        <div class="col-md-12 padding-10">
+                            <p id="service_price" class="text-center" style="font-weight: bold;"></p>
+                        </div>
+                    </div>
                     <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
                     <div id="msg-status" class="alert" role="alert"></div>
                 </form>
             </div>
         </div>
     </div>
-</section></section>
+</section>
 <section id="gallery" class="gallery_section bg-grey bd-bottom padding">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
@@ -213,7 +216,7 @@
                 <div class="team_member">
                     <img src="img/team-1.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Kyle Frederick</h3>
+                        <h3>Zaki Haider</h3>
                         <p>WEB DESIGNER</p>
                     </div>
                 </div>
@@ -222,7 +225,7 @@
                 <div class="team_member">
                     <img src="img/team-2.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>José Carpio</h3>
+                        <h3>Jazib Salman</h3>
                         <p>WORDPRESS DEVELOPER</p>
                     </div>
                 </div>
@@ -231,7 +234,7 @@
                 <div class="team_member">
                     <img src="img/team-3.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Michel Ibáñez</h3>
+                        <h3>Hamza Akram</h3>
                         <p>ONLINE MARKETER</p>
                     </div>
                 </div>
@@ -240,7 +243,7 @@
                 <div class="team_member">
                     <img src="img/team-4.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Adam Castellon</h3>
+                        <h3>Muhammad Affan</h3>
                         <p>JAVA SPECIALIST</p>
                     </div>
                 </div>
@@ -365,7 +368,7 @@
                         <div class="content_inner">
                             <h2>Haircuts</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="#">Make Appointment</a>
+                            <a href="appointment">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -377,7 +380,7 @@
                         <div class="content_inner">
                             <h2>Facials</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="#">Make Appointment</a>
+                            <a href="appointment">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -389,7 +392,7 @@
                         <div class="content_inner">
                             <h2>Makeups</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="#">Make Appointment</a>
+                            <a href="appointment">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -479,5 +482,26 @@
         </ul>
     </div>
 </div>
+<script>
+    function updatePrice() {
+        const prices = {
+            hair_styling: "$30",
+            shaving: "$20",
+            face_mask: "$25",
+            hair_wash: "$15",
+            beard_trimming: "$18"
+        };
+
+        const serviceSelect = document.getElementById('app_services');
+        const selectedService = serviceSelect.value;
+        const priceDisplay = document.getElementById('service_price');
+
+        if (prices[selectedService]) {
+            priceDisplay.textContent = `Price: ${prices[selectedService]}`;
+        } else {
+            priceDisplay.textContent = '';
+        }
+    }
+</script>
 
 @endsection

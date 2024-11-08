@@ -12,7 +12,10 @@ class ServiceController extends Controller
         return view('admin.services', ['service' => $services]);
         // return $services;
     }
-
+    public function create()
+    {
+        return view('admin.servicesCreate'); // Ensure this path is correct
+    }
     public function store(Request $request)
     {
         $request->validate([
