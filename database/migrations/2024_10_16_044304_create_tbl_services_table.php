@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('tbl_services', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->text('description')->nullable();
-            $table->string('image');
-            $table->integer('price')->nullable();
+            $table->string('name')->nullable()->change();
+            $table->text('description')->nullable()->change();
+            $table->string('image')->nullable()->change();
+            $table->integer('price')->nullable()->change();
             $table->timestamps();
         });
     }

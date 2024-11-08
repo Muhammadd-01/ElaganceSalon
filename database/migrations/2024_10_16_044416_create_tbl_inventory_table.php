@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('productName');
             $table->text('productDescription');
             $table->integer('Stock');
-            $table->string('productImage');
+            $table->string('productImage')->nullable();
             $table->integer('productPrice');
             $table->string('productStatus')->default('inStock');
             $table->string('productExpiry');

@@ -32,11 +32,12 @@
     <header id="header" class="header-section">
         <div class="container">
             <nav class="navbar ">
-
+               <a href="/"> <img src="{{ asset('img/logo (2).png') }}" style="height: 120px; margin-left: 48px;" alt=""></a>
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
-                            <li><a data-scroll class="nav-link active" href="/">Home<span class="sr-only">(current)</span></a></li>
+                            <li><a data-scroll class="nav-link active" href="/">Home<span
+                                        class="sr-only">(current)</span></a></li>
                             <li><a href="aboutus">About</a>
                                 <ul>
                                     <li><a href="aboutus">About Us</a></li>
@@ -48,59 +49,60 @@
 
                             </li>
                             <li><a href="contact">Contact</a></li>
-                            <li><a href="appointment" >Appointment</a></li>
+                            <li><a href="appointment">Appointment</a></li>
                             @guest
-                            @if (Route::has('login'))
-                            <div class="header-btn" style="margin-top: 20px;">
-                                <a class="menu-btn" href="{{ route('login') }}"
-                                   style="display: inline-block;  border-radius: 15px;"
-                                   onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
-                                   onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
-                                    {{ __('Login') }}
-                                </a>
-                            </div>
-                            
-                            
-                            @endif
+                                @if (Route::has('login'))
+                                    <div class="header-btn" style="margin-top: 20px;">
+                                        <a class="menu-btn" href="{{ route('login') }}"
+                                            style="display: inline-block;  border-radius: 15px;"
+                                            onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
+                                            onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                            {{ __('Login') }}
+                                        </a>
+                                    </div>
+                                @endif
 
-                            @if (Route::has('register'))
-                                <div class="header-btn" style="margin-top: 20px;">
-                                    <a class="menu-btn" href="{{ route('register') }}"style="display: inline-block;  border-radius: 15px;"
-                                    onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
-                                    onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
-                                        {{ __('Register') }}</a>
-                                </div>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                @if (Route::has('register'))
+                                    <div class="header-btn" style="margin-top: 20px;">
+                                        <a class="menu-btn"
+                                            href="{{ route('register') }}"style="display: inline-block;  border-radius: 15px;"
+                                            onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
+                                            onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                            {{ __('Register') }}</a>
+                                    </div>
+                                @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
                         </ul>
 
                     </div>
-                    
+
                 </div>
             </nav>
         </div>
 
     </header>
 
-{{-- Header end --}}
+    {{-- Header end --}}
 
 
 
@@ -119,7 +121,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 sm-padding">
                     <div class="footer_widget">
-                        <img class="mb-15" src="img/logo (2).png" alt="Brand" style="margin-top: -50px">
+                        <a href="/"><img class="mb-15" src="img/logo (2).png" alt="Brand" style="margin-top: -50px;"></a>
                         <p>Our barbershop is the created for men who appreciate premium quality, time and flawless look.
                         </p>
                         <ul class="widget_social">
@@ -137,7 +139,8 @@
                         <p>Aptech Metro Star Gate, Karachi</p>
                         <p><a href="muhammadaffan1445@gmail.com" class="__cf_email__"
                                 data-cfemail="1d55787171725d7964737c70747e717c64786f6e33737869">[email&#160;protected]</a>
-                            <br>+92 3101259848</p>
+                            <br>+92 3101259848
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 sm-padding">
@@ -177,7 +180,9 @@
             <div class="row">
                 <div class="col-md-6 xs-padding">
                     <div class="copyright">&copy;
-                        <script type="text/javascript"> document.write(new Date().getFullYear())</script> All Rights Reserved By Elegance
+                        <script type="text/javascript">
+                            document.write(new Date().getFullYear())
+                        </script> All Rights Reserved By Elegance
 
                     </div>
                 </div>
@@ -193,22 +198,22 @@
     </footer>
     <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
 
-   <!-- JavaScript Links -->
-   <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
-   <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
-   <script src="{{ asset('js/vendor/imagesloaded.pkgd.min.js') }}"></script>
-   <script src="{{ asset('js/vendor/owl.carousel.min.js') }}"></script>
-   <script src="{{ asset('js/vendor/jquery.isotope.v3.0.2.js') }}"></script>
-   <script src="{{ asset('js/vendor/smooth-scroll.min.js') }}"></script>
-   <script src="{{ asset('js/vendor/venobox.min.js') }}"></script>
-   <script src="{{ asset('js/vendor/jquery.ajaxchimp.min.js') }}"></script>
-   <script src="{{ asset('js/vendor/jquery.slicknav.min.js') }}"></script>
-   <script src="{{ asset('js/vendor/jquery.nice-select.min.js') }}"></script>
-   <script src="{{ asset('js/vendor/jquery.mb.YTPlayer.min.js') }}"></script>
-   <script src="{{ asset('js/vendor/wow.min.js') }}"></script>
-   <script src="{{ asset('js/contact.js') }}"></script>
-   <script src="{{ asset('js/appointment.js') }}"></script>
-   <script src="{{ asset('js/main.js') }}"></script>
+    <!-- JavaScript Links -->
+    <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/jquery.isotope.v3.0.2.js') }}"></script>
+    <script src="{{ asset('js/vendor/smooth-scroll.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/venobox.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/jquery.slicknav.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/jquery.mb.YTPlayer.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/wow.min.js') }}"></script>
+    <script src="{{ asset('js/contact.js') }}"></script>
+    <script src="{{ asset('js/appointment.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 
