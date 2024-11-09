@@ -1,10 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    <style>
-        *{
-            padding: 0;
-        }
-    </style>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,10 +52,7 @@
                             @guest
                             @if (Route::has('login'))
                             <div class="header-btn" style="margin-top: 20px;">
-                                <a class="menu-btn" href="{{ route('login') }}"
-                                   style="display: inline-block;  border-radius: 15px;"
-                                   onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
-                                   onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                <a class="menu-btn" href="{{ route('login') }}">
                                     {{ __('Login') }}
                                 </a>
                             </div>
@@ -69,9 +62,7 @@
 
                             @if (Route::has('register'))
                                 <div class="header-btn" style="margin-top: 20px;">
-                                    <a class="menu-btn" href="{{ route('register') }}"style="display: inline-block;  border-radius: 15px;"
-                                    onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
-                                    onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                    <a class="menu-btn" href="{{ route('register') }}">
                                         {{ __('Register') }}</a>
                                 </div>
                             @endif

@@ -147,10 +147,10 @@
                         <div class="col-md-6 padding-10">
                             <select class="form-control" id="app_barbers" name="app_barbers">
                                 <option>Choose Barbers</option>
-                                <option>Michel Brown</option>
-                                <option>Jonathan Smith</option>
-                                <option>Jack Tosan</option>
-                                <option>Martin Lane</option>
+                                <option>Jazib Salman</option>
+                                <option>Affan</option>
+                                <option>Zaki Haider</option>
+                                <option>Hamza Akram</option>
                             </select>
                         </div>
                     </div>
