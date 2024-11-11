@@ -90,8 +90,32 @@ a:hover {
     color: #007bff; /* Hover color to match theme */
     text-decoration: underline;
 }
+/* Apply specific styles to the gender select */
+#gender {
+    background-color: #ffffff; /* White background for the select dropdown */
+    color: #333;               /* Dark text color */
+    border-radius: 8px;        /* Rounded corners */
+    border: 1px solid #343a40; /* Consistent border */
+    padding: 10px;             /* Padding for the select box */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow */
+    -webkit-appearance: none;  /* Remove default dropdown styles in WebKit browsers */
+    -moz-appearance: none;     /* Remove default dropdown styles in Firefox */
+    appearance: none;          /* Standardize appearance across browsers */
+}
+
+/* Make sure the options have a white background */
+#gender option {
+    background-color: #ffffff;  /* White background for options */
+    color: #333;                /* Dark text color for contrast */
+}
 
  </style>
+
+
+
+
+
+
 </head>
 <body>
 <div class="container">
@@ -156,23 +180,22 @@ a:hover {
                         </div>
 
 
-                        <!-- Gender Field -->
-<div class="row mb-3">
-    <label for="gender" class="col-md-4 col-form-label text-md-end">{{ __('Gender') }}</label>
-    <div class="col-md-6">
-        <select id="gender" class="form-control @error('gender') is-invalid @enderror" name="gender">
-            <option value="">{{ __('Select Gender') }}</option>
-            <option value="Male">{{ __('Male') }}</option>
-            <option value="Female">{{ __('Female') }}</option>
-            <option value="Other">{{ __('Other') }}</option>
-        </select>
-        @error('gender')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-        @enderror
-    </div>
-</div>
+                        <div class="row mb-3">
+                            <label for="gender" class="col-md-4 col-form-label text-md-end">{{ __('Gender') }}</label>
+                            <div class="col-md-6">
+                                <select id="gender" class="form-control @error('gender') is-invalid @enderror" name="gender">
+                                    <option value="">{{ __('Select Gender') }}</option>
+                                    <option value="Male">{{ __('Male') }}</option>
+                                    <option value="Female">{{ __('Female') }}</option>
+                                    <option value="Other">{{ __('Other') }}</option>
+                                </select>
+                                @error('gender')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
 
                         <!-- Address Field -->

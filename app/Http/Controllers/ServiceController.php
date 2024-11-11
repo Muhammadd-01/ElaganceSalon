@@ -12,7 +12,10 @@ class ServiceController extends Controller
         return view('admin.services', ['service' => $services]);
         // return $services;
     }
-
+    public function create()
+    {
+        return view('admin.servicesCreate'); // Ensure this path is correct
+    }
     public function store(Request $request)
     {
         $request->validate([
@@ -31,6 +34,6 @@ class ServiceController extends Controller
             'price' => $request->price,
         ]);
 
-        return redirect()->route('admin.servicesCreate')->with('success', 'Service added successfully');
+        return redirect()->route('admin.services.create')->with('success', 'Service added successfully');
     }
 }

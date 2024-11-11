@@ -88,7 +88,7 @@ Route::delete('/users/{id}', [HomeController::class, 'destroy'])->name('user.des
 
 
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
-Route::post('/services', [ServiceController::class, 'store'])->name('services.store');
+Route::post('/servicesStore', [ServiceController::class, 'store'])->name('services.store');
 Route::get('/admin/services/create', [ServiceController::class, 'create'])->name('admin.services.create');
 
 
