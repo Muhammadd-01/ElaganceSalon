@@ -34,6 +34,6 @@ class ServiceController extends Controller
             'price' => $request->price,
         ]);
 
-        return redirect()->route('admin.servicesCreate')->with('success', 'Service added successfully');
+        return redirect()->route('admin.services.create')->with('success', 'Service added successfully');
     }
 }

@@ -28,25 +28,24 @@ class InventoryController extends Controller
             'productExpiry' => 'nullable|date',
         ]);
 
-        // Store the uploaded image
-        $imagePath = $request->file('productImage')->store('products', 'public');
+        $fileName = time() . '.' . $request->productImage->extension();
+        $request->productImage->move(public_path('uploads'), $fileName);
 
         // Create the new inventory item
         Inventory::create([
             'productName' => $request->productName,
             'productDescription' => $request->productDescription,
             'stock' => $request->stock,
-            'productImage' => $imagePath,
+            'productImage' => $fileName, // Store the filename (without the full path)
             'productPrice' => $request->productPrice,
             'productStatus' => $request->productStatus,
             'productExpiry' => $request->productExpiry,
         ]);
 
-        // Toastr notification
-
+        // Redirect with a success message
         return redirect()->route('admin.products.index');
-
     }
+
 
     // Method to display all inventory products
     public function index()
