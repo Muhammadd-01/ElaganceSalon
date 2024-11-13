@@ -32,7 +32,7 @@
     <header id="header" class="header-section">
         <div class="container">
             <nav class="navbar ">
-               <a href="/"> <img src="{{ asset('img/logo (2).png') }}" style="height: 120px; margin-left: 48px;" alt=""></a>
+
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
