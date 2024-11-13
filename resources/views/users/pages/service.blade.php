@@ -133,15 +133,13 @@
                     <h3>Face Mask</h3>
                     <ul class="price_list">
                         <li>
-                            <h4>White Facial</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>White Facial</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, shave, and provide white facials for men.</p>
                             <span class="price">$8</span>
                         </li>
                         <li>
-                            <h4>Face Cleaning</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Face Cleaning</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, shave, and provide face cleaning for men.</p>
                             <span class="price">$9</span>
                         </li>
                         <li>
