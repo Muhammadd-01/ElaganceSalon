@@ -53,4 +53,13 @@ class InventoryController extends Controller
         $products = Inventory::all(); // Retrieve all products from the Inventory model
         return view('admin.inventory', ['data' => $products]); // Pass products to the view
     }
+
+    public function destroy($id)
+{
+    $product = Inventory::findOrFail($id);
+    $product->delete();
+
+    return redirect()->route('admin.products.index')->with('success', 'Product deleted successfully.');
+}
+
 }

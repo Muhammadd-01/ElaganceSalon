@@ -33,23 +33,26 @@
         <div class="container">
             <nav class="navbar ">
 
+                <img src="{{ asset('img/logo (2).png') }}" style="height: 150px; width: 150px;" alt="">
                 <div class="d-flex menu-wrap align-items-center">
                     <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
                             <li><a data-scroll class="nav-link active" href="/">Home<span
                                         class="sr-only">(current)</span></a></li>
+@if(Auth::check())
                             <li><a href="aboutus">About</a>
                                 <ul>
                                     <li><a href="aboutus">About Us</a></li>
                                     <li><a href="aboutcompany">About Company</a></li>
                                 </ul>
                             </li>
-                            <li><a href="service">Services</a></li>
-                            <li><a href="feedback">Feedback</a>
+                            <li><a href="/user/services">Services</a></li>
+                            <li><a href="/feedback">Feedback</a>
 
                             </li>
-                            <li><a href="contact">Contact</a></li>
-                            <li><a href="appointment">Appointment</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/user/appointments">Appointment</a></li>
+                            @endif
                             @guest
                             @if (Route::has('login'))
                             <div class="header-btn" style="margin-top: 20px;">

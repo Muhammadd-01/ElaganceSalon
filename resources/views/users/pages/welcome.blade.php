@@ -32,7 +32,7 @@
             <h1>Being a barber is about <br>taking care of the people.</h1>
             <p>Our barbershop is the territory created purely for males who appreciate<br> premium quality, time and
                 flawless look.</p>
-            <a href="appointment" class="default_btn">Make Appointment</a>
+            <a href="/user/appointments" class="default_btn">Make Appointment</a>
         </div>
     </div>
 </section>

@@ -31,9 +31,9 @@ class ReviewController extends Controller
 
          Feedback::create([
             //  'apponitId	' => $request->appoint_id,
-             'apponitId' => 1,
+             'apponitId' => $request->apponitId,
              'name' => $request->name,
-             'userId' => 17,
+             'userId' => $request->userId,
              'email' => $request->email,
              'feedback' => $request->feedback,
              'review' => $request->review,  // Save star rating

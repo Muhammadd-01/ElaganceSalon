@@ -29,13 +29,23 @@
                         <td>
                             <img src="{{ asset('uploads/' . $product->productImage) }}" alt="{{ $product->productName }}" height="80" width="auto">
                         </td>
-                        <td>{{ $product->stock }}</td>
+                        <td>{{ $product->Stock }}</td>
                         <td>${{ $product->productPrice }}</td>
                         <td>{{ $product->productStatus ? 'Available' : 'Unavailable' }}</td>
                         <td>{{ $product->productExpiry }}</td>
+                        <td>
+                            <form action="{{ route('admin.products.destroy', $product->id) }}" method="POST">
+                                @csrf
+
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this product?')">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
+
         </table>
     </div>
 @endsection

@@ -78,7 +78,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Services</a>
                         <div class="dropdown-menu bg-transparent border-0">
 
-                            <a href="/services" class="dropdown-item">showService</a>
+                            <a href="/admin/services" class="dropdown-item">showService</a>
                             <a href="/adminServicesCreate" class="dropdown-item">addService</a>
 
                         </div>
@@ -92,7 +92,8 @@
 
                         </div>
                     </div>
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Appointments</a>
+                    <a href="/showAppointments" class="dropdown-item">Appointments</a>
+
 
 
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Feedback</a>
@@ -124,7 +125,7 @@
         <input class="form-control bg-dark border-0" type="search" placeholder="Search">
     </form>
     <div class="navbar-nav align-items-center ms-auto">
-       
+
         <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img class="rounded-circle me-lg-2" src="admin/img/" alt="" style="width: 40px; height: 40px;">

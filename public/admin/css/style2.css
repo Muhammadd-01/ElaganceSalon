@@ -89,10 +89,10 @@
     }
 
     /* Spinner Loader */
-    .spinner-border.text-primary {
+    /* .spinner-border.text-primary {
         color: #c0a16b;
         animation: spinner-grow 0.8s infinite ease-in-out;
-    }
+    } */
 
     @keyframes spinner-grow {
         0% {
