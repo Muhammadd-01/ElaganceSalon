@@ -143,9 +143,8 @@
                             <span class="price">$9</span>
                         </li>
                         <li>
-                            <h4>Bright Tuning</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Bright Tuning</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, shave, and provide bright tuning for men.</p>
                             <span class="price">$10</span>
                             <br>
                             <br>
@@ -160,21 +159,21 @@
                     <h3>Beard Trimming</h3>
                     <ul class="price_list">
                         <li>
-                            <h4>Fade Beard Trim</h4>
-                            <p>Blends the beard into the hair on the sides for a smooth transition, often used with shorter hairstyles.
-                            </p>
+                        <h4>Fade Beard Trim</h4>
+<p>Gradually blends the beard with the hair on the sides, creating a seamless transition, commonly paired with shorter haircuts.</p>
+
                             <span class="price">$5</span>
                         </li>
                         <li>
-                            <h4>Goatee Trim</h4>
-                            <p>Specifically trims and shapes the goatee, maintaining its length while defining the edges.
-                            </p>
+                        <h4>Goatee Trim</h4>
+<p>Carefully trims and sculpts the goatee, preserving its length while sharpening the outline.</p>
+
                             <span class="price">$7</span>
                         </li>
                         <li>
-                            <h4>Ducktail Beard Trim</h4>
-                            <p> Leaves length in the front while tapering the sides, creating a "tail" effect at the chin.
-                            </p>
+                        <h4>Ducktail Beard Trim</h4>
+<p>Maintains length at the front while tapering the sides, forming a distinctive "tail" shape at the chin.</p>
+
                             <span class="price">$10</span>
                         </li>
                     </ul>
@@ -185,21 +184,21 @@
                     <h3>Massage Therapy</h3>
                     <ul class="price_list">
                         <li>
-                            <h4>Swedish Massage</h4>
-                            <p>A gentle massage using long strokes and kneading to promote relaxation and improve circulation.
-                            </p>
+                        <h4>Swedish Massage</h4>
+<p>A soothing massage that uses long, flowing strokes and kneading techniques to enhance relaxation and boost circulation.</p>
+
                             <span class="price">$13</span>
                         </li>
                         <li>
-                            <h4>Deep Tissue Massage</h4>
-                            <p>Focused on deeper muscle layers, this massage uses intense pressure to relieve chronic tension and pain.
-                            </p>
+                        <h4>Deep Tissue Massage</h4>
+<p>Targeting the deeper layers of muscle, this massage applies firm pressure to alleviate chronic tension and discomfort.</p>
+
                             <span class="price">$20</span>
                         </li>
                         <li>
-                            <h4>Hot Stone Massage</h4>
-                            <p>Heated stones are placed on the body and used during massage to enhance relaxation and relieve muscle tightness.
-                            </p>
+                        <h4>Hot Stone Massage</h4>
+<p>Warmed stones are positioned on the body and incorporated into the massage to promote relaxation and ease muscle stiffness.</p>
+
                             <span class="price">$17</span>
                         </li>
                     </ul>
@@ -210,21 +209,21 @@
                     <h3>Hair Wash</h3>
                     <ul class="price_list">
                         <li>
-                            <h4>Basic Hair Wash</h4>
-                            <p>Cleanses the hair and scalp using shampoo, followed by conditioner to hydrate and detangle.
-                            </p>
+                        <h4>Basic Hair Wash</h4>
+<p>Purifies the hair and scalp with shampoo, followed by conditioner to moisturize and smooth out tangles.</p>
+
                             <span class="price">$13</span>
                         </li>
                         <li>
-                            <h4>Clarifying Wash</h4>
-                            <p>Removes buildup from products and oils, providing a deep cleanse; ideal for occasional use.
-                            </p>
+                        <h4>Clarifying Wash</h4>
+<p>Eliminates product buildup and excess oils, delivering a thorough cleanse; perfect for occasional use.</p>
+
                             <span class="price">$10</span>
                         </li>
                         <li>
-                            <h4>Sulfate-Free Wash</h4>
-                            <p> Gentle cleansing without harsh sulfates, suitable for sensitive scalps or color-treated hair.
-                            </p>
+                        <h4>Sulfate-Free Wash</h4>
+<p>Provides a mild cleanse without harsh sulfates, ideal for sensitive scalps or color-treated hair.</p>
+
                             <span class="price">$15</span>
                         </li>
                     </ul>
@@ -238,9 +237,9 @@
         <div class="display-table">
             <div class="table-cel">
                 <div class="cta_content align-center wow fadeInUp" data-wow-delay="300ms">
-                    <h2>Making You Look Good <br> Is In Our Haritage.</h2>
-                    <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave men's
-                        and boys hair.</p>
+                <h2>Our Legacy Is About Making You Look Your Best.</h2>
+<p>A barber is a professional whose main job is to cut, groom, style,<br> and shave men’s and boys’ hair.</p>
+
                     <a href="appointment" class="default_btn">Make Appointment</a>
                 </div>
             </div>
