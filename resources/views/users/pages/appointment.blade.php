@@ -22,28 +22,32 @@
                 <div class="service_box">
                     <i class="bs bs-scissors-1"></i>
                     <h3>Haircut Styles</h3>
-                    <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+<p>A barber is a professional whose primary role is to cut, groom, and style hair.</p>
+
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
                 <div class="service_box">
                     <i class="bs bs-razor-2"></i>
                     <h3>Beard Trimming</h3>
-                    <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+<p>A barber is a professional whose main role is to cut, groom, and shape facial hair.</p>
+
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
                 <div class="service_box">
                     <i class="bs bs-brush"></i>
                     <h3>Smooth Shave</h3>
-                    <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+<p>A barber is a professional whose primary job is to cut, groom, and shave facial hair to perfection.</p>
+
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="500ms">
                 <div class="service_box">
                     <i class="bs bs-hairbrush-1"></i>
                     <h3>Face Masking</h3>
-                    <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+<p>A barber is a professional whose main role is to cut, groom, style, and offer facial treatments for relaxation.</p>
+
                 </div>
             </div>
         </div>
@@ -175,8 +179,8 @@
             <div class="table-cel">
                 <div class="cta_content align-center wow fadeInUp" data-wow-delay="300ms">
                     <h2>Making You Look Good <br> Is In Our Heritage.</h2>
-                    <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave men's
-                        and boys hair.</p>
+                    <p>A barber is a professional whose primary role is to cut, groom, style,<br> and shave men’s and boys’ hair.</p>
+
                     <a href="#" class="default_btn">Make Appointment</a>
                 </div>
             </div>
