@@ -87,21 +87,20 @@
                     <h3>Hair Styling</h3>
                     <ul class="price_list">
                         <li>
-                            <h4>Hair Cut</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Hair Cut</h4>
+<p>Barbers specialize in cutting, grooming, styling, and shaving hair for men, ensuring a polished look.</p>
+
                             <span class="price">$8</span>
                         </li>
                         <li>
-                            <h4>Hair Styling</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Hair Styling</h4>
+                        <p>Barber is a person whose occupation is mainly to cut, dress, groom,<br> style, and shave men’s hair.</p>
                             <span class="price">$9</span>
                         </li>
                         <li>
-                            <h4>Hair Triming</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Hair Trimming</h4>
+<p>A barber is a professional whose main occupation is to cut, groom, style,<br> trim, and shave men’s hair.</p>
+
                             <span class="price">$10</span>
                         </li>
                     </ul>
@@ -112,21 +111,18 @@
                     <h3>Shaving</h3>
                     <ul class="price_list">
                         <li>
-                            <h4>Clean Shaving</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Clean Shaving</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, and provide clean shaves for men.</p>
                             <span class="price">$8</span>
                         </li>
                         <li>
-                            <h4>Beard Triming</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Beard Trimming</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, trim, and shave men’s beards.</p>
                             <span class="price">$9</span>
                         </li>
                         <li>
-                            <h4>Smooth Shave</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Smooth Shave</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, and provide a smooth shave for men.</p>
                             <span class="price">$10</span>
                         </li>
                     </ul>

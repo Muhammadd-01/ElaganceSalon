@@ -17,9 +17,10 @@
                     <h3 class="wow fadeInUp" data-wow-delay="100ms">Introducing</h3>
                     <h2 class="wow fadeInUp" data-wow-delay="200ms">Elegance-Hair salon<br>Since 2018</h2>
                     <img class="wow fadeInUp" data-wow-delay="500ms" src="img/about-logo.png" alt="logo">
-                    <p class="wow fadeInUp" data-wow-delay="600ms">Welcome to Elegance Men Hair Salon, where timeless grooming meets classic style. Our skilled barbers, each with roots in Pakistan, are dedicated to providing tailored haircuts and refined shaves for men and boys.
+                    <p class="wow fadeInUp" data-wow-delay="600ms">Welcome to Elegance Men Hair Salon, where classic grooming meets refined style. Our expert barbers, with deep roots in Pakistan, are passionate about providing custom haircuts and impeccable shaves for men and boys.
 
-                        Step into our salon, a charming retreat that embodies the essence of vintage elegance. Here, you can relax, engage in conversation, and enjoy a sense of community. We blend traditional barbering techniques with a touch of sophistication, ensuring each visit is a memorable experience.</p>
+Step into our salon, a welcoming space that reflects the charm of old-world elegance. Relax, engage in conversation, and enjoy a true sense of community. We merge traditional barbering techniques with a touch of modern sophistication, making each visit an unforgettable experience.</p>
+
                     <a href="aboutcompany" class="default_btn wow fadeInUp" data-wow-delay="600ms">More About Us</a>
                 </div>
             </div>
