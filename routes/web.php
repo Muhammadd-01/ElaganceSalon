@@ -116,3 +116,6 @@ Route::get('reviews/{id}/edit', [ReviewController::class, 'edit'])->name('review
 Route::put('reviews/{id}', [ReviewController::class, 'update'])->name('reviews.update');
 // Route for deleting a review
 Route::delete('reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
+
+
+Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');
