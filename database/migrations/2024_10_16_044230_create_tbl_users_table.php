@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('tbl_users', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
+            $table->string('name');
             $table->string('email')->unique();
-            $table->integer('mobile')->nullable();
-            $table->string('image')->nullable();
+            $table->bigInteger('mobile')->nullable();
+            // $table->string('image')->nullable();
             $table->integer('age')->nullable();
             $table->string('gender')->nullable();
-            $table->string('password')->nullable();
+            $table->string('password')->unique();
             $table->string('address')->nullable();
             $table->integer('role')->default(0); // 0 represents 'user', 1 represents 'admin' (or any other logic you have)
             $table->timestamps();

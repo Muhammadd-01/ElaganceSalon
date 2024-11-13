@@ -7,26 +7,27 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="admin/img/favicon.ico" rel="icon">
+      <!-- Favicon -->
+      <link href="{{ asset('public/img/logo (2).png') }}" rel="icon">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+      <!-- Google Web Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+      <!-- Icon Font Stylesheet -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- admin/libraries Stylesheet -->
-    <link href="admin/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+      <!-- Library Stylesheet -->
+      <link href="{{ asset('admin/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+      <link href="{{ asset('admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="admin/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Customized Bootstrap Stylesheet -->
+      <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="admin/css/style.css" rel="stylesheet">
+      <!-- Template Stylesheet -->
+      <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -38,35 +39,65 @@
             </div>
         </div>
         <!-- Spinner End -->
-        
+
 
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
                 <a href="index" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>DarkPan</h3>
+                    <h3> <img src="{{ asset('img/logo (2).png') }}" style="margin-left: 20px; height: 100px;"  alt=""></h3>
                 </a>
-                <div class="d-flex align-items-center ms-4 mb-4">
+                {{-- <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="img/logo (2).png" alt="" style="width: 40px; height: 40px;">
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
                         <h6 class="mb-0">Jhon Doe</h6>
                         <span>Admin</span>
                     </div>
-                </div>
-                <div class="navbar-nav w-100">
-                    <a href="index" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                </div> --}}
+                <div class="navbar-nav w-100 mt-0">
+                    <a href="/index" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>User</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="button" class="dropdown-item">Buttons</a>
-                            <a href="typo" class="dropdown-item">Typography</a>
-                            <a href="element" class="dropdown-item">Other Elements</a>
+
+                            <a href="/getUser" class="dropdown-item">showUser</a>
+                            <a href="/createUser" class="dropdown-item">addUser</a>
+
                         </div>
                     </div>
-                    <a href="widget" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Services</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+
+                            <a href="/services" class="dropdown-item">showService</a>
+                            <a href="/adminServicesCreate" class="dropdown-item">addService</a>
+
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Inventory</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+
+                            <a href="{{Route('admin.products.index')}}" class="dropdown-item">showProducts</a>
+                            <a href="/adminInventoryCreate" class="dropdown-item">addProducts</a>
+
+                        </div>
+                    </div>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Appointments</a>
+
+
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Feedback</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+
+
+                        </div>
+
+
+
+                    {{-- <a href="widget" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Feedback</a>
                     <a href="form" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
                     <a href="table" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
                     <a href="chart" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
@@ -78,7 +109,7 @@
                             <a href="404" class="dropdown-item">404 Error</a>
                             <a href="blank" class="dropdown-item">Blank Page</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </nav>
         </div>
@@ -167,10 +198,16 @@
                             <img class="rounded-circle me-lg-2" src="admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex">John Doe</span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -190,13 +227,9 @@
                 <div class="bg-secondary rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Muhammad Affan</a>, All Right Reserved.
+                            &copy; <a href="#">Elegance</a>, All Right Reserved.
                         </div>
-                        {{-- <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                            <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                        </div> --}}
+
                     </div>
                 </div>
             </div>
@@ -209,19 +242,19 @@
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
-    <!-- JavaScript admin/libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="admin/lib/chart/chart.min.js"></script>
-    <script src="admin/lib/easing/easing.min.js"></script>
-    <script src="admin/lib/waypoints/waypoints.min.js"></script>
-    <script src="admin/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="admin/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="admin/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ asset('admin/lib/chart/chart.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/easing/easing.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/waypoints/waypoints.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/tempusdominus/js/moment.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+  <script src="{{ asset('admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 
-    <!-- Template Javascript -->
-    <script src="admin/js/main.js"></script>
+  <!-- Template JavaScript -->
+  <script src="{{ asset('admin/js/main.js') }}"></script>
 </body>
 
 </html>
