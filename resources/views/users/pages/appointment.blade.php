@@ -1,54 +1,6 @@
 @extends('users.pages.template')
 
 @section('content')
-<section class="page_header d-flex align-items-center">
-    <div class="container">
-        <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-            <h3>Trendy Salon &amp; Spa</h3>
-            <h2>Appointment</h2>
-            <div class="heading-line"></div>
-        </div>
-    </div>
-</section>
-<section class="service_section bg-grey padding">
-    <div class="container">
-        <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-            <h3>Trendy Salon &amp; Spa</h3>
-            <h2>Our Services</h2>
-            <div class="heading-line"></div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="200ms">
-                <div class="service_box">
-                    <i class="bs bs-scissors-1"></i>
-                    <h3>Haircut Styles</h3>
-                    <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
-                <div class="service_box">
-                    <i class="bs bs-razor-2"></i>
-                    <h3>Beard Trimming</h3>
-                    <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
-                <div class="service_box">
-                    <i class="bs bs-brush"></i>
-                    <h3>Smooth Shave</h3>
-                    <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="500ms">
-                <div class="service_box">
-                    <i class="bs bs-hairbrush-1"></i>
-                    <h3>Face Masking</h3>
-                    <p>Barber is a person whose occupation is mainly to cut dress style.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="book_section padding">
     <div class="book_bg"></div>
     <div class="map_pattern"></div>
@@ -85,11 +37,12 @@
                     <div class="form-group row">
                         <div class="col-md-6 padding-10">
                             <select class="form-control" id="app_barbers" name="app_barbers">
+
                                 <option>Choose Barbers</option>
-                                <option>Michel Brown</option>
-                                <option>Jonathan Smith</option>
-                                <option>Jack Tosan</option>
-                                <option>Martin Lane</option>
+                                <option>Jazib Salman</option>
+                                <option>Affan</option>
+                                <option>Zaki Haider</option>
+                                <option>Hamza Akram</option>
                             </select>
                         </div>
                         <div class="col-md-6 padding-10">
@@ -125,7 +78,7 @@
 <section id="team" class="team_section bd-bottom padding">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-            <h3>Trendy Salon &amp; Spa</h3>
+            <h3>Elegance Salon</h3>
             <h2>Our Barbers</h2>
             <div class="heading-line"></div>
         </div>
@@ -134,7 +87,7 @@
                 <div class="team_member">
                     <img src="img/team-1.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Kyle Frederick</h3>
+                        <h3>Jazib Salman</h3>
                         <p>WEB DESIGNER</p>
                     </div>
                 </div>
@@ -143,7 +96,7 @@
                 <div class="team_member">
                     <img src="img/team-2.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>José Carpio</h3>
+                        <h3>Affan</h3>
                         <p>WORDPRESS DEVELOPER</p>
                     </div>
                 </div>
@@ -152,7 +105,7 @@
                 <div class="team_member">
                     <img src="img/team-3.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Michel Ibáñez</h3>
+                        <h3>Zaki Haider</h3>
                         <p>ONLINE MARKETER</p>
                     </div>
                 </div>
@@ -161,7 +114,7 @@
                 <div class="team_member">
                     <img src="img/team-4.jpg" alt="Team Member">
                     <div class="overlay">
-                        <h3>Adam Castellon</h3>
+                        <h3>Hamza Akram</h3>
                         <p>JAVA SPECIALIST</p>
                     </div>
                 </div>

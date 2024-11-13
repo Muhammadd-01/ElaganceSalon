@@ -51,32 +51,32 @@
                             <li><a href="contact">Contact</a></li>
                             <li><a href="appointment">Appointment</a></li>
                             @guest
-                                @if (Route::has('login'))
-                                    <div class="header-btn" style="margin-top: 20px;">
-                                        <a class="menu-btn" href="{{ route('login') }}"
-                                            style="display: inline-block;  border-radius: 15px;"
-                                            onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
-                                            onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
-                                            {{ __('Login') }}
-                                        </a>
-                                    </div>
-                                @endif
+                            @if (Route::has('login'))
+                            <div class="header-btn" style="margin-top: 20px;">
+                                <a class="menu-btn" href="{{ route('login') }}"
+                                   style="display: inline-block;  border-radius: 15px;"
+                                   onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
+                                   onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                    {{ __('Login') }}
+                                </a>
+                            </div>
 
-                                @if (Route::has('register'))
-                                    <div class="header-btn" style="margin-top: 20px;">
-                                        <a class="menu-btn"
-                                            href="{{ route('register') }}"style="display: inline-block;  border-radius: 15px;"
-                                            onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
-                                            onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
-                                            {{ __('Register') }}</a>
-                                    </div>
-                                @endif
-                            @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }}
-                                    </a>
+
+                            @endif
+
+                            @if (Route::has('register'))
+                                <div class="header-btn" style="margin-top: 20px;">
+                                    <a class="menu-btn" href="{{ route('register') }}"style="display: inline-block;  border-radius: 15px;"
+                                    onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
+                                    onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                        {{ __('Register') }}</a>
+                                </div>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
 
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
@@ -116,12 +116,12 @@
 
 
     {{-- Footer start --}}
-    <section class="widget_section padding">
+    <section class="widget_section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 sm-padding">
+                <div class="col-md-4 col-lg-4 ">
                     <div class="footer_widget">
-                        <a href="/"><img class="mb-15" src="img/logo (2).png" alt="Brand" style="margin-top: -50px;"></a>
+                        <img class="mb-15" src="img/logo (2).png" alt="Brand" style="margin-top: -50px">
                         <p>Our barbershop is the created for men who appreciate premium quality, time and flawless look.
                         </p>
                         <ul class="widget_social">
@@ -133,17 +133,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 sm-padding">
+                <div class="col-md-4 col-lg-4 ">
                     <div class="footer_widget">
                         <h3>Headquaters</h3>
-                        <p>Aptech Metro Star Gate, Karachi</p>
-                        <p><a href="muhammadaffan1445@gmail.com" class="__cf_email__"
+                        <p>962 Fifth Avenue, 3rd Floor New York, NY10022</p>
+                        <p><a href="https://html.dynamiclayers.net/cdn-cgi/l/email-protection" class="__cf_email__"
                                 data-cfemail="1d55787171725d7964737c70747e717c64786f6e33737869">[email&#160;protected]</a>
-                            <br>+92 3101259848
-                        </p>
+                            <br>+92 3101259848</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 sm-padding">
+                <div class="col-md-4 col-lg-4 ">
                     <div class="footer_widget">
                         <h3>Opening Hours</h3>
                         <ul class="opening_time">
@@ -154,23 +153,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-12 sm-padding">
-                    <div class="footer_widget">
-                        <h3>Subscribe to our contents</h3>
-                        <div class="subscribe_form">
-                            <form action="#" class="subscribe_form">
-                                <input type="email" name="email" id="subs-email" class="form_input"
-                                    placeholder="Email Address...">
-                                <button type="submit" class="submit">SUBSCRIBE</button>
-                                <div class="clearfix"></div>
-                                <div id="subscribe-result">
-                                    <p class="subscription-success"></p>
-                                    <p class="subscription-error"></p>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -178,7 +161,7 @@
     <footer class="footer_section">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 xs-padding">
+                <div class="col-md-4 col-lg-4 ">
                     <div class="copyright">&copy;
                         <script type="text/javascript">
                             document.write(new Date().getFullYear())
@@ -186,7 +169,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-6 xs-padding">
+                <div class="col-md-4 col-lg-4 ">
                     <ul class="footer_social">
                         <li><a href="#">Orders</a></li>
                         <li><a href="#">Terms</a></li>

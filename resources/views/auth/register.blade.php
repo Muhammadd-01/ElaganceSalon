@@ -9,96 +9,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Male Hair Salon Register Form</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <style>
-    body {
-      background-color: #e9ecef; /* Light grey background for a clean look */
-      font-family: 'Arial', sans-serif; /* Clean font */
-    }
-    .login-form-container {
-      border-radius: 15px; /* Rounded corners */
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
-      background-color: #ffffff; /* White background for contrast */
-      padding: 40px; /* Padding around the card */
-      margin-top: 5%; /* Margin from the top */
-      width: 700px; /* Fixed width */
-      margin-left: auto; /* Centering */
-      margin-right: auto; /* Centering */
-      margin-bottom: 5%;
-    }
-    .login-form-container h2 {
-      color: #343a40; /* Dark grey color for the heading */
-      font-weight: bold; /* Bold text for emphasis */
-      margin-bottom: 25px; /* Space below heading */
-      text-align: center; /* Center the heading */
-    }
-    .form-control:focus {
-      border-color: #343a40; /* Dark grey focus border color */
-      box-shadow: 0 0 0.2rem rgba(52, 58, 64, 0.25); /* Focus shadow */
-    }
-    .btn-primary {
-      background-color: #007bff; /* Classic blue for the button */
-      border: none; /* Remove border */
-      border-radius: 8px; /* Rounded button */
-      padding: 12px 20px; /* Padding for button */
-      transition: background-color 0.3s; /* Transition effect */
-    }
-    .btn-primary:hover {
-      background-color: #0056b3; /* Darker blue on hover */
-    }
-    .invalid-feedback {
-      font-size: 0.9em; /* Smaller error message */
+ <style>
+.login-form-container {
+    border-radius: 15px; /* Smooth, rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+    background-color: #ffffff; /* Contrasting white background */
+    padding: 40px; /* Balanced padding for card */
+    margin: 5% auto; /* Center and top margin */
+    width: 90%; /* Responsive width */
+    max-width: 700px; /* Maximum width for larger screens */
+}
 
-    }
-    .create-account {
-      text-align: center; /* Centered text */
-      margin-top: 20px; /* Space above */
-    }
-    a {
-      color: #007bff; /* Link color */
-      text-decoration: none; /* No underline */
-    }
-    a:hover {
-      text-decoration: underline; /* Underline on hover */
-    }
-    .form-control {
-    border-radius: 8px; /* Rounded input fields */
-    box-shadow: inset 0 2px 5px rgba(255, 252, 252, 0.1); /* Subtle inner shadow */
-    border: 1px solid #343a40; /* Dark grey border */
-    background-color: white; /* Black background for dropdown */
-    color: black; /* White text color */
+.login-form-container h2 {
+    color: #333; /* Dark grey for good contrast */
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 8px; /* Smooth, rounded input fields */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    border: 1px solid #343a40; /* Consistent border */
+    background-color: #ffffff; /* Light background for inputs */
+    color: #333; /* Standard text color */
+    padding: 10px; /* Comfortable padding */
+    transition: all 0.3s ease; /* Smooth transition on focus */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Bright focus shadow */
 }
 
 .form-control option {
-    background-color: black; /* Ensure options have black background */
-    color: white; /* White text for options */
+    background-color: #343a40; /* Dark background for dropdown options */
+    color: #ffffff; /* White text in options */
 }
 
-.form-control:hover,
-.form-control:focus {
-    background-color: #5a5a5a; /* Darker grey on hover */
-    color: white; /* Maintain white text on hover */
-    border-color: black; /* Border color on focus */
-    box-shadow: 0 0 0.2rem rgba(52, 58, 64, 0.25); /* Focus shadow */
-}
-.custom-btn {
-    background-color: black; /* Black background */
-    color: white; /* White text color */
-    border: none; /* Remove border */
-    border-radius: 8px; /* Rounded button */
-    padding: 12px 20px; /* Padding for button */
-    transition: background-color 0.3s; /* Transition effect */
-    cursor: pointer; /* Pointer cursor */
+.btn-primary, .custom-btn {
+    background-color: #007bff; /* Primary blue */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    cursor: pointer;
 }
 
-.custom-btn:hover {
-    background-color: #333; /* Darker shade on hover */
+.btn-primary:hover, .custom-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.invalid-feedback {
+    font-size: 0.9em; /* Smaller text for feedback */
+    color: #e63946; /* Red color for visibility */
+    margin-top: 5px; /* Spacing above error messages */
+}
+
+.create-account {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #007bff; /* Link color consistent with primary button */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .custom-link {
-    color: black; /* White text color for the link */
-    text-decoration: none; /* No underline */
+    color: #333; /* Consistent link color */
+    text-decoration: none;
 }
-  </style>
+
+.custom-link:hover {
+    color: #007bff; /* Hover color to match theme */
+    text-decoration: underline;
+}
+/* Apply specific styles to the gender select */
+#gender {
+    background-color: #ffffff; /* White background for the select dropdown */
+    color: #333;               /* Dark text color */
+    border-radius: 8px;        /* Rounded corners */
+    border: 1px solid #343a40; /* Consistent border */
+    padding: 10px;             /* Padding for the select box */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow */
+    -webkit-appearance: none;  /* Remove default dropdown styles in WebKit browsers */
+    -moz-appearance: none;     /* Remove default dropdown styles in Firefox */
+    appearance: none;          /* Standardize appearance across browsers */
+}
+
+/* Make sure the options have a white background */
+#gender option {
+    background-color: #ffffff;  /* White background for options */
+    color: #333;                /* Dark text color for contrast */
+}
+
+ </style>
+
+
+
+
+
+
 </head>
 <body>
 <div class="container">
@@ -163,23 +180,22 @@
                         </div>
 
 
-                        <!-- Gender Field -->
-<div class="row mb-3">
-    <label for="gender" class="col-md-4 col-form-label text-md-end">{{ __('Gender') }}</label>
-    <div class="col-md-6">
-        <select id="gender" class="form-control @error('gender') is-invalid @enderror" name="gender">
-            <option value="">{{ __('Select Gender') }}</option>
-            <option value="Male">{{ __('Male') }}</option>
-            <option value="Female">{{ __('Female') }}</option>
-            <option value="Other">{{ __('Other') }}</option>
-        </select>
-        @error('gender')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-        @enderror
-    </div>
-</div>
+                        <div class="row mb-3">
+                            <label for="gender" class="col-md-4 col-form-label text-md-end">{{ __('Gender') }}</label>
+                            <div class="col-md-6">
+                                <select id="gender" class="form-control @error('gender') is-invalid @enderror" name="gender">
+                                    <option value="">{{ __('Select Gender') }}</option>
+                                    <option value="Male">{{ __('Male') }}</option>
+                                    <option value="Female">{{ __('Female') }}</option>
+                                    <option value="Other">{{ __('Other') }}</option>
+                                </select>
+                                @error('gender')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
 
                         <!-- Address Field -->
@@ -225,7 +241,7 @@
                                 <a href="{{ route('login') }}" class="ms-3 custom-link">{{ __('Already have an account? Login') }}</a>
                             </div>
                         </div>
-                        
+
                     </form>
                 </div>
             </div>

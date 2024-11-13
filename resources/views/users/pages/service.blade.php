@@ -49,7 +49,7 @@
                 </div></a>
             </div>
             <div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="600ms">
-              <a class="service1" href="service5">  <div class="service_box">
+              <a class="service1" href="service2">  <div class="service_box">
                     <i class="bs bs-razor"></i>
                     <h3>Message Therapy</h3>
                     <p>Barber is a person whose occupation is mainly to cut dress style.</p>
