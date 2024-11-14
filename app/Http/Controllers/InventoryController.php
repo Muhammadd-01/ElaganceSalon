@@ -28,25 +28,24 @@ class InventoryController extends Controller
             'productExpiry' => 'nullable|date',
         ]);
 
-        // Store the uploaded image
-        $imagePath = $request->file('productImage')->store('products', 'public');
+        $fileName = time() . '.' . $request->productImage->extension();
+        $request->productImage->move(public_path('uploads'), $fileName);
 
         // Create the new inventory item
         Inventory::create([
             'productName' => $request->productName,
             'productDescription' => $request->productDescription,
             'stock' => $request->stock,
-            'productImage' => $imagePath,
+            'productImage' => $fileName, // Store the filename (without the full path)
             'productPrice' => $request->productPrice,
             'productStatus' => $request->productStatus,
             'productExpiry' => $request->productExpiry,
         ]);
 
-        // Toastr notification
-
+        // Redirect with a success message
         return redirect()->route('admin.products.index');
-
     }
+
 
     // Method to display all inventory products
     public function index()
@@ -54,4 +53,65 @@ class InventoryController extends Controller
         $products = Inventory::all(); // Retrieve all products from the Inventory model
         return view('admin.inventory', ['data' => $products]); // Pass products to the view
     }
+
+    public function destroy($id)
+{
+    $product = Inventory::findOrFail($id);
+    $product->delete();
+
+    return redirect()->route('admin.products.index')->with('success', 'Product deleted successfully.');
+}
+// Method to show the edit form
+public function editInventory($id)
+{
+    $inventory = Inventory::find($id);
+
+    if (!$inventory) {
+        return redirect()->route( 'admin.inventory')->with('error', 'Inventory item not found.');
+    }
+
+    return view('admin.inventoryEdit', compact('inventory'));
+}
+
+// Method to update inventory details
+public function updateInventory(Request $request, $id)
+{
+    $inventory = Inventory::find($id);
+
+    if (!$inventory) {
+        return redirect()->route('admin.inventoryEdit')->with('error', 'Inventory item not found.');
+    }
+
+    // Validate input data
+    $request->validate([
+        'productName' => 'required|string|max:255',
+        'productDescription' => 'required|string',
+        'stock' => 'required|integer',
+        'productImage' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        'productPrice' => 'required|numeric',
+        'productStatus' => 'required|boolean',
+        'productExpiry' => 'nullable|date',
+    ]);
+
+    // Update inventory details
+    $inventory->productName = $request->productName;
+    $inventory->productDescription = $request->productDescription;
+    $inventory->Stock = $request->Stock;
+
+    if ($request->hasFile('productImage')) {
+        $fileName = time() . '.' . $request->productImage->extension();
+        $request->productImage->move(public_path('uploads'), $fileName);
+        $inventory->productImage = 'uploads' . $fileName;
+    }
+
+    $inventory->productPrice = $request->productPrice;
+    $inventory->productStatus = $request->productStatus;
+    $inventory->productExpiry = $request->productExpiry;
+
+    $inventory->save();
+
+    return redirect()->route('admin.products.index')->with('success', 'Inventory item updated successfully.');
+}
+
+
 }

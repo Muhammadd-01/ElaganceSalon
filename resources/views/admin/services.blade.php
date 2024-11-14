@@ -8,7 +8,7 @@
     </div>
 
     <!-- Display Services Table -->
-    <div class="container mt-3">
+    <div class="container mt-3" >
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -19,15 +19,29 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($service as $services)
+                @foreach($services as $service)
                     <tr>
-                        <td>{{ $services->name }}</td>
-                        <td>{{ $services->description }}</td>
-                        <td><img src="{{ asset('storage/' . $services->image) }}" alt="{{ $services->name }}" width="100"></td>
-                        <td>${{ $services->price }}</td>
+                        <td>{{ $service->name }}</td>
+                        <td>{{ $service->description }}</td>
+                         <td>
+                            <img src="{{ asset('uploads/services/' . $service->image) }}" alt="{{ $service->name }}" height="80" width="auto">
+                        </td>
+                        <td>${{ $service->price }}</td>
+                        <td>
+                            <!-- Update button -->
+                            <a href="{{ route('admin.services.edit', $service->id) }}" class="btn btn-warning">Edit</a>
+
+                            <!-- Delete button -->
+                            <form action="{{ route('admin.services.destroy', $service->id) }}" method="POST" style="display:inline-block;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this service?')">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
+
         </table>
     </div>
 @endsection

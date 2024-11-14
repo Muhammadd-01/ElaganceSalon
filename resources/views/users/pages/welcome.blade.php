@@ -2,17 +2,44 @@
 
 
 @section('content')
+<style>
+    .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
 
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+</style>
 <section class="hero_section d-flex align-items-center">
     <div class="video_bg"
         data-property="{videoURL:'3pFH7FQu5so',containment:'self',autoPlay:true, mute:true, startAt:0, opacity:1, showControls:false, ratio:'16/9', quality: 'hd720', showYTLogo: false }">
     </div>
     <div class="container">
         <div class="hero_content align-center">
+
             <h3>A Haircut That’s an Experience in Itself.</h3>
             <h1>For barbers, <br> it’s more than just a job it’s about caring for people.</h1>
             <p>At our barbershop, being a barber means caring for every client and ensuring<br> they leave feeling their best.</p>
             <a href="appointment" class="default_btn">Make Appointment</a>
+
+            <h3>Its Not Just a Haircut, Its an Experience.</h3>
+            <h1>Being a barber is about <br>taking care of the people.</h1>
+            <p>Our barbershop is the territory created purely for males who appreciate<br> premium quality, time and
+                flawless look.</p>
+            <a href="/user/appointments" class="default_btn">Make Appointment</a>
+
         </div>
     </div>
 </section>
@@ -82,7 +109,9 @@
     <div class="map_pattern"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-6">
+            <div class="col-md-6 offset-md-6"><section id="appointment-form">
+                <!-- Appointment form content here -->
+
                 <form action="https://html.dynamiclayers.net/dl/barbershop/appointment.php" method="post"
                     id="appointment_form" class="form-horizontal appointment_form">
                     <div class="book_content">
@@ -111,28 +140,23 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6 padding-10">
-                            <select class="form-control" id="app_services" name="app_services" onchange="updatePrice()">
-                                <option value="">Select Service</option>
-                                <option value="hair_styling">Hair Styling</option>
-                                <option value="shaving">Shaving</option>
-                                <option value="face_mask">Face Mask</option>
-                                <option value="hair_wash">Hair Wash</option>
-                                <option value="beard_trimming">Beard Trimming</option>
+                            <select class="form-control" id="app_services" name="app_services">
+                                <option>Services</option>
+                                <option>Hair Styling</option>
+                                <option>Shaving</option>
+                                <option>Face Mask</option>
+                                <option>Hair Wash</option>
+                                <option>Beard Triming</option>
                             </select>
                         </div>
                         <div class="col-md-6 padding-10">
                             <select class="form-control" id="app_barbers" name="app_barbers">
                                 <option>Choose Barbers</option>
-                                <option>Michel Brown</option>
-                                <option>Jonathan Smith</option>
-                                <option>Jack Tosan</option>
-                                <option>Martin Lane</option>
+                                <option>Jazib Salman</option>
+                                <option>Affan</option>
+                                <option>Zaki Haider</option>
+                                <option>Hamza Akram</option>
                             </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-12 padding-10">
-                            <p id="service_price" class="text-center" style="font-weight: bold;"></p>
                         </div>
                     </div>
                     <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
@@ -141,7 +165,7 @@
             </div>
         </div>
     </div>
-</section>
+</section></section>
 <section id="gallery" class="gallery_section bg-grey bd-bottom padding">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
@@ -484,26 +508,5 @@
         </ul>
     </div>
 </div>
-<script>
-    function updatePrice() {
-        const prices = {
-            hair_styling: "$30",
-            shaving: "$20",
-            face_mask: "$25",
-            hair_wash: "$15",
-            beard_trimming: "$18"
-        };
-
-        const serviceSelect = document.getElementById('app_services');
-        const selectedService = serviceSelect.value;
-        const priceDisplay = document.getElementById('service_price');
-
-        if (prices[selectedService]) {
-            priceDisplay.textContent = `Price: ${prices[selectedService]}`;
-        } else {
-            priceDisplay.textContent = '';
-        }
-    }
-</script>
 
 @endsection

@@ -12,10 +12,16 @@ class ReviewController extends Controller
      public function index()
      {
          $reviews = Feedback::all();
-         return view('reviews.index', compact('reviews'));
+         return view('users.pages.feedback', compact('reviews'));
         // return $reviews;
      }
+     public function showFeedbacks()
+     {
+         // Fetch appointments from the database
+         $feedbacks = Feedback::all(); // You can adjust this query based on your needs
 
+         return view('admin.feedback', compact('feedbacks'));
+     }
      public function store(Request $request)
      {
 
@@ -31,9 +37,9 @@ class ReviewController extends Controller
 
          Feedback::create([
             //  'apponitId	' => $request->appoint_id,
-             'apponitId' => 1,
+             'apponitId' => $request->apponitId,
              'name' => $request->name,
-             'userId' => 17,
+             'userId' => $request->userId,
              'email' => $request->email,
              'feedback' => $request->feedback,
              'review' => $request->review,  // Save star rating
@@ -45,7 +51,7 @@ class ReviewController extends Controller
      public function edit($id)
      {
          $review = Feedback::findOrFail($id);
-         return view('reviews.edit', compact('review'));
+         return view('admin.feedback', compact('review'));
      }
 
      // Update the specified review
@@ -62,7 +68,7 @@ class ReviewController extends Controller
 
          $review = Feedback::findOrFail($id);
          $review->update($request->all());
-         return redirect()->route('reviews.index')->with('success', 'Review updated successfully.');
+         return redirect()->route('admin.feedback')->with('success', 'Review updated successfully.');
      }
 
      // Remove the specified review
@@ -70,6 +76,6 @@ class ReviewController extends Controller
      {
          $review = Feedback::findOrFail($id);
          $review->delete();
-         return redirect()->route('reviews.index')->with('success', 'Review deleted successfully.');
+         return redirect()->route('showFeedbacks')->with('success', 'Review deleted successfully.');
      }
 }

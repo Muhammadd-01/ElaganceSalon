@@ -12,9 +12,9 @@ class Service extends Model
     protected $table = 'tbl_services';
 
     protected $fillable = [
-        'service_name',
-        'service_description',
-        'service_image',
-        'service_price',
+        'name',
+        'description',
+        'image',
+        'price',
     ];
 }

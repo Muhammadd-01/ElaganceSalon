@@ -20,7 +20,7 @@
         }
     </style>
 </div>
-<section class="contact-section padding">
+<section class="contact-section">
     <div class="map"></div>
     <div class="container">
         <div class="contact-wrap d-flex align-items-center row">
