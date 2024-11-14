@@ -133,6 +133,12 @@ Route::get('/reviews/{id}/edit', [ReviewController::class, 'edit'])->name('revie
 // Route for updating an existing review
 Route::put('/reviews/{id}', [ReviewController::class, 'update'])->name('reviews.update');
 // Route for deleting a review
+
+Route::delete('reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
+
+
+Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');
+=======
 Route::delete('/reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
 
 
@@ -164,3 +170,4 @@ Route::put('/appointments/{id}', [AppointmentController::class, 'update'])->name
 Route::delete('/appointments/{id}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');
 Route::patch('/appointments/{id}/accept', [AppointmentController::class, 'accept'])->name('appointments.accept');
 Route::delete('/appointments/{id}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');
+

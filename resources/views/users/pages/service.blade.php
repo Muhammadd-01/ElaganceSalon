@@ -37,6 +37,172 @@
 
             </div>
         </div>
+
+    </div>
+</section>
+<section class="pricing_section bg-grey bd-bottom padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 sm-padding">
+                <div class="price_wrap">
+                    <h3>Hair Styling</h3>
+                    <ul class="price_list">
+                        <li>
+                        <h4>Hair Cut</h4>
+<p>Barbers specialize in cutting, grooming, styling, and shaving hair for men, ensuring a polished look.</p>
+
+                            <span class="price">$8</span>
+                        </li>
+                        <li>
+                        <h4>Hair Styling</h4>
+                        <p>Barber is a person whose occupation is mainly to cut, dress, groom,<br> style, and shave men’s hair.</p>
+                            <span class="price">$9</span>
+                        </li>
+                        <li>
+                        <h4>Hair Trimming</h4>
+<p>A barber is a professional whose main occupation is to cut, groom, style,<br> trim, and shave men’s hair.</p>
+
+                            <span class="price">$10</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 sm-padding">
+                <div class="price_wrap">
+                    <h3>Shaving</h3>
+                    <ul class="price_list">
+                        <li>
+                        <h4>Clean Shaving</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, and provide clean shaves for men.</p>
+                            <span class="price">$8</span>
+                        </li>
+                        <li>
+                        <h4>Beard Trimming</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, trim, and shave men’s beards.</p>
+                            <span class="price">$9</span>
+                        </li>
+                        <li>
+                        <h4>Smooth Shave</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, and provide a smooth shave for men.</p>
+                            <span class="price">$10</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 sm-padding">
+                <div class="price_wrap">
+                    <h3>Face Mask</h3>
+                    <ul class="price_list">
+                        <li>
+                        <h4>White Facial</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, shave, and provide white facials for men.</p>
+                            <span class="price">$8</span>
+                        </li>
+                        <li>
+                        <h4>Face Cleaning</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, shave, and provide face cleaning for men.</p>
+                            <span class="price">$9</span>
+                        </li>
+                        <li>
+                        <h4>Bright Tuning</h4>
+                        <p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, shave, and provide bright tuning for men.</p>
+                            <span class="price">$10</span>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 sm-padding">
+                <div class="price_wrap">
+                    <h3>Beard Trimming</h3>
+                    <ul class="price_list">
+                        <li>
+                        <h4>Fade Beard Trim</h4>
+<p>Gradually blends the beard with the hair on the sides, creating a seamless transition, commonly paired with shorter haircuts.</p>
+
+                            <span class="price">$5</span>
+                        </li>
+                        <li>
+                        <h4>Goatee Trim</h4>
+<p>Carefully trims and sculpts the goatee, preserving its length while sharpening the outline.</p>
+
+                            <span class="price">$7</span>
+                        </li>
+                        <li>
+                        <h4>Ducktail Beard Trim</h4>
+<p>Maintains length at the front while tapering the sides, forming a distinctive "tail" shape at the chin.</p>
+
+                            <span class="price">$10</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 sm-padding">
+                <div class="price_wrap">
+                    <h3>Massage Therapy</h3>
+                    <ul class="price_list">
+                        <li>
+                        <h4>Swedish Massage</h4>
+<p>A soothing massage that uses long, flowing strokes and kneading techniques to enhance relaxation and boost circulation.</p>
+
+                            <span class="price">$13</span>
+                        </li>
+                        <li>
+                        <h4>Deep Tissue Massage</h4>
+<p>Targeting the deeper layers of muscle, this massage applies firm pressure to alleviate chronic tension and discomfort.</p>
+
+                            <span class="price">$20</span>
+                        </li>
+                        <li>
+                        <h4>Hot Stone Massage</h4>
+<p>Warmed stones are positioned on the body and incorporated into the massage to promote relaxation and ease muscle stiffness.</p>
+
+                            <span class="price">$17</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 sm-padding">
+                <div class="price_wrap">
+                    <h3>Hair Wash</h3>
+                    <ul class="price_list">
+                        <li>
+                        <h4>Basic Hair Wash</h4>
+<p>Purifies the hair and scalp with shampoo, followed by conditioner to moisturize and smooth out tangles.</p>
+
+                            <span class="price">$13</span>
+                        </li>
+                        <li>
+                        <h4>Clarifying Wash</h4>
+<p>Eliminates product buildup and excess oils, delivering a thorough cleanse; perfect for occasional use.</p>
+
+                            <span class="price">$10</span>
+                        </li>
+                        <li>
+                        <h4>Sulfate-Free Wash</h4>
+<p>Provides a mild cleanse without harsh sulfates, ideal for sensitive scalps or color-treated hair.</p>
+
+                            <span class="price">$15</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta_section padding">
+    <div class="container">
+        <div class="display-table">
+            <div class="table-cel">
+                <div class="cta_content align-center wow fadeInUp" data-wow-delay="300ms">
+                <h2>Our Legacy Is About Making You Look Your Best.</h2>
+<p>A barber is a professional whose main job is to cut, groom, style,<br> and shave men’s and boys’ hair.</p>
+
+                    <a href="appointment" class="default_btn">Make Appointment</a>
+=======
     </section>
     <section class="pricing_section bg-grey bd-bottom padding">
         <div class="container">
@@ -217,6 +383,7 @@
                             and boys hair.</p>
                         <a href="appointment" class="default_btn">Make Appointment</a>
                     </div>
+
                 </div>
             </div>
         </div>
