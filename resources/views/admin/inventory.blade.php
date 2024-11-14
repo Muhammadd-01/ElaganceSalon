@@ -34,6 +34,8 @@
                         <td>{{ $product->productStatus ? 'Available' : 'Unavailable' }}</td>
                         <td>{{ $product->productExpiry }}</td>
                         <td>
+
+                            <a href="{{ route('admin.inventory.edit', $product->id) }}" class="btn btn-warning">Edit</a>
                             <form action="{{ route('admin.products.destroy', $product->id) }}" method="POST">
                                 @csrf
 

@@ -6,7 +6,9 @@ use App\Models\Appointment;
 use App\Models\User;
 use App\Models\Service;
 use Illuminate\Http\Request;
-
+use App\Mail\AppointmentAccepted;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Auth;
 class AppointmentController extends Controller
 {
 
@@ -22,8 +24,9 @@ class AppointmentController extends Controller
 
     // public function index()
     // {
-    //     $appointments = Appointment::with(['user', 'service'])->get();
-    //     return view('users.pages.appointment', ['appointments' => $appointments]);
+
+    //     $appointments = Appointment::all();
+    //     return view('admin.appointment', ['appointments' => $appointments]);
     // }
     public function userAppointments()
     {
@@ -93,7 +96,7 @@ class AppointmentController extends Controller
         $appointment = Appointment::findOrFail($id);
         $appointment->update($request->all());
 
-        return redirect()->route('appointments.index')->with('success', 'Appointment updated successfully.');
+        return redirect()->route('admin.showAppointments')->with('success', 'Appointment updated successfully.');
     }
 
     public function destroy($id)
@@ -101,6 +104,34 @@ class AppointmentController extends Controller
         $appointment = Appointment::findOrFail($id);
         $appointment->delete();
 
-        return redirect()->route('appointments.index')->with('success', 'Appointment deleted successfully.');
+        return redirect()->route('admin.showAppointments')->with('success', 'Appointment deleted successfully.');
     }
+
+    public function accept($id)
+{
+    $appointment = Appointment::findOrFail($id);
+    $appointment->status = 'Accepted';
+    $appointment->save();
+
+    return redirect()->back()->with('success', 'Appointment accepted.');
+}
+
+
+
+public function mailAccept($id)
+{
+    $appointment = Appointment::with(['user', 'service'])->findOrFail($id);
+
+    if ($appointment->status === 'Pending') {
+        $appointment->status = 'Accepted';
+        $appointment->save();
+
+        // Send email notification to the logged-in user's email
+        $userEmail = Auth::user()->email;
+        Mail::to($userEmail)->send(new AppointmentAccepted($appointment));
+    }
+
+    return redirect()->back()->with('success', 'Appointment accepted and email sent to the user.');
+}
+
 }

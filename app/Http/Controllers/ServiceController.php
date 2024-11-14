@@ -58,7 +58,7 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $service = Service::findOrFail($id);
-        return view('admin.servicesEdit', ['service' => $service]);
+        return view('admin.serviceEdit', ['service' => $service]);
     }
 
     public function update(Request $request, $id)
@@ -83,7 +83,7 @@ class ServiceController extends Controller
         $service->price = $request->price;
         $service->save();
 
-        return redirect()->route('admin.services')->with('success', 'Service updated successfully');
+        return redirect()->route('showServices')->with('success', 'Service updated successfully');
     }
 
     public function destroy($id)

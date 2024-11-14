@@ -48,6 +48,8 @@ Route::get('/get-price/{id}', [ServiceController::class, 'getPrice']);
 //Admin Routes Start
 Route::view("/dash","admin.dashboard");
 Route::view("/appointments","admin.appointment");
+Route::view("/editService","admin.serviceEdit");
+Route::view("/editInventory","admin.inventoryEdit");
 
 Route::view("/blank","admin.blank");
 Route::view("/button","admin.button");
@@ -112,30 +114,33 @@ Route::get('/admin/products/create', [InventoryController::class, 'create'])->na
 Route::post('/admin/products/store', [InventoryController::class, 'store'])->name('admin.products.store');
 Route::get('/admin/products', [InventoryController::class, 'index'])->name('admin.products.index');
 Route::delete('/products/{id}', [InventoryController::class, 'destroy'])->name('admin.products.destroy');
+Route::get('/admin/inventory/{id}/edit', [InventoryController::class, 'editInventory'])->name('admin.inventory.edit');
+Route::put('/admin/inventory/{id}', [InventoryController::class, 'updateInventory'])->name('admin.inventory.update');
 
-
-// routes/web.php
+// reviews/web.php
 
 
 // Route for displaying all reviews
-Route::get('reviews', [ReviewController::class, 'index'])->name('reviews.index');
+Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
+
+Route::get('/showFeedbacks', [ReviewController::class, 'showFeedbacks'])->name('showFeedbacks');
 // Route for showing the form to create a new review
-Route::get('reviews/create', [ReviewController::class, 'create'])->name('reviews.create');
+Route::get('/reviews/create', [ReviewController::class, 'create'])->name('reviews.create');
 // Route for storing a new review
-Route::post('reviews', [ReviewController::class, 'store'])->name('reviews.store');
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 // Route for showing the form to edit an existing review
-Route::get('reviews/{id}/edit', [ReviewController::class, 'edit'])->name('reviews.edit');
+Route::get('/reviews/{id}/edit', [ReviewController::class, 'edit'])->name('reviews.edit');
 // Route for updating an existing review
-Route::put('reviews/{id}', [ReviewController::class, 'update'])->name('reviews.update');
+Route::put('/reviews/{id}', [ReviewController::class, 'update'])->name('reviews.update');
 // Route for deleting a review
-Route::delete('reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
+Route::delete('/reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
 
 
 //Appointment Routes
 
 // In your routes/web.php
 
-Route::get('/showAppointments', [AppointmentController::class, 'showAppointments']);
+Route::get('/showAppointments', [AppointmentController::class, 'showAppointments'])->name('admin.showAppointments');
 
 // Display all appointments
 Route::get('/appointments', [AppointmentController::class, 'index'])->name('Showappointment');
@@ -156,4 +161,6 @@ Route::get('/appointments/{id}/edit', [AppointmentController::class, 'edit'])->n
 Route::put('/appointments/{id}', [AppointmentController::class, 'update'])->name('appointments.update');
 
 // Delete an appointment
+Route::delete('/appointments/{id}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');
+Route::patch('/appointments/{id}/accept', [AppointmentController::class, 'accept'])->name('appointments.accept');
 Route::delete('/appointments/{id}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');

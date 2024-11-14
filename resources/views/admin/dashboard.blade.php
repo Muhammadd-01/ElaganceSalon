@@ -93,14 +93,11 @@
                         </div>
                     </div>
                     <a href="/showAppointments" class="dropdown-item">Appointments</a>
+                    <a href="/showFeedbacks" class="dropdown-item">Feedbacks</a>
 
 
 
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Feedback</a>
-                        <div class="dropdown-menu bg-transparent border-0">
 
-
-                        </div>
 
 
 
