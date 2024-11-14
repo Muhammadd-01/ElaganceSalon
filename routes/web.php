@@ -28,7 +28,6 @@ Route::view("/gallery","users.pages.gallery");
 Route::view("/feedback","users.pages.feedback");
 Route::view("/testimonals","users.pages.testimonals");
 Route::view("/contact","users.pages.contact");
-// Route::view("/service","users.pages.service");
 Route::view("/team","users.pages.team");
 Route::view("/pricing","users.pages.pricing");
 Route::view("/signup","auth.register");
@@ -39,8 +38,6 @@ Route::view("/aboutcompany","users.pages.about-company");
 Route::get('/user/services', [ServiceController::class, 'userServices'])->name('userServices');
 Route::get('/user/appointments', [AppointmentController::class, 'userAppointments'])->name('userAppointments');
 Route::get('/get-price/{id}', [ServiceController::class, 'getPrice']);
-// Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
-// Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');
 
 
 //User Routes End
@@ -138,7 +135,7 @@ Route::delete('reviews/{id}', [ReviewController::class, 'destroy'])->name('revie
 
 
 Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');
-=======
+
 Route::delete('/reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
 
 
