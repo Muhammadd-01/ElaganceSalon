@@ -43,15 +43,7 @@ class AppointmentController extends Controller
 
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'userId' => 'required|exists:tbl_users,id',
-        //     'serviceId' => 'required|exists:tbl_services,id',
-        //     'bookDate' => 'required|date',
-        //     'bookTime' => 'required',
-        //     'status' => 'required|string',
-        //     'paymentMethod' => 'required|string',
-        //     'payAmount' => 'required|numeric',
-        // ]);
+
 
         Appointment::create([
             'userId' => $request->user_id,      // Foreign key from users table
@@ -64,7 +56,7 @@ class AppointmentController extends Controller
         ]);
 
 
-        return redirect()->route('userAppointments')->with('success', 'Appointment booked successfully.');
+        return redirect()->route('admin.showAppointments')->with('success', 'Appointment booked successfully.');
     }
 
     public function show($id)
@@ -109,12 +101,34 @@ class AppointmentController extends Controller
 
     public function accept($id)
 {
-    $appointment = Appointment::findOrFail($id);
-    $appointment->status = 'Accepted';
-    $appointment->save();
+     // Find the appointment by ID
+     $appointment = Appointment::with(['user', 'service'])->findOrFail($id);
+    //  return $appointment;
 
-    return redirect()->back()->with('success', 'Appointment accepted.');
+
+     // Check if the appointment status is 'Pending'
+     if ($appointment->status === 'pending') {
+         // Update the status to 'Accepted'
+         $appointment->status = 'Accepted';
+         $appointment->save();
+         // Send email notification to the user associated with the appointment
+         Mail::to($appointment->user->email)->send(new AppointmentAccepted($appointment));
+
+         // Optionally, you can also send an email to the logged-in user
+         // Mail::to(Auth::user()->email)->send(new AppointmentAccepted($appointment));
+     }
+
+     // Redirect back with a success message
+     return redirect()->back()->with('success', 'Appointment accepted and email sent to the user.');
 }
+//     public function accept($id)
+// {
+//     $appointment = Appointment::findOrFail($id);
+//     $appointment->status = 'Accepted';
+//     $appointment->save();
+
+//     return redirect()->back()->with('success', 'Appointment accepted.');
+// }
 
 
 

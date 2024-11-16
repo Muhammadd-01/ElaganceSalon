@@ -26,8 +26,9 @@ class AppointmentAccepted extends Mailable
     public function build()
     {
         return $this->subject('Your Appointment has been Accepted')
-                    ->view('emails.appointment_accepted');
+                    // ->view('admin.showAppointments');
+                    ->redirect()->route('admin.showAppointments');
     }
 
-    
+
 }

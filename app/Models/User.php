@@ -26,7 +26,7 @@ class User extends Authenticatable
         'gender',
         'address',
         'password',
-        'admin'
+        'role'
     ];
 
     /**
@@ -64,5 +64,5 @@ class User extends Authenticatable
         });
     }
 
-    
+
 }

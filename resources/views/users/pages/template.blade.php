@@ -39,47 +39,47 @@
                         <ul class="nav">
                             <li><a data-scroll class="nav-link active" href="/">Home<span
                                         class="sr-only">(current)</span></a></li>
-@if(Auth::check())
-                            <li><a href="aboutus">About</a>
-                                <ul>
-                                    <li><a href="aboutus">About Us</a></li>
-                                    <li><a href="aboutcompany">About Company</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/user/services">Services</a></li>
-                            <li><a href="/feedback">Feedback</a>
+                            @if (Auth::check())
+                                <li><a href="aboutus">About</a>
+                                    <ul>
+                                        <li><a href="aboutus">About Us</a></li>
+                                        <li><a href="aboutcompany">About Company</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/user/services">Services</a></li>
+                                <li><a href="/feedback">Feedback</a>
 
-                            </li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="/user/appointments">Appointment</a></li>
+                                </li>
+                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="/user/appointments">Appointment</a></li>
                             @endif
                             @guest
-                            @if (Route::has('login'))
-                            <div class="header-btn" style="margin-top: 20px;">
-                                <a class="menu-btn" href="{{ route('login') }}"
-                                   style="display: inline-block;  border-radius: 15px;"
-                                   onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
-                                   onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
-                                    {{ __('Login') }}
-                                </a>
-                            </div>
+                                @if (Route::has('login'))
+                                    <div class="header-btn" style="margin-top: 20px;">
+                                        <a class="menu-btn" href="{{ route('login') }}"
+                                            style="display: inline-block;  border-radius: 15px;"
+                                            onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
+                                            onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                            {{ __('Login') }}
+                                        </a>
+                                    </div>
+                                @endif
 
-
-                            @endif
-
-                            @if (Route::has('register'))
-                                <div class="header-btn" style="margin-top: 20px;">
-                                    <a class="menu-btn" href="{{ route('register') }}"style="display: inline-block;  border-radius: 15px;"
-                                    onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
-                                    onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
-                                        {{ __('Register') }}</a>
-                                </div>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+                                @if (Route::has('register'))
+                                    <div class="header-btn" style="margin-top: 20px;">
+                                        <a class="menu-btn"
+                                            href="{{ route('register') }}"style="display: inline-block;  border-radius: 15px;"
+                                            onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
+                                            onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                            {{ __('Register') }}</a>
+                                    </div>
+                                @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
+                                    </a>
 
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
@@ -142,7 +142,8 @@
                         <p>962 Fifth Avenue, 3rd Floor New York, NY10022</p>
                         <p><a href="https://html.dynamiclayers.net/cdn-cgi/l/email-protection" class="__cf_email__"
                                 data-cfemail="1d55787171725d7964737c70747e717c64786f6e33737869">[email&#160;protected]</a>
-                            <br>+92 3101259848</p>
+                            <br>+92 3101259848
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 ">

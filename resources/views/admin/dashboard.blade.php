@@ -70,7 +70,10 @@
                         <div class="dropdown-menu bg-transparent border-0">
 
                             <a href="/getUser" class="dropdown-item">showUser</a>
+                            @if (Auth::user()->role == '0')
+
                             <a href="/createUser" class="dropdown-item">addUser</a>
+                            @endif
 
                         </div>
                     </div>

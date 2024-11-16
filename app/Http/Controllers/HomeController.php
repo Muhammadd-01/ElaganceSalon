@@ -47,11 +47,6 @@ class HomeController extends Controller
      * Create a new controller instance.
      *
      * @return void
-     */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
 
     /**
      * Show the application dashboard.
@@ -80,11 +75,9 @@ class HomeController extends Controller
         $user = Auth::user();
 
         // Check if the user is an admin based on their email and password
-        if ($user->email == 'admin@gmail.com' && Hash::check('12345678', $user->password)) {
+        if ($user->role  == '0' || $user->role == '1') {
             return view('admin.dashboard');  // Admin view
-        } elseif (($user->email == 'jazib@gmail.com' || $user->email == 'hamza@gmail.com' || $user->email == 'zaki@gmail.com') && Hash::check('staffpassword', $user->password)) {
-            return view('admin.index');  // Regular user view
-        } else {
+        }  else {
             return view('users.pages.welcome');  // Regular user view
         }
 

@@ -48,9 +48,9 @@
             <div class="mb-3">
                 <label for="role" class="form-label">Role</label>
                 <select class="form-control" id="role" name="role" required>
-                    <option value="User">User</option>
-                    <option value="Staff">Staff</option>
-                    <option value="Admin">Admin</option>
+                    <option value="2">User</option>
+                    <option value="1">Staff</option>
+                    <option value="0">Admin</option>
                 </select>
             </div>
 

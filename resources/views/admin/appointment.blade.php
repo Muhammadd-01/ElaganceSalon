@@ -52,7 +52,7 @@
                             </div>
 
                             <!-- Button to change the status -->
-                             
+
                                 <form action="{{ route('appointments.accept', $appointment->id) }}" method="POST" style="display:inline;">
                                     @csrf
                                     @method('PATCH')

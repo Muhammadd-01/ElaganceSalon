@@ -76,8 +76,9 @@
                                 <p id="service_price" class="text-center" style="font-weight: bold;"></p>
                             </div>
                         </div>
-                        <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
-                        <div id="msg-status" class="alert" role="alert"></div>
+                        {{-- <button id="app_submit" class="default_btn" type="submit">Make Appointment</button> --}}
+                        <input type="submit" value="Make Appointment" class="default_btn" onclick="refreshPage()">
+                        {{-- <div id="msg-status" class="alert" role="alert"></div> --}}
                     </form>
 
                 </div>
@@ -202,6 +203,11 @@
                 .catch(error => {
                     console.error('There was a problem with the fetch operation:', error);
                 });
+        }
+        function refreshPage() {
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
         }
     </script>
 @endsection
