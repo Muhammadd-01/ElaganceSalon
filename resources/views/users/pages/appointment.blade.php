@@ -1,65 +1,109 @@
 @extends('users.pages.template')
+
 @php
     use Illuminate\Support\Facades\Auth;
     $currentUser = Auth::user(); // Get the logged-in user
 @endphp
-@section('content')
-    <section class="book_section padding">
-        <div class="book_bg"></div>
-        <div class="map_pattern"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 offset-md-6">
-                    <form action="{{ route('appointments.store') }}" method="POST" id="appointment_form"
-                        class="form-horizontal appointment_form">
-                        @csrf
-                        <input type="text" name="user_id" value="{{ $currentUser->id ?? '' }}" hidden>
-                        <div class="book_content">
-                            <h2>Make an appointment</h2>
-                            <p>Barber is a person whose occupation is mainly to cut, groom, and shave men's and boys' hair.
-                            </p>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-md-6 padding-10">
-                                <input type="text" id="app_name" name="app_name" class="form-control" placeholder="Name"
-                                    value="{{ $currentUser->name ?? '' }}" required readonly>
-                            </div>
-                            <div class="col-md-6 padding-10">
-                                <input type="email" id="app_email" name="app_email" class="form-control"
-                                    placeholder="Your Email" value="{{ $currentUser->email ?? '' }}" required readonly>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-md-6 padding-10">
-                                <input type="text" id="app_phone" name="app_phone" class="form-control"
-                                    placeholder="Your Phone No" value="{{ $currentUser->mobile ?? '' }}" required readonly>
-                            </div>
-                            <div class="col-md-6 padding-10">
-                                <input type="date" id="app_book_date" name="book_date" class="form-control" placeholder="Booking Date" required>
-                            </div>
-                            <div class="col-md-6 padding-10">
-                                <input type="time" id="app_book_time" name="book_time" class="form-control" placeholder="Booking Time" required>
-                            </div>
 
+@section('content')
+
+<section class="page-header">
+    <div class="container text-center">
+        <h1 class="main-title">Trendy Salon &amp; Spa</h1>
+        <h2 class="sub-title">Appointment</h2>
+        <hr class="separator">
+    </div>
+</section>
+
+<section class="services-section py-5">
+    <div class="container">
+        <div class="section-heading text-center mb-5">
+            <h3 class="section-title">Our Services</h3>
+            <p class="section-description">We offer the best salon services for your grooming needs.</p>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-box">
+                    <i class="bs bs-scissors-1 service-icon"></i>
+                    <h3>Haircut Styles</h3>
+                    <p>Professional hair cutting and styling to match your unique style.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-box">
+                    <i class="bs bs-razor-2 service-icon"></i>
+                    <h3>Beard Trimming</h3>
+                    <p>Precision beard trimming for a neat and stylish look.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-box">
+                    <i class="bs bs-brush service-icon"></i>
+                    <h3>Smooth Shave</h3>
+                    <p>A classic shave for a fresh, clean look.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-box">
+                    <i class="bs bs-hairbrush-1 service-icon"></i>
+                    <h3>Face Masking</h3>
+                    <p>Relaxing facial treatments for glowing skin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="appointment-section bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-6">
+                <form action="{{ route('appointments.store') }}" method="POST" id="appointment_form">
+                    @csrf
+                    <input type="hidden" name="user_id" value="{{ $currentUser->id ?? '' }}">
+
+                    <div class="appointment-form">
+                        <h2 class="form-title">Make an Appointment</h2>
+                        <p class="form-description">Book an appointment to experience premium barber services.</p>
+
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <input type="text" id="app_name" name="app_name" class="form-control" placeholder="Name" value="{{ $currentUser->name ?? '' }}" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" id="app_email" name="app_email" class="form-control" placeholder="Your Email" value="{{ $currentUser->email ?? '' }}" readonly>
+                            </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-md-6 padding-10">
-                                <!-- Dynamic Service Dropdown -->
-                                <select class="form-control" id="app_service" onchange="getprice()" name="serviceId"
-                                    required>
+
+                        <div class="form-row mt-3">
+                            <div class="col-md-6">
+                                <input type="text" id="app_phone" name="app_phone" class="form-control" placeholder="Your Phone No" value="{{ $currentUser->mobile ?? '' }}" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="date" id="app_book_date" name="book_date" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row mt-3">
+                            <div class="col-md-6">
+                                <input type="time" id="app_book_time" name="book_time" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <select class="form-control" id="app_service" name="serviceId" onchange="getPrice()" required>
                                     <option value="">Choose Service</option>
                                     @foreach ($services as $service)
                                         <option value="{{ $service->id }}">{{ $service->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="col-md-6 padding-10">
-                                <input type="text" id="pay_amount" name="pay_amount" class="form-control"
-                                    placeholder="Payment Amount" required readonly>
-                            </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-md-6 padding-10">
+
+                        <div class="form-row mt-3">
+                            <div class="col-md-6">
+                                <input type="text" id="pay_amount" name="pay_amount" class="form-control" placeholder="Payment Amount" readonly>
+                            </div>
+                            <div class="col-md-6">
                                 <select class="form-control" id="payment_method" name="payment_method" required>
                                     <option value="">Payment Method</option>
                                     <option value="credit_card">Credit Card</option>
@@ -67,10 +111,8 @@
                                     <option value="cash">Cash</option>
                                 </select>
                             </div>
-                            <div class="col-md-6 padding-10">
-                                <input type="hidden" name="status" value="pending">
-                            </div>
                         </div>
+<<<<<<< HEAD
                         <div class="form-group row">
                             <div class="col-md-12 padding-10">
                                 <p id="service_price" class="text-center" style="font-weight: bold;"></p>
@@ -80,121 +122,41 @@
                         <input type="submit" value="Make Appointment" class="default_btn" onclick="refreshPage()">
                         {{-- <div id="msg-status" class="alert" role="alert"></div> --}}
                     </form>
+=======
+>>>>>>> fdb739e79315c09b1d8d35f0a0a9b312c45fd659
 
-                </div>
+                        <button type="submit" class="btn btn-primary mt-4">Make Appointment</button>
+                    </div>
+                </form>
             </div>
-        </div>
-    </section>
-
-    <section id="team" class="team_section bd-bottom padding">
-        <div class="container">
-            <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-                <h3>Elegance Salon</h3>
-                <h2>Our Barbers</h2>
-                <div class="heading-line"></div>
-            </div>
-            <ul class="team_members row">
-                <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="200ms">
-                    <div class="team_member">
-                        <img src="img/team-1.jpg" alt="Team Member">
-                        <div class="overlay">
-                            <h3>Jazib Salman</h3>
-                            <p>WEB DESIGNER</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
-                    <div class="team_member">
-                        <img src="img/team-2.jpg" alt="Team Member">
-                        <div class="overlay">
-                            <h3>Affan</h3>
-                            <p>WORDPRESS DEVELOPER</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
-                    <div class="team_member">
-                        <img src="img/team-3.jpg" alt="Team Member">
-                        <div class="overlay">
-                            <h3>Zaki Haider</h3>
-                            <p>ONLINE MARKETER</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="500ms">
-                    <div class="team_member">
-                        <img src="img/team-4.jpg" alt="Team Member">
-                        <div class="overlay">
-                            <h3>Hamza Akram</h3>
-                            <p>JAVA SPECIALIST</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="cta_section padding">
-        <div class="container">
-            <div class="display-table">
-                <div class="table-cel">
-                    <div class="cta_content align-center wow fadeInUp" data-wow-delay="300ms">
-                        <h2>Making You Look Good <br> Is In Our Heritage.</h2>
-                        <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave men's
-                            and boys hair.</p>
-                        <a href="#" class="default_btn">Make Appointment</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="sponsor_section bg-grey padding">
-        <div class="container">
-            <ul id="sponsor_carousel" class="sponsor_items owl-carousel">
-                <li class="sponsor_item">
-                    <img src="img/sponsor-1.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor_item">
-                    <img src="img/sponsor-2.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor_item">
-                    <img src="img/sponsor-3.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor_item">
-                    <img src="img/sponsor-4.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor_item">
-                    <img src="img/sponsor-5.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor_item">
-                    <img src="img/sponsor-1.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor_item">
-                    <img src="img/sponsor-2.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor_item">
-                    <img src="img/sponsor-3.png" alt="sponsor-image">
-                </li>
-            </ul>
         </div>
     </div>
-    <script>
-        function getprice() {
-            let Id = document.getElementById('app_service').value;
-            // alert('Service selected: ' + Id);
+</section>
 
-            // Make an AJAX call using Fetch API
-            fetch(`/get-price/${Id}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.price) {
-                        // alert('Price: ' + data.price);
-                        // You can also update the DOM to show the price
+<section class="cta-section py-5 text-center">
+    <div class="container">
+        <h2>Making You Look Good Is In Our Heritage</h2>
+        <p>Experience premium grooming with Trendy Salon &amp; Spa.</p>
+        <a href="#appointment" class="btn btn-secondary">Make Appointment</a>
+    </div>
+</section>
 
+<script>
+    function getPrice() {
+        let serviceId = document.getElementById('app_service').value;
+
+        fetch(`/get-price/${serviceId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.price) {
+                    document.getElementById('pay_amount').value = `${data.price} Rs`;
+                }
+            })
+            .catch(error => console.error('Error fetching price:', error));
+    }
+</script>
+
+<<<<<<< HEAD
                         document.getElementById('pay_amount').value = `${data.price} Rs`;
                     } else {
                         alert('Price not found.');
@@ -210,4 +172,6 @@
             }, 1000);
         }
     </script>
+=======
+>>>>>>> fdb739e79315c09b1d8d35f0a0a9b312c45fd659
 @endsection

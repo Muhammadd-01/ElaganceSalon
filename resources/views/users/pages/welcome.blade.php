@@ -28,11 +28,14 @@
     </div>
     <div class="container">
         <div class="hero_content align-center">
-            <h3>Its Not Just a Haircut, Its an Experience.</h3>
-            <h1>Being a barber is about <br>taking care of the people.</h1>
-            <p>Our barbershop is the territory created purely for males who appreciate<br> premium quality, time and
-                flawless look.</p>
-            <a href="/user/appointments" class="default_btn">Make Appointment</a>
+
+            <h3>A Haircut That’s an Experience in Itself.</h3>
+            <h1>For barbers, <br> it’s more than just a job it’s about caring for people.</h1>
+            <p>At our barbershop, being a barber means caring for every client and ensuring<br> they leave feeling their best.</p>
+            <a href="user/appointments" class="default_btn">Make Appointment</a>
+
+
+
         </div>
     </div>
 </section>
@@ -42,11 +45,9 @@
             <div class="col-md-6 xs-padding">
                 <div class="section_heading">
                     <h3>Trendy Salon & Spa</h3>
-                    <h2>Step up your healthy hair care <br> routine with tips and advice!</h2>
-                    <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men's and
-                        boys' hair. A barber's place of work is known as a "barbershop" or a "barber's". Barbershops
-                        are also places of social interaction and public discourse. In some instances, barbershops
-                        are also public forums.</p>
+                    <h2>Enhance Your Hair Care Routine<br> with Expert Tips and Advice!</h2>
+<p>A barber is a professional dedicated to cutting, grooming, styling, and shaving men’s and boys' hair. A barber’s workplace, known as a “barbershop” or simply a “barber’s,” is more than just a salon—it’s a hub for social interaction and community conversation. In many cases, barbershops also serve as public forums, bringing people together.</p>
+
                     <a href="aboutus" class="default_btn">More About Us</a>
                 </div>
             </div>
@@ -71,21 +72,22 @@
                 <div class="service_content align-center wow fadeInUp" data-wow-delay="200ms">
                     <img src="img/service-1.jpg" alt="Services">
                     <h3>Haircut Styles</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
+                    <p>A barber is a professional whose main role is to cut, groom, and style hair.</p>
+
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
                 <div class="service_content align-center">
                     <img src="img/service-2.jpg" alt="Services">
                     <h3>Beard Triming</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
+                    <p>A barber is a skilled professional whose main role is to cut, groom, and style hair.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
                 <div class="service_content align-center">
                     <img src="img/service-3.jpg" alt="Services">
                     <h3>Clean Smooth Shave</h3>
-                    <P>Barber is a person whose occupation is mainly to cut dress style.</P>
+                    <p>A barber is dedicated to expertly cutting, grooming, and styling hair for clients who value quality and care.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="500ms">
@@ -98,69 +100,7 @@
         </div>
     </div>
 </section>
-<section class="book_section padding">
-    <div class="book_bg"></div>
-    <div class="map_pattern"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-6"><section id="appointment-form">
-                <!-- Appointment form content here -->
 
-                <form action="https://html.dynamiclayers.net/dl/barbershop/appointment.php" method="post"
-                    id="appointment_form" class="form-horizontal appointment_form">
-                    <div class="book_content">
-                        <h2>Make an appointment</h2>
-                        <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave
-                            men's and boys hair.</p>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-6 padding-10">
-                            <input type="text" id="app_name" name="app_name" class="form-control" placeholder="Name"
-                                required>
-                        </div>
-                        <div class="col-md-6 padding-10">
-                            <input type="email" id="app_email" name="app_email" class="form-control"
-                                placeholder="Your Email" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-6 padding-10">
-                            <input type="text" id="app_phone" name="app_phone" class="form-control"
-                                placeholder="Your Phone No" required>
-                        </div>
-                        <div class="col-md-6 padding-10">
-                            <input type="text" id="app_free_time" name="app_free_time" class="form-control"
-                                placeholder="Your Free Time" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-6 padding-10">
-                            <select class="form-control" id="app_services" name="app_services">
-                                <option>Services</option>
-                                <option>Hair Styling</option>
-                                <option>Shaving</option>
-                                <option>Face Mask</option>
-                                <option>Hair Wash</option>
-                                <option>Beard Triming</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6 padding-10">
-                            <select class="form-control" id="app_barbers" name="app_barbers">
-                                <option>Choose Barbers</option>
-                                <option>Jazib Salman</option>
-                                <option>Affan</option>
-                                <option>Zaki Haider</option>
-                                <option>Hamza Akram</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
-                    <div id="msg-status" class="alert" role="alert"></div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section></section>
 <section id="gallery" class="gallery_section bg-grey bd-bottom padding">
     <div class="container">
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
@@ -271,19 +211,22 @@
     <div class="container">
         <ul id="testimonial_carousel" class="testimonial_items owl-carousel">
             <li class="testimonial_item">
-                <p>"There are design companies, and then there are user experience design interface design<br>
-                    professional. By far one of the worlds best known brands."</p>
-                <h4 class="text-white">Anita Tran, IT Solutions.</h4>
+            <p>"Some companies design, but others master user experience and interface design<br>
+    with unmatched professionalism. Truly one of the world's top brands."</p>
+<h4 class="text-white">Anita Tran, IT Solutions.</h4>
+
             </li>
             <li class="testimonial_item">
-                <p>"There are design companies, and then there are user experience design interface design<br>
-                    professional. By far one of the worlds best known brands."</p>
-                <h4 class="text-white">Leslie Williamson, Developer.</h4>
+            <p>"Some design companies stand out, but user experience and interface design<br>
+    professionals take it to the next level. Truly one of the world’s best-known brands."</p>
+<h4 class="text-white">Leslie Williamson, Developer.</h4>
+
             </li>
             <li class="testimonial_item">
-                <p>"There are design companies, and then there are user experience design interface design<br>
-                    professional. By far one of the worlds best known brands."</p>
-                <h4 class="text-white">Fred Moody, Network Software.</h4>
+            <p>"Some design companies exist, but the true professionals in user experience and interface design<br>
+    are part of one of the world’s most famous brands."</p>
+<h4 class="text-white">Fred Moody, Network Software.</h4>
+
             </li>
         </ul>
     </div>
@@ -301,20 +244,22 @@
                     <h3>Hair Styling</h3>
                     <ul class="price_list">
                         <li>
-                            <h4>Hair Cut</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Hair Cut</h4>
+<p>Barbers specialize in cutting, grooming, styling, and shaving hair for men, ensuring a polished look.</p>
+
                             <span class="price">$8</span>
                         </li>
                         <li>
-                            <h4>Hair Styling</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Hair Styling</h4>
+<p>Barber is a person whose occupation is mainly to cut, dress, groom,<br> style, and shave men’s hair.</p>
+
+
                             <span class="price">$9</span>
                         </li>
                         <li>
-                            <h4>Hair Triming</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
+                        <h4>Hair Trimming</h4>
+<p>A barber is a professional whose main occupation is to cut, groom, style,<br> trim, and shave men’s hair.</p>
+
                             </p>
                             <span class="price">$10</span>
                         </li>
@@ -326,21 +271,21 @@
                     <h3>Shaving</h3>
                     <ul class="price_list">
                         <li>
-                            <h4>Clean Shaving</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Clean Shaving</h4>
+<p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, and provide clean shaves for men.</p>
+
                             <span class="price">$8</span>
                         </li>
                         <li>
-                            <h4>Beard Triming</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Beard Trimming</h4>
+<p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, trim, and shave men’s beards.</p>
+
                             <span class="price">$9</span>
                         </li>
                         <li>
-                            <h4>Smooth Shave</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Smooth Shave</h4>
+<p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, and provide a smooth shave for men.</p>
+
                             <span class="price">$10</span>
                         </li>
                     </ul>
@@ -351,21 +296,21 @@
                     <h3>Face Masking</h3>
                     <ul class="price_list">
                         <li>
-                            <h4>White Facial</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>White Facial</h4>
+<p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, shave, and provide white facials for men.</p>
+
                             <span class="price">$8</span>
                         </li>
                         <li>
-                            <h4>Face Cleaning</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Face Cleaning</h4>
+<p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, shave, and provide face cleaning for men.</p>
+
                             <span class="price">$9</span>
                         </li>
                         <li>
-                            <h4>Bright Tuning</h4>
-                            <p>Barber is a person whose occupation is mainly to cut dress groom style and shave men.
-                            </p>
+                        <h4>Bright Tuning</h4>
+<p>A barber is a professional whose main occupation is to cut, dress, groom,<br> style, shave, and provide bright tuning for men.</p>
+
                             <span class="price">$10</span>
                         </li>
                     </ul>
@@ -384,7 +329,7 @@
                         <div class="content_inner">
                             <h2>Haircuts</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="appointment">Make Appointment</a>
+                            <a href="user/appointments">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -396,7 +341,7 @@
                         <div class="content_inner">
                             <h2>Facials</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="appointment">Make Appointment</a>
+                            <a href="user/appointments">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -408,7 +353,7 @@
                         <div class="content_inner">
                             <h2>Makeups</h2>
                             <h3>Trendy Salon & Spa</h3>
-                            <a href="appointment">Make Appointment</a>
+                            <a href="user/appointments">Make Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -431,9 +376,9 @@
                     </div>
                     <div class="blog-content">
                         <h3><a href="#">Minimalist trending in modern architecture 2019</a></h3>
-                        <p>Building first evolved out dynamics between needs means available building materials
-                            attendant skills.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <p>Building first evolved from the dynamics between needs, available materials, and the skills required to use them.</p>
+
+
                     </div>
                 </div>
             </div>
@@ -445,9 +390,9 @@
                     </div>
                     <div class="blog-content">
                         <h3><a href="#">Terrace in the town yamazaki kentaro design workshop.</a></h3>
-                        <p>Building first evolved out dynamics between needs means available building materials
-                            attendant skills.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <p>Construction initially developed through the interaction of needs, available materials, and the skills required to work with them.</p>
+
+
                     </div>
                 </div>
             </div>
@@ -459,9 +404,9 @@
                     </div>
                     <div class="blog-content">
                         <h3><a href="#">W270 house são paulo arquitetos fabio jorge architeqture.</a></h3>
-                        <p>Building first evolved out dynamics between needs means available building materials
-                            attendant skills.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <p>Building initially developed through the interaction of human needs, available materials, and the skills required to use them effectively.</p>
+
+                      
                     </div>
                 </div>
             </div>

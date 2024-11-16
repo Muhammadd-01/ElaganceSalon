@@ -37,11 +37,15 @@
 
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
+
+
     <section class="pricing_section bg-grey bd-bottom padding">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 sm-padding">
+                <div class="col-lg-4 col-md-6 ">
                     <div class="price_wrap">
                         <h3>Hair Styling</h3>
                         <ul class="price_list">
@@ -217,6 +221,7 @@
                             and boys hair.</p>
                         <a href="appointment" class="default_btn">Make Appointment</a>
                     </div>
+
                 </div>
             </div>
         </div>

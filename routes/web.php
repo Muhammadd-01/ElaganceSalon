@@ -28,7 +28,6 @@ Route::view("/gallery","users.pages.gallery");
 Route::view("/feedback","users.pages.feedback");
 Route::view("/testimonals","users.pages.testimonals");
 Route::view("/contact","users.pages.contact");
-// Route::view("/service","users.pages.service");
 Route::view("/team","users.pages.team");
 Route::view("/pricing","users.pages.pricing");
 Route::view("/signup","auth.register");
@@ -39,8 +38,6 @@ Route::view("/aboutcompany","users.pages.about-company");
 Route::get('/user/services', [ServiceController::class, 'userServices'])->name('userServices');
 Route::get('/user/appointments', [AppointmentController::class, 'userAppointments'])->name('userAppointments');
 Route::get('/get-price/{id}', [ServiceController::class, 'getPrice']);
-// Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
-// Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');
 
 
 //User Routes End
@@ -133,6 +130,12 @@ Route::get('/reviews/{id}/edit', [ReviewController::class, 'edit'])->name('revie
 // Route for updating an existing review
 Route::put('/reviews/{id}', [ReviewController::class, 'update'])->name('reviews.update');
 // Route for deleting a review
+
+Route::delete('reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
+
+
+Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');
+
 Route::delete('/reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
 
 
@@ -164,3 +167,4 @@ Route::put('/appointments/{id}', [AppointmentController::class, 'update'])->name
 Route::delete('/appointments/{id}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');
 Route::patch('/appointments/{id}/accept', [AppointmentController::class, 'accept'])->name('appointments.accept');
 Route::delete('/appointments/{id}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');
+
