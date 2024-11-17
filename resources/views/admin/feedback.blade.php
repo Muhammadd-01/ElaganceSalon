@@ -5,8 +5,11 @@
 
 
 <div class="container">
+    <br>
+    <br>
     <h2>User Feedbacks</h2>
     <table class="table table-bordered">
+        <br>
         <thead>
             <tr>
                 <th>Name</th>

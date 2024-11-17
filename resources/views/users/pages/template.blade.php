@@ -7,7 +7,7 @@
     <meta name="description" content="Elegance Men Hair Salon">
     <meta name="author" content="">
     <title>Elegance Men Hair Salon</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/favicon.png') }}">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -29,81 +29,69 @@
 </head>
 
 <body>
-    <header id="header" class="header-section">
-        <div class="container">
-            <nav class="navbar ">
+<header id="header" class="header-section">
+    <div class="container">
+        <nav class="navbar">
+            <img src="{{ asset('img/logo (2).png') }}" style="height: 150px; width: 150px;" alt="">
+            <div class="d-flex menu-wrap align-items-center">
+                <div id="mainmenu" class="mainmenu">
+                    <ul class="nav">
+                        <li><a data-scroll class="nav-link active" href="/">Home<span class="sr-only">(current)</span></a></li>
 
-                <img src="{{ asset('img/logo (2).png') }}" style="height: 150px; width: 150px;" alt="">
-                <div class="d-flex menu-wrap align-items-center">
-                    <div id="mainmenu" class="mainmenu">
-                        <ul class="nav">
-                            <li><a data-scroll class="nav-link active" href="/">Home<span
-                                        class="sr-only">(current)</span></a></li>
-                            @if (Auth::check())
-                                <li><a href="aboutus">About</a>
-                                    <ul>
-                                        <li><a href="aboutus">About Us</a></li>
-                                        <li><a href="aboutcompany">About Company</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="/user/services">Services</a></li>
-                                <li><a href="/feedback">Feedback</a>
+                        <!-- These links are now available to both authenticated and guest users -->
+                        <li><a href="/aboutus">About</a>
+                        </li>
+                        <li><a href="/user/services">Services</a></li>
+                        <li><a href="/feedback">Feedback</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/user/appointments">Appointment</a></li>
 
-                                </li>
-                                <li><a href="/contact">Contact</a></li>
-                                <li><a href="/user/appointments">Appointment</a></li>
+                        @guest
+                            @if (Route::has('login'))
+                            <div class="header-btn" style="margin-top: 20px;">
+                                <a class="menu-btn" href="{{ route('login') }}"
+                                   style="display: inline-block; border-radius: 15px;"
+                                   onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
+                                   onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                    {{ __('Login') }}
+                                </a>
+                            </div>
                             @endif
-                            @guest
-                                @if (Route::has('login'))
-                                    <div class="header-btn" style="margin-top: 20px;">
-                                        <a class="menu-btn" href="{{ route('login') }}"
-                                            style="display: inline-block;  border-radius: 15px;"
-                                            onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
-                                            onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
-                                            {{ __('Login') }}
-                                        </a>
-                                    </div>
-                                @endif
 
-                                @if (Route::has('register'))
-                                    <div class="header-btn" style="margin-top: 20px;">
-                                        <a class="menu-btn"
-                                            href="{{ route('register') }}"style="display: inline-block;  border-radius: 15px;"
-                                            onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
-                                            onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
-                                            {{ __('Register') }}</a>
-                                    </div>
-                                @endif
-                            @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }}
+                            @if (Route::has('register'))
+                                <div class="header-btn" style="margin-top: 20px;">
+                                    <a class="menu-btn" href="{{ route('register') }}" style="display: inline-block; border-radius: 15px;"
+                                       onmouseover="this.style.backgroundColor='#222227'; this.style.color='#857568';"
+                                       onmouseout="this.style.backgroundColor='#857568'; this.style.color='white';">
+                                        {{ __('Register') }}
                                     </a>
-
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                            class="d-none">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
-                            @endguest
-                        </ul>
-
-                    </div>
-
+                                </div>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
+    </div>
+</header>
 
-    </header>
+
 
     {{-- Header end --}}
 
@@ -124,7 +112,7 @@
             <div class="row">
                 <div class="col-md-4 col-lg-4 ">
                     <div class="footer_widget">
-                        <img class="mb-15" src="img/logo (2).png" alt="Brand" style="margin-top: -50px">
+                        <img class="mb-15" src="{{ asset('img/logo (2).png') }}" alt="Brand" style="margin-top: -50px">
                         <p>Our barbershop is the created for men who appreciate premium quality, time and flawless look.
                         </p>
                         <ul class="widget_social">
@@ -139,11 +127,11 @@
                 <div class="col-md-4 col-lg-4 ">
                     <div class="footer_widget">
                         <h3>Headquaters</h3>
-                        <p>962 Fifth Avenue, 3rd Floor New York, NY10022</p>
-                        <p><a href="https://html.dynamiclayers.net/cdn-cgi/l/email-protection" class="__cf_email__"
-                                data-cfemail="1d55787171725d7964737c70747e717c64786f6e33737869">[email&#160;protected]</a>
-                            <br>+92 3101259848
+                        <p>Aptech Metro Star Gate Shah Faisal Colony Flyover, Faisal Cantonment, Karachi, Karachi City, Sindh
                         </p>
+                        <h3>Phone No.</h3>
+                        <p>+92 3324428634</p>
+                        <p>+92 3101259848</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 ">

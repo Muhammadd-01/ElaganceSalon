@@ -20,7 +20,9 @@
 @section('content')
     <div class="appointments-list">
         @if ($appointments->isEmpty())
-            <p>No appointments found.</p>
+        <br>
+
+            <p style="margin-left: 50px;">No appointments found.</p>
         @else
             <ul>
                 <ul class="appointment-list">

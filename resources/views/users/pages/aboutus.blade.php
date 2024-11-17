@@ -48,7 +48,7 @@ Step into our salon, a welcoming space that reflects the charm of old-world eleg
         <ul class="team_members row">
             <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="200ms">
                 <div class="team_member">
-                    <img src="img/" alt="Team Member">
+                    <img src="img/team-1.jpg" alt="Team Member">
                     <div class="overlay">
                         <h3>Jazib Salman</h3>
                         <p>Beard Specialist</p>
@@ -57,7 +57,7 @@ Step into our salon, a welcoming space that reflects the charm of old-world eleg
             </li>
             <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
                 <div class="team_member">
-                    <img src="img/" alt="Team Member">
+                    <img src="img/team-2.jpg" alt="Team Member">
                     <div class="overlay">
                         <h3>Affan</h3>
                         <p>Hair Specialist</p>
@@ -66,7 +66,7 @@ Step into our salon, a welcoming space that reflects the charm of old-world eleg
             </li>
             <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
                 <div class="team_member">
-                    <img src="img/" alt="Team Member">
+                    <img src="img/team-3.jpg" alt="Team Member">
                     <div class="overlay">
                         <h3>Zaki Haider</h3>
                         <p>Moustache Specialist</p>
@@ -75,7 +75,7 @@ Step into our salon, a welcoming space that reflects the charm of old-world eleg
             </li>
             <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="500ms">
                 <div class="team_member">
-                    <img src="img/" alt="Team Member">
+                    <img src="img/team-4.jpg" alt="Team Member">
                     <div class="overlay">
                         <h3>Hamza Akram</h3>
                         <p>Facial Specialist</p>

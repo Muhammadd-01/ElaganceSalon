@@ -287,3 +287,30 @@
     background: var(--dark);
     border-color: var(--primary);
 }
+/* Custom CSS for the image */
+.about_video {
+    position: relative;
+    overflow: hidden;
+}
+
+.square-image {
+    width: 100%;       /* Full width */
+    height: 300px;     /* Fixed height for square shape */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* For smaller screens, adjust the layout to stack */
+@media (max-width: 767px) {
+    .about_video {
+        margin-bottom: 20px; /* Add some space between the image and form on mobile */
+    }
+
+    .square-image {
+        height: 250px; /* Adjust image height on smaller screens */
+    }
+
+    .col-md-6 {
+        width: 100%; /* Make the form and image full-width on mobile */
+    }
+}

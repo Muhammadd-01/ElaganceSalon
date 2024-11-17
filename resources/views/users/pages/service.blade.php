@@ -22,8 +22,7 @@
             <div class="row">
                 @foreach ($services as $service)
                    <a href="/user/appointments"><div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="service_box" {{ route('userServices', $service->id) }}'"
-                            style="cursor: pointer;">
+                        <div class="service_box" {{ route('userServices', $service->id) }} style="cursor: pointer;">
                             <img src="{{ asset('uploads/services/' . $service->image) }}" alt="{{ $service->name }}"
                                 class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;">
                             <!-- Image -->
@@ -219,7 +218,7 @@
                         <h2>Making You Look Good <br> Is In Our Haritage.</h2>
                         <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave men's
                             and boys hair.</p>
-                        <a href="appointment" class="default_btn">Make Appointment</a>
+                        <a href="/user/appointments" class="default_btn">Make Appointment</a>
                     </div>
 
                 </div>
@@ -230,28 +229,28 @@
         <div class="container">
             <ul id="sponsor_carousel" class="sponsor_items owl-carousel">
                 <li class="sponsor_item">
-                    <img src="img/sponsor-1.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-1.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-2.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-2.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-3.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-3.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-4.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-4.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-5.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-5.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-1.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-1.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-2.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-2.png') }}" alt="sponsor-image">
                 </li>
                 <li class="sponsor_item">
-                    <img src="img/sponsor-3.png" alt="sponsor-image">
+                    <img src="{{ asset('img/sponsor-3.png') }}" alt="sponsor-image">
                 </li>
             </ul>
         </div>

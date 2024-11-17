@@ -48,7 +48,7 @@ class HomeController extends Controller
      *
      * @return void
 
-    /**
+
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -75,9 +75,11 @@ class HomeController extends Controller
         $user = Auth::user();
 
         // Check if the user is an admin based on their email and password
-        if ($user->role  == '0' || $user->role == '1') {
+        if ($user->email == 'admin@gmail.com' && Hash::check('12345678', $user->password)) {
             return view('admin.dashboard');  // Admin view
-        }  else {
+        } elseif (($user->email == 'jazib@gmail.com' || $user->email == 'hamza@gmail.com' || $user->email == 'zaki@gmail.com') && Hash::check('staffpassword', $user->password)) {
+            return view('admin.index');  // Regular user view
+        } else {
             return view('users.pages.welcome');  // Regular user view
         }
 

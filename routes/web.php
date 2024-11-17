@@ -168,3 +168,5 @@ Route::delete('/appointments/{id}', [AppointmentController::class, 'destroy'])->
 Route::patch('/appointments/{id}/accept', [AppointmentController::class, 'accept'])->name('appointments.accept');
 Route::delete('/appointments/{id}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');
 
+
+

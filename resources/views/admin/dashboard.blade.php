@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Elegance - Men's Hair Salon Admin Panel</title>
@@ -53,18 +52,18 @@
                 <a href="index" class="navbar-brand mx-4 mb-3">
                     <h3> <img src="{{ asset('img/logo (2).png') }}" style="margin-left: 20px; height: 100px;"  alt=""></h3>
                 </a>
-                {{-- <div class="d-flex align-items-center ms-4 mb-4">
+                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="img/logo (2).png" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="{{ asset('img/logo (2).png') }}" alt="" style="width: 40px; height: 40px;">
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
-                    <div class="ms-3">
-                        <h6 class="mb-0">Jhon Doe</h6>
-                        <span>Admin</span>
-                    </div>
-                </div> --}}
+                <!-- Display user's name dynamically -->
+                <span class="d-none d-lg-inline-flex">{{ auth()->user()->name }}</span>
+                
+            </a>
+                </div> 
                 <div class="navbar-nav w-100 mt-0">
-                    <a href="/dash" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/index" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>User</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -114,7 +113,7 @@
         <!-- Content Start -->
         <div class="content">
           <!-- Navbar Start -->
-<nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+          <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
     <a href="index" class="navbar-brand d-flex d-lg-none me-4">
         <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
     </a>
@@ -128,8 +127,10 @@
 
         <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <img class="rounded-circle me-lg-2" src="admin/img/" alt="" style="width: 40px; height: 40px;">
-                <span class="d-none d-lg-inline-flex">John Doe</span>
+                <img class="rounded-circle me-lg-2" src="{{ asset('img/logo (2).png') }}" alt="" style="width: 40px; height: 40px;">
+                <!-- Display user's name dynamically -->
+                <span class="d-none d-lg-inline-flex">{{ auth()->user()->name }}</span>
+                
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -145,6 +146,7 @@
         </div>
     </div>
 </nav>
+
 <!-- Navbar End -->
 
             <!-- Navbar End -->
