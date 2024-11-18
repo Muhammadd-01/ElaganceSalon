@@ -3,7 +3,10 @@
 @section('content')
     <div class="container mt-4">
         <h2>Inventory Products</h2>
+        @if (Auth::user()->role == '0')
+
         <a href="{{ route('admin.products.create') }}" class="btn btn-primary mb-3">Add New Product</a>
+        @endif
 
         @if (session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
@@ -19,6 +22,11 @@
                     <th>Price</th>
                     <th>Status</th>
                     <th>Expiry Date</th>
+                    @if (Auth::user()->role == '0')
+
+                    <th>Actions</th>
+                    @endif
+
                 </tr>
             </thead>
             <tbody>
@@ -33,6 +41,8 @@
                         <td>${{ $product->productPrice }}</td>
                         <td>{{ $product->productStatus ? 'Available' : 'Unavailable' }}</td>
                         <td>{{ $product->productExpiry }}</td>
+                        @if (Auth::user()->role == '0')
+
                         <td>
 
                             <a href="{{ route('admin.inventory.edit', $product->id) }}" class="btn btn-warning">Edit</a>
@@ -44,6 +54,7 @@
                                 <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this product?')">Delete</button>
                             </form>
                         </td>
+                        @endif
                     </tr>
                 @endforeach
             </tbody>

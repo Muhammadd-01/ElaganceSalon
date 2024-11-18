@@ -59,9 +59,9 @@
                     </div>
                 <!-- Display user's name dynamically -->
                 <span class="d-none d-lg-inline-flex">{{ auth()->user()->name }}</span>
-                
+
             </a>
-                </div> 
+                </div>
                 <div class="navbar-nav w-100 mt-0">
                     <a href="/index" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
@@ -81,7 +81,9 @@
                         <div class="dropdown-menu bg-transparent border-0">
 
                             <a href="/admin/services" class="dropdown-item">showService</a>
+                            @if (Auth::user()->role == '0')
                             <a href="/adminServicesCreate" class="dropdown-item">addService</a>
+                            @endif
 
                         </div>
                     </div>
@@ -90,12 +92,16 @@
                         <div class="dropdown-menu bg-transparent border-0">
 
                             <a href="{{Route('admin.products.index')}}" class="dropdown-item">showProducts</a>
+                            @if (Auth::user()->role == '0')
                             <a href="/adminInventoryCreate" class="dropdown-item">addProducts</a>
+                            @endif
 
                         </div>
                     </div>
+                    @if (Auth::user()->role == '0')
                     <a href="/showAppointments" class="dropdown-item">Appointments</a>
                     <a href="/showFeedbacks" class="dropdown-item">Feedbacks</a>
+                    @endif
 
 
 
@@ -130,7 +136,7 @@
                 <img class="rounded-circle me-lg-2" src="{{ asset('img/logo (2).png') }}" alt="" style="width: 40px; height: 40px;">
                 <!-- Display user's name dynamically -->
                 <span class="d-none d-lg-inline-flex">{{ auth()->user()->name }}</span>
-                
+
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{ route('logout') }}"

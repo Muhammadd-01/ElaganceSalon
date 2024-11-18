@@ -75,7 +75,7 @@ class RegisterController extends Controller
             'gender' => $data['gender'],
             'address' => $data['address'],
             'mobile' => $data['mobile'],
-            'role' => 0, // Default to 'user' role
+            'role' => $data['role'], // Default to 'user' role
         ]);
     }
 

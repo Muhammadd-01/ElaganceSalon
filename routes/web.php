@@ -18,9 +18,7 @@ Route::get('/login', function () {
 
 Route::get('/', function () {
     return view('users.pages.welcome');
-
 });
-
 
 Route::view("/template","users.pages.template");
 Route::view("/aboutus","users.pages.aboutus");
@@ -62,6 +60,7 @@ Route::view("/typo","admin.typography");
 Route::view("/widget","admin.widget");
 Route::view("/User","admin.user");
 Route::view("/createUser","admin.userCreate");
+Route::view("/editUser","admin.userEdit");
 Route::view("/adminServices","admin.services");
 Route::view("/adminServicesCreate","admin.servicesCreate");
 Route::view("/adminInventory","admin.inventory");
@@ -76,7 +75,7 @@ Route::get('/getUser', [App\Http\Controllers\AdminController::class, 'getUsers']
 Route::post('/users', [HomeController::class, 'store'])->name('user.store');
 
 Route::get('/users/{id}/edit', [HomeController::class, 'edit'])->name('user.edit'); // To show the form to edit an existing user
-Route::put('/users/{id}', [HomeController::class, 'update'])->name('user.update'); // To update a user
+Route::put('/users/{id}', [HomeController::class, 'update'])->name('users.update');// To update a user
 Route::delete('/users/{id}', [HomeController::class, 'destroy'])->name('user.destroy'); // To delete a user
 // Route::get('/user/create', [HomeController::class, 'create'])->name('user.create'); // This handles the GET request to show the form
 

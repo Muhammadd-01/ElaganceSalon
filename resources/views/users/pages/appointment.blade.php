@@ -14,7 +14,7 @@ $currentUser = Auth::user(); // Get the logged-in user
 <!-- Page Header Section -->
 <section class="page_header d-flex align-items-center">
     <div class="container">
-        
+
         <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
 
             <h2>Appointment</h2>
@@ -190,7 +190,7 @@ $currentUser = Auth::user(); // Get the logged-in user
                         </div>
                         <br>
 
-                        <input type="submit" value="Make Appointment" class="default_btn">
+                        <input type="submit" value="Make Appointment" onclick="refresh()" class="default_btn">
                     </div>
                 </form>
             </div>
@@ -219,7 +219,11 @@ $currentUser = Auth::user(); // Get the logged-in user
             });
     }
 }
-
+ function refresh() {
+   setTimeout(() => {
+    location.reload();
+   }, 1000);
+ }
 </script>
 
 @endsection

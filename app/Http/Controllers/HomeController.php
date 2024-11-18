@@ -75,10 +75,12 @@ class HomeController extends Controller
         $user = Auth::user();
 
         // Check if the user is an admin based on their email and password
-        if ($user->email == 'admin@gmail.com' && Hash::check('12345678', $user->password)) {
-            return view('admin.dashboard');  // Admin view
-        } elseif (($user->email == 'jazib@gmail.com' || $user->email == 'hamza@gmail.com' || $user->email == 'zaki@gmail.com') && Hash::check('staffpassword', $user->password)) {
-            return view('admin.index');  // Regular user view
+        if ($user->role == 0 || $user->role == 1) {
+            return view('admin.index');
+            // Admin view
+        } elseif ($user->role == 2) {
+            // return view('admin.index');
+            return view('users.pages.welcome');  // Regular user view
         } else {
             return view('users.pages.welcome');  // Regular user view
         }
@@ -89,30 +91,47 @@ class HomeController extends Controller
 
     public function edit($id)
     {
-        $user = User::findOrFail($id); // Find the user by ID
-        return view('admin.user', ['myuser' => $user]);
+        $user = User::findOrFail($id); // Retrieve the user or show 404 if not found
+        return view('admin.userEdit', compact('user')); // Ensure 'users.edit' matches your Blade file path
     }
 
     // Method to update an existing user
+    // Handle the user update
     public function update(Request $request, $id)
     {
-        // Validate the request
+        $user = User::findOrFail($id); // Retrieve the user
+
+        // Validate the request data
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,' . $id,
+            'email' => 'required|email|unique:users,email,' . $id,
             'mobile' => 'required|string|max:15',
             'age' => 'required|integer|min:1',
-            'gender' => 'required|string',
-            'password' => 'required|string|min:8|confirmed',
-            'address' => 'required|string|max:255',
+            'gender' => 'required|string|in:Male,Female,Other',
+            'address' => 'required|string|max:500',
+           'role' => 'required|string|in:User,Admin,Staff',
         ]);
+        $roleMap = [
+            'User' => 2,
+            'Admin' => 0,
+            'Staff' => 1,
+        ];
+        // Update the user fields
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->mobile = $request->mobile;
+        $user->age = $request->age;
+        $user->gender = $request->gender;
+        $user->address = $request->address;
+        $user->role = $roleMap[$request->role];
+        // Update password only if provided
+        if ($request->filled('password')) {
+            $user->password = bcrypt($request->password);
+        }
 
-        // Find the user by ID and update their data
-        $user = User::findOrFail($id);
-        $user->update($request->all());
+        $user->save(); // Save the changes
 
-        // Redirect to user list with a success message
-        return redirect()->route('admin.user')->with('success', 'User updated successfully.');
+        return redirect()->route('user.edit', $id)->with('success', 'User updated successfully.');
     }
 
     // Method to delete a user
@@ -145,7 +164,7 @@ class HomeController extends Controller
         // ]);
 
         // Create the new user
-     $res =  User::create(attributes: [
+        $res = User::create(attributes: [
             'name' => $request->name,
             'email' => $request->email,
             'mobile' => $request->mobile,
