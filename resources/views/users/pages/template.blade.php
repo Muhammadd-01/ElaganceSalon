@@ -39,10 +39,10 @@
                             <li><a data-scroll class="nav-link active" href="/">Home<span
                                         class="sr-only">(current)</span></a></li>
                             @if (Auth::check())
-                                <li><a href="aboutus">About</a>
+                                <li><a href="/aboutus">About</a>
                                     <ul>
-                                        <li><a href="aboutus">About Us</a></li>
-                                        <li><a href="aboutcompany">About Company</a></li>
+                                        <li><a href="/aboutus">About Us</a></li>
+                                        <li><a href="/aboutcompany">About Company</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="/user/services">Services</a></li>

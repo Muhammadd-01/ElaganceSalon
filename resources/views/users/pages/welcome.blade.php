@@ -181,7 +181,7 @@
                         <img src="img/team-1.jpg" alt="Team Member">
                         <div class="overlay">
                             <h3>Zaki Haider</h3>
-                            <p>WEB DESIGNER</p>
+                            <p>Beard Specialist</p>
                         </div>
                     </div>
                 </li>
@@ -190,7 +190,7 @@
                         <img src="img/team-2.jpg" alt="Team Member">
                         <div class="overlay">
                             <h3>Jazib Salman</h3>
-                            <p>WORDPRESS DEVELOPER</p>
+                            <p>Hair Specialist</p>
                         </div>
                     </div>
                 </li>
@@ -199,7 +199,7 @@
                         <img src="img/team-3.jpg" alt="Team Member">
                         <div class="overlay">
                             <h3>Hamza Akram</h3>
-                            <p>ONLINE MARKETER</p>
+                            <p>Moustache Specialist</p>
                         </div>
                     </div>
                 </li>
@@ -208,7 +208,7 @@
                         <img src="img/team-4.jpg" alt="Team Member">
                         <div class="overlay">
                             <h3>Muhammad Affan</h3>
-                            <p>JAVA SPECIALIST</p>
+                            <p>Facial Specialist</p>
                         </div>
                     </div>
                 </li>
@@ -346,7 +346,9 @@
                             <div class="content_inner">
                                 <h2>Haircuts</h2>
                                 <h3>Trendy Salon & Spa</h3>
+                                @if (Auth::check())
                                 <a href="user/appointments">Make Appointment</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -358,7 +360,9 @@
                             <div class="content_inner">
                                 <h2>Facials</h2>
                                 <h3>Trendy Salon & Spa</h3>
+                                @if (Auth::check())
                                 <a href="user/appointments">Make Appointment</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -370,7 +374,9 @@
                             <div class="content_inner">
                                 <h2>Makeups</h2>
                                 <h3>Trendy Salon & Spa</h3>
+                                @if (Auth::check())
                                 <a href="user/appointments">Make Appointment</a>
+                                @endif
                             </div>
                         </div>
                     </div>

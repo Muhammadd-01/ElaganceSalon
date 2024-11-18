@@ -70,7 +70,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/getUser', [App\Http\Controllers\AdminController::class, 'getUsers']);
+Route::get('/getUser', [App\Http\Controllers\AdminController::class, 'getUsers'])->name('user');
 
 Route::post('/users', [HomeController::class, 'store'])->name('user.store');
 
@@ -167,5 +167,5 @@ Route::delete('/appointments/{id}', [AppointmentController::class, 'destroy'])->
 Route::patch('/appointments/{id}/accept', [AppointmentController::class, 'accept'])->name('appointments.accept');
 Route::delete('/appointments/{id}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');
 
-
-
+// staff routes
+Route::view("/staff",".staff.staff");
