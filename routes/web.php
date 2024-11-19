@@ -70,7 +70,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/getUser', [App\Http\Controllers\AdminController::class, 'getUsers']);
+Route::get('/getUser', [App\Http\Controllers\AdminController::class, 'getUsers'])->name('user');
 
 Route::post('/users', [HomeController::class, 'store'])->name('user.store');
 

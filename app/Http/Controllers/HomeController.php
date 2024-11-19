@@ -141,7 +141,7 @@ class HomeController extends Controller
         $user->delete(); // Delete the user
 
         // Redirect to user list with a success message
-        return redirect()->route('admin.user')->with('success', 'User deleted successfully.');
+        return redirect()->route('user')->with('success', 'User deleted successfully.');
     }
 
     public function create()
@@ -177,7 +177,7 @@ class HomeController extends Controller
         // return $res;
 
         // Redirect back to the users list with a success message
-        return redirect()->route('admin.user')->with('success', 'User added successfully.');
+        return redirect()->route('user')->with('success', 'User added successfully.');
     }
 
 }

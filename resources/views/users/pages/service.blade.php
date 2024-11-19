@@ -21,7 +21,8 @@
         <div class="container">
             <div class="row">
                 @foreach ($services as $service)
-                   <a href="/user/appointments"><div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="200ms">
+                 
+                    <a href="/user/appointments"><div class="col-lg-3 col-md-6 padding-15 wow fadeInUp" data-wow-delay="200ms">
                         <div class="service_box" {{ route('userServices', $service->id) }} style="cursor: pointer;">
                             <img src="{{ asset('uploads/services/' . $service->image) }}" alt="{{ $service->name }}"
                                 class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;">
@@ -31,6 +32,7 @@
                             <p><strong>Price: ${{ $service->price }}</strong></p> <!-- Price -->
                         </div>
                     </div></a>
+
                 @endforeach
 
 
